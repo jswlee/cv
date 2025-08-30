@@ -268,7 +268,7 @@ def main():
     # Webcam URLs to interleave
     urls = [
         "https://share.earthcam.net/tJ90CoLmq7TzrY396Yd88M3ySv9LnAn8E0UsZn2nKhs!/hilton_waikiki_beach/camera/live",
-        "https://embed.cdn-surfline.com/cams/6328c8d46a2a105e18365162/2a22d923244e8a4160f57feff3b47e1f8f5d0abc",
+        # "https://embed.cdn-surfline.com/cams/6328c8d46a2a105e18365162/2a22d923244e8a4160f57feff3b47e1f8f5d0abc",
     ]
 
     interval = args.interval
