@@ -13,7 +13,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
+import shutil
 from urllib.parse import urlparse
 import re
 
@@ -40,24 +40,50 @@ class WebcamCapture:
         os.makedirs(self.output_dir, exist_ok=True)
 
     def setup_driver(self):
-        """Setup Chrome driver with appropriate options"""
+        """Setup Chrome/Chromium driver using system binaries (no webdriver-manager)."""
         chrome_options = Options()
-        chrome_options.add_argument("--headless")  # Run in background
+        # Headless on servers
+        chrome_options.add_argument("--headless=new")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--window-size=1920,1080")
         chrome_options.add_argument("--disable-extensions")
         chrome_options.add_argument("--disable-plugins")
-        
+
+        # Prefer env override if provided
+        chrome_bin = os.environ.get("CHROME_BIN")
+        if not chrome_bin:
+            # Common executable names/paths on Linux
+            for candidate in (
+                shutil.which("chromium-browser"),
+                shutil.which("chromium"),
+                shutil.which("google-chrome"),
+                "/usr/bin/chromium-browser",
+                "/usr/bin/chromium",
+                "/usr/bin/google-chrome",
+            ):
+                if candidate and os.path.exists(candidate):
+                    chrome_bin = candidate
+                    break
+        if chrome_bin:
+            chrome_options.binary_location = chrome_bin
+
+        # Find system chromedriver
+        driver_path = os.environ.get("CHROMEDRIVER") or shutil.which("chromedriver") or "/usr/bin/chromedriver"
+        if not (driver_path and os.path.exists(driver_path)):
+            raise RuntimeError(
+                "chromedriver not found. Install system package (e.g., 'sudo apt-get install -y chromium-driver') "
+                "or set CHROMEDRIVER env var to the driver path."
+            )
+
         try:
-            # Automatically download and setup ChromeDriver
-            service = Service(ChromeDriverManager().install())
+            service = Service(driver_path)
             self.driver = webdriver.Chrome(service=service, options=chrome_options)
             print("Chrome driver initialized successfully")
         except Exception as e:
             print(f"Error initializing Chrome driver: {e}")
-            print("Make sure Chrome browser is installed on your system")
+            print("Make sure Chromium/Chrome and chromedriver are installed on your system")
             raise
             
     def capture_snapshot(self):
