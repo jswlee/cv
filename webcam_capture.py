@@ -5,6 +5,7 @@ Captures snapshots from a live webcam at 5-second intervals
 """
 
 import os
+import argparse
 import time
 from datetime import datetime
 from selenium import webdriver
@@ -253,15 +254,25 @@ def run_interleaved(urls, interval=5, max_runtime=None):
 
 def main():
     """Main function"""
+    parser = argparse.ArgumentParser(description="Interleaved webcam snapshotter")
+    parser.add_argument(
+        "--interval", type=float, default=5,
+        help="Seconds between each snapshot across all URLs (default: 5)",
+    )
+    parser.add_argument(
+        "--max-runtime", type=int, default=30,
+        help="Total run time in seconds; 0 or negative = run until Ctrl+C (default: 30)",
+    )
+    args = parser.parse_args()
+
     # Webcam URLs to interleave
     urls = [
         "https://share.earthcam.net/tJ90CoLmq7TzrY396Yd88M3ySv9LnAn8E0UsZn2nKhs!/hilton_waikiki_beach/camera/live",
         "https://embed.cdn-surfline.com/cams/6328c8d46a2a105e18365162/2a22d923244e8a4160f57feff3b47e1f8f5d0abc",
     ]
 
-    # Interleave settings
-    interval = 5      # seconds between each snapshot (overall)
-    max_runtime = 30  # total seconds for the whole run (covering all URLs)
+    interval = args.interval
+    max_runtime = args.max_runtime if args.max_runtime and args.max_runtime > 0 else None
 
     run_interleaved(urls, interval=interval, max_runtime=max_runtime)
 
