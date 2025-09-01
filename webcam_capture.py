@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Webcam Snapshot Capture Script
-Captures snapshots from a live webcam at 5-second intervals
+Captures snapshots from a live webcam at specified intervals
 """
 
 import os
@@ -13,49 +13,38 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import shutil
-from urllib.parse import urlparse
-import re
 
 
 class WebcamCapture:
     def __init__(self, url, output_dir="images", interval=5, max_runtime=None):
-        """
-        Initialize the webcam capture
-        
-        Args:
-            url (str): The webcam URL
-            output_dir (str): Directory to save images
-            interval (int): Capture interval in seconds
-            max_runtime (int, optional): Maximum runtime in seconds. If None, runs indefinitely
-        """
+        """Initialize webcam capture with a single URL"""
         self.url = url
         self.output_dir = output_dir
         self.interval = interval
         self.max_runtime = max_runtime
         self.driver = None
-        self.start_time = None
         
-        # Create output directory if it doesn't exist
-        os.makedirs(self.output_dir, exist_ok=True)
+        # Create output directory
+        os.makedirs(output_dir, exist_ok=True)
 
     def setup_driver(self):
-        """Setup Chrome/Chromium driver using system binaries (no webdriver-manager)."""
+        """Setup Chrome/Chromium driver using system binaries"""
         chrome_options = Options()
-        # Headless on servers
+        # Headless mode with performance settings for small VMs
         chrome_options.add_argument("--headless=new")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-gpu")
-        chrome_options.add_argument("--window-size=1920,1080")
-        chrome_options.add_argument("--disable-extensions")
-        chrome_options.add_argument("--disable-plugins")
+        chrome_options.add_argument("--window-size=1280,720")  # Smaller for less memory
+        chrome_options.add_argument("--hide-scrollbars")
+        chrome_options.add_argument("--mute-audio")
+        chrome_options.add_argument("--autoplay-policy=no-user-gesture-required")
+        chrome_options.page_load_strategy = "none"
 
-        # Prefer env override if provided
+        # Find Chrome/Chromium binary
         chrome_bin = os.environ.get("CHROME_BIN")
         if not chrome_bin:
-            # Common executable names/paths on Linux
             for candidate in (
                 shutil.which("chromium-browser"),
                 shutil.which("chromium"),
@@ -70,211 +59,139 @@ class WebcamCapture:
         if chrome_bin:
             chrome_options.binary_location = chrome_bin
 
-        # Find system chromedriver
+        # Find chromedriver
         driver_path = os.environ.get("CHROMEDRIVER") or shutil.which("chromedriver") or "/usr/bin/chromedriver"
-        if not (driver_path and os.path.exists(driver_path)):
-            raise RuntimeError(
-                "chromedriver not found. Install system package (e.g., 'sudo apt-get install -y chromium-driver') "
-                "or set CHROMEDRIVER env var to the driver path."
-            )
+        if not os.path.exists(driver_path):
+            raise RuntimeError("chromedriver not found. Install with: sudo apt install -y chromium-driver")
 
-        try:
-            service = Service(driver_path)
-            self.driver = webdriver.Chrome(service=service, options=chrome_options)
-            print("Chrome driver initialized successfully")
-        except Exception as e:
-            print(f"Error initializing Chrome driver: {e}")
-            print("Make sure Chromium/Chrome and chromedriver are installed on your system")
-            raise
+        # Initialize driver
+        service = Service(driver_path)
+        self.driver = webdriver.Chrome(service=service, options=chrome_options)
+        self.driver.set_page_load_timeout(120)
+        self.driver.set_script_timeout(120)
+        print("Chrome driver initialized successfully")
             
     def capture_snapshot(self):
-        """Capture a single snapshot"""
+        """Capture a snapshot with retries"""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"webcam_snapshot_{timestamp}.png"
+        filepath = os.path.join(self.output_dir, filename)
+
+        # Try up to 3 times
+        for attempt in range(1, 4):
+            try:
+                # Try element screenshot first (more reliable)
+                elems = self.driver.find_elements(By.TAG_NAME, "video") or \
+                        self.driver.find_elements(By.TAG_NAME, "canvas")
+                if elems:
+                    elems[0].screenshot(filepath)
+                else:
+                    self.driver.save_screenshot(filepath)
+                print(f"Snapshot saved: {filename}")
+                return filepath
+            except Exception as e:
+                print(f"Error on attempt {attempt}/3: {e}")
+                time.sleep(2)
+        return None
+            
+    def wait_for_page_load(self):
+        """Wait for page to load and video/canvas to appear"""
         try:
-            # Generate timestamp for filename
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = f"webcam_snapshot_{timestamp}.png"
-            filepath = os.path.join(self.output_dir, filename)
-            
-            # Take screenshot
-            self.driver.save_screenshot(filepath)
-            print(f"Snapshot saved: {filename}")
-            return filepath
-            
-        except Exception as e:
-            print(f"Error capturing snapshot: {e}")
-            return None
-            
-    def wait_for_page_load(self, timeout=30):
-        """Wait for the webcam page to load"""
-        try:
-            # Wait for the page to load and any video/canvas elements to appear
-            WebDriverWait(self.driver, timeout).until(
-                lambda driver: driver.execute_script("return document.readyState") == "complete"
+            # Wait for document ready state
+            WebDriverWait(self.driver, 60).until(
+                lambda d: d.execute_script("return document.readyState") in ("interactive", "complete")
             )
-            
-            # Give extra time for the webcam stream to load
-            time.sleep(15)
+            # Wait for video/canvas (best effort)
+            WebDriverWait(self.driver, 30).until(
+                lambda d: d.find_elements(By.TAG_NAME, "video") or d.find_elements(By.TAG_NAME, "canvas")
+            )
+            time.sleep(3)  # Small buffer
             print("Page loaded successfully")
-            
         except Exception as e:
-            print(f"Warning: Page load timeout or error: {e}")
-            print("Proceeding anyway...")
+            print(f"Warning: Page load issue: {e}")
             
-    def start_capture(self):
-        """Start the continuous capture process"""
+    def run(self):
+        """Run the capture process"""
         try:
+            # Setup and navigate
             self.setup_driver()
-            
             print(f"Loading webcam URL: {self.url}")
             self.driver.get(self.url)
-            
             self.wait_for_page_load()
             
-            # Record start time for runtime tracking
-            self.start_time = time.time()
-            
-            if self.max_runtime:
-                print(f"Starting capture every {self.interval} seconds for maximum {self.max_runtime} seconds...")
-                print(f"Images will be saved to: {os.path.abspath(self.output_dir)}")
-                print("Script will stop automatically after the specified time")
-            else:
-                print(f"Starting capture every {self.interval} seconds (indefinite)...")
-                print(f"Images will be saved to: {os.path.abspath(self.output_dir)}")
-                print("Press Ctrl+C to stop")
-            
+            # Start capturing
+            start_time = time.time()
             capture_count = 0
+            
+            # Show info
+            print(f"Capturing every {self.interval} seconds")
+            if self.max_runtime:
+                print(f"Will run for {self.max_runtime} seconds")
+            else:
+                print("Press Ctrl+C to stop")
+            print(f"Saving to: {os.path.abspath(self.output_dir)}")
+            
+            # Main loop
             while True:
-                # Check if we've exceeded the maximum runtime
-                if self.max_runtime:
-                    elapsed_time = time.time() - self.start_time
-                    if elapsed_time >= self.max_runtime:
-                        print(f"\nMaximum runtime of {self.max_runtime} seconds reached.")
-                        print(f"Total captures: {capture_count}")
-                        break
+                # Check max runtime
+                if self.max_runtime and (time.time() - start_time) >= self.max_runtime:
+                    print(f"\nMaximum runtime reached. Captured {capture_count} images.")
+                    break
                 
-                filepath = self.capture_snapshot()
-                if filepath:
+                # Take snapshot
+                if self.capture_snapshot():
                     capture_count += 1
                     if self.max_runtime:
-                        elapsed_time = time.time() - self.start_time
-                        remaining_time = max(0, self.max_runtime - elapsed_time)
-                        print(f"Total captures: {capture_count} | Time remaining: {remaining_time:.0f}s")
-                    else:
-                        print(f"Total captures: {capture_count}")
+                        remaining = max(0, self.max_runtime - (time.time() - start_time))
+                        print(f"Captures: {capture_count} | Remaining: {remaining:.0f}s")
                 
+                # Wait for next interval
                 time.sleep(self.interval)
                 
         except KeyboardInterrupt:
-            if self.max_runtime:
-                elapsed_time = time.time() - self.start_time
-                print(f"\nCapture stopped by user after {elapsed_time:.0f} seconds. Total captures: {capture_count}")
-            else:
-                print(f"\nCapture stopped by user. Total captures: {capture_count}")
+            elapsed = time.time() - start_time if 'start_time' in locals() else 0
+            print(f"\nStopped after {elapsed:.0f}s with {capture_count if 'capture_count' in locals() else 0} captures")
         except Exception as e:
-            print(f"Error during capture: {e}")
+            print(f"Error: {e}")
         finally:
-            self.cleanup()
-            
-    def cleanup(self):
-        """Clean up resources"""
-        if self.driver:
-            self.driver.quit()
-            print("Browser closed")
+            if self.driver:
+                self.driver.quit()
+                print("Browser closed")
 
-
-def safe_dirname(url: str) -> str:
-    """Create a filesystem-safe directory name from a URL."""
-    parsed = urlparse(url)
-    # Combine netloc and path, replace non-safe chars with underscores
-    raw = f"{parsed.netloc}{parsed.path}".strip("/") or parsed.netloc or "source"
-    name = re.sub(r"[^A-Za-z0-9._-]+", "_", raw)
-    # Limit length to avoid extremely long folder names
-    return name[:64] if name else "source"
-
-def run_interleaved(urls, interval=5, max_runtime=None):
-    """Alternate snapshots across multiple URLs in a round-robin manner.
-
-    Args:
-        urls (list[str]): List of webcam page URLs to capture from.
-        interval (int): Seconds to wait between consecutive snapshots (overall).
-        max_runtime (int|None): Total seconds to run. If None, runs until Ctrl+C.
-    """
-    captures = []
-    try:
-        # Prepare a capture instance per URL and open pages
-        for u in urls:
-            out_dir = os.path.join("images", safe_dirname(u))
-            print(f"\n=== Preparing URL: {u} ===")
-            print(f"Saving to directory: {out_dir}")
-            cap = WebcamCapture(url=u, output_dir=out_dir)
-            cap.setup_driver()
-            cap.driver.get(u)
-            cap.wait_for_page_load()
-            captures.append(cap)
-
-        start_time = time.time()
-        counts = [0] * len(captures)
-        print(
-            f"Starting interleaved capture across {len(captures)} URL(s) with {interval}s between snapshots"
-        )
-        if max_runtime:
-            print(f"Total maximum runtime: {max_runtime} seconds")
-        else:
-            print("Press Ctrl+C to stop")
-
-        # Round-robin loop
-        while True:
-            # Stop check (time-based)
-            if max_runtime and (time.time() - start_time) >= max_runtime:
-                print("\nMaximum total runtime reached. Stopping.")
-                break
-
-            for i, cap in enumerate(captures):
-                # Check again before each shot to avoid overshooting
-                if max_runtime and (time.time() - start_time) >= max_runtime:
-                    break
-                filepath = cap.capture_snapshot()
-                if filepath:
-                    counts[i] += 1
-                    print(
-                        f"URL {i+1}/{len(captures)} snapshot {counts[i]} saved."
-                    )
-                time.sleep(interval)
-
-    except KeyboardInterrupt:
-        elapsed = time.time() - start_time if 'start_time' in locals() else 0
-        print(f"\nCapture stopped by user after {elapsed:.0f} seconds.")
-        if 'counts' in locals():
-            for i, c in enumerate(counts):
-                print(f"URL {i+1}: {c} snapshots")
-    finally:
-        # Cleanup all drivers
-        for cap in captures:
-            cap.cleanup()
 
 def main():
-    """Main function"""
-    parser = argparse.ArgumentParser(description="Interleaved webcam snapshotter")
+    """Parse arguments and start capture"""
+    parser = argparse.ArgumentParser(description="Webcam snapshot capture")
+    parser.add_argument(
+        "--url", type=str,
+        default="https://share.earthcam.net/tJ90CoLmq7TzrY396Yd88M3ySv9LnAn8E0UsZn2nKhs!/hilton_waikiki_beach/camera/live",
+        help="URL of the webcam to capture"
+    )
     parser.add_argument(
         "--interval", type=float, default=5,
-        help="Seconds between each snapshot across all URLs (default: 5)",
+        help="Seconds between snapshots (default: 5)"
     )
     parser.add_argument(
         "--max-runtime", type=int, default=30,
-        help="Total run time in seconds; 0 or negative = run until Ctrl+C (default: 30)",
+        help="Total runtime in seconds; 0 = run until Ctrl+C (default: 30)"
+    )
+    parser.add_argument(
+        "--output-dir", type=str, default="images",
+        help="Directory to save images (default: images)"
     )
     args = parser.parse_args()
 
-    # Webcam URLs to interleave
-    urls = [
-        "https://share.earthcam.net/tJ90CoLmq7TzrY396Yd88M3ySv9LnAn8E0UsZn2nKhs!/hilton_waikiki_beach/camera/live",
-        # "https://embed.cdn-surfline.com/cams/6328c8d46a2a105e18365162/2a22d923244e8a4160f57feff3b47e1f8f5d0abc",
-    ]
+    # Handle max_runtime=0 meaning run indefinitely
+    max_runtime = args.max_runtime if args.max_runtime > 0 else None
 
-    interval = args.interval
-    max_runtime = args.max_runtime if args.max_runtime and args.max_runtime > 0 else None
-
-    run_interleaved(urls, interval=interval, max_runtime=max_runtime)
+    # Create and run the capture
+    capture = WebcamCapture(
+        url=args.url,
+        output_dir=args.output_dir,
+        interval=args.interval,
+        max_runtime=max_runtime
+    )
+    capture.run()
 
 
 if __name__ == "__main__":
