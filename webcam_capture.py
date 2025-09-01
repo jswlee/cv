@@ -36,7 +36,6 @@ class WebcamCapture:
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-gpu")
-        chrome_options.add_argument("--window-size=1280,720")  # Smaller for less memory
         chrome_options.add_argument("--hide-scrollbars")
         chrome_options.add_argument("--mute-audio")
         chrome_options.add_argument("--autoplay-policy=no-user-gesture-required")
