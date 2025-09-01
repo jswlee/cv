@@ -53,6 +53,7 @@ class WebcamCapture:
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--window-size=1920,1080")  # Force full HD resolution
         chrome_options.add_argument("--hide-scrollbars")
         chrome_options.add_argument("--mute-audio")
         chrome_options.add_argument("--autoplay-policy=no-user-gesture-required")
@@ -147,15 +148,51 @@ class WebcamCapture:
                         logger.error("Failed to restart browser, skipping this capture")
                         return None
                 
-                # Try element screenshot first (more reliable)
-                elems = self.driver.find_elements(By.TAG_NAME, "video") or \
-                        self.driver.find_elements(By.TAG_NAME, "canvas")
-                if elems:
-                    elems[0].screenshot(filepath)
-                else:
+                # First try: Use full page screenshot
+                try:
+                    # Get original window size
+                    original_size = self.driver.get_window_size()
+                    
+                    # Try to find the actual size of the video/canvas
+                    video_size = None
+                    elems = self.driver.find_elements(By.TAG_NAME, "video") or \
+                            self.driver.find_elements(By.TAG_NAME, "canvas")
+                    if elems:
+                        try:
+                            # Try to get element dimensions
+                            width = int(self.driver.execute_script("return arguments[0].videoWidth || arguments[0].width", elems[0]))
+                            height = int(self.driver.execute_script("return arguments[0].videoHeight || arguments[0].height", elems[0]))
+                            if width > 0 and height > 0:
+                                video_size = (width, height)
+                                logger.info(f"Found video/canvas with dimensions: {width}x{height}")
+                                
+                                # Resize window to match video size plus some margin
+                                self.driver.set_window_size(width + 100, height + 100)
+                        except Exception as e:
+                            logger.warning(f"Could not determine video dimensions: {e}")
+                    
+                    # Take full page screenshot
                     self.driver.save_screenshot(filepath)
-                logger.info(f"Snapshot saved: {filename}")
-                return filepath
+                    
+                    # Restore original window size
+                    if original_size:
+                        self.driver.set_window_size(original_size['width'], original_size['height'])
+                        
+                    logger.info(f"Snapshot saved: {filename} with full page screenshot")
+                    return filepath
+                except Exception as e:
+                    logger.warning(f"Full page screenshot failed: {e}, trying element screenshot")
+                    
+                    # Fall back to element screenshot
+                    if elems:
+                        elems[0].screenshot(filepath)
+                        logger.info(f"Snapshot saved: {filename} with element screenshot")
+                        return filepath
+                    else:
+                        # Last resort: standard screenshot
+                        self.driver.save_screenshot(filepath)
+                        logger.info(f"Snapshot saved: {filename} with standard screenshot")
+                        return filepath
             except Exception as e:
                 logger.error(f"Error on attempt {attempt}/3: {e}")
                 if attempt == 3:
