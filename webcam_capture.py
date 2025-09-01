@@ -15,6 +15,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 import shutil
+from urllib.parse import urlparse
 import traceback
 import sys
 
@@ -278,7 +279,7 @@ def main():
     )
     args = parser.parse_args()
     if args.output_dir is None:
-        args.output_dir = f"images/{args.url}"
+        args.output_dir = f"images/{urlparse(args.url).netloc}"
 
     # Configure logging
     global log_file
