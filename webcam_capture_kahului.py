@@ -457,8 +457,8 @@ def main():
         help="Directory to save images (default: images/{url})"
     )
     parser.add_argument(
-        "--log-file", type=str, default="webcam_capture.log",
-        help="Log file path (default: webcam_capture.log)"
+        "--log-file", type=str, default="webcam_capture_kahului.log",
+        help="Log file path (default: webcam_capture_kahului.log)"
     )
     args = parser.parse_args()
     if args.output_dir is None:
