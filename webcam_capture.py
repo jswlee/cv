@@ -258,7 +258,8 @@ def main():
     parser = argparse.ArgumentParser(description="Webcam snapshot capture")
     parser.add_argument(
         "--url", type=str,
-        default="https://share.earthcam.net/tJ90CoLmq7TzrY396Yd88M3ySv9LnAn8E0UsZn2nKhs!/hilton_waikiki_beach/camera/live",
+        # default="https://share.earthcam.net/tJ90CoLmq7TzrY396Yd88M3ySv9LnAn8E0UsZn2nKhs!/hilton_waikiki_beach/camera/live",
+        default = "https://www.nps.gov/media/webcam/view.htm?id=56F5E0DC-9116-8502-7F673D0FF0B8378A",
         help="URL of the webcam to capture"
     )
     parser.add_argument(
