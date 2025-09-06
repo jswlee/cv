@@ -1,3 +1,4 @@
+
 2025-09-02 06:06:29,663 - INFO - Starting YouTube capture for https://www.youtube.com/watch?v=DNnj_9bVWGI
 2025-09-02 06:06:29,888 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
 2025-09-02 06:06:32,494 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
@@ -1131,3 +1132,4 @@
 2025-09-02 18:05:44,149 - INFO - Saved: youtube_snapshot_20250902_180544.jpg | Size: 1.6MB
 2025-09-02 18:05:44,149 - INFO - Captures: 281 | Remaining: 46s
 2025-09-02 18:08:14,161 - INFO - Maximum runtime reached. Captured 281 images.
+8336f3a6ac8509f3580615283e4fa21a487633c7
