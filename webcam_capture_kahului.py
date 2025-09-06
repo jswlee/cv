@@ -1,0 +1,504 @@
+#!/usr/bin/env python3
+"""
+Webcam Snapshot Capture Script
+Captures snapshots from a live webcam at specified intervals
+"""
+
+import os
+import argparse
+import time
+import logging
+from datetime import datetime
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+import shutil
+from urllib.parse import urlparse
+import traceback
+import sys
+
+
+# Configure logging
+log_file = "webcam_capture.log"
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+class WebcamCapture:
+    def __init__(self, url, output_dir="images", interval=5, max_runtime=None, zoom=1.0):
+        """Initialize webcam capture with a single URL"""
+        self.url = url
+        self.output_dir = output_dir
+        self.interval = interval
+        self.max_runtime = max_runtime
+        self.driver = None
+        self.session_id = None
+        self.zoom = zoom
+        
+        # Create output directory
+        os.makedirs(output_dir, exist_ok=True)
+
+    def setup_driver(self):
+        """Setup Chrome/Chromium driver using system binaries"""
+        chrome_options = Options()
+        # Headless mode with performance settings for small VMs
+        chrome_options.add_argument("--headless=new")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--window-size=1920,1080")  # Force full HD resolution
+        chrome_options.add_argument("--hide-scrollbars")
+        chrome_options.add_argument("--mute-audio")
+        chrome_options.add_argument("--autoplay-policy=no-user-gesture-required")
+        chrome_options.add_argument("--disable-extensions")
+        chrome_options.add_argument("--disable-infobars")
+        chrome_options.add_argument("--single-process")  # Less memory but less stable
+        chrome_options.add_argument("--disable-application-cache")
+        chrome_options.add_argument("--disable-features=site-per-process")  # Less memory
+        chrome_options.add_argument("--js-flags=--max-old-space-size=128")  # Limit JS memory
+        chrome_options.page_load_strategy = "none"
+
+        # Find Chrome/Chromium binary
+        chrome_bin = os.environ.get("CHROME_BIN")
+        if not chrome_bin:
+            for candidate in (
+                shutil.which("chromium-browser"),
+                shutil.which("chromium"),
+                shutil.which("google-chrome"),
+                "/usr/bin/chromium-browser",
+                "/usr/bin/chromium",
+                "/usr/bin/google-chrome",
+            ):
+                if candidate and os.path.exists(candidate):
+                    chrome_bin = candidate
+                    break
+        if chrome_bin:
+            chrome_options.binary_location = chrome_bin
+            logger.info(f"Using browser binary: {chrome_bin}")
+
+        # Find chromedriver
+        driver_path = os.environ.get("CHROMEDRIVER") or shutil.which("chromedriver") or "/usr/bin/chromedriver"
+        if not os.path.exists(driver_path):
+            error_msg = "chromedriver not found. Install with: sudo apt install -y chromium-driver"
+            logger.error(error_msg)
+            raise RuntimeError(error_msg)
+
+        try:
+            # Initialize driver
+            service = Service(driver_path)
+            self.driver = webdriver.Chrome(service=service, options=chrome_options)
+            self.driver.set_page_load_timeout(120)
+            self.driver.set_script_timeout(120)
+            self.session_id = self.driver.session_id
+            logger.info(f"Chrome driver initialized successfully (session: {self.session_id})")
+        except Exception as e:
+            logger.error(f"Failed to initialize driver: {e}")
+            raise
+            
+    def is_driver_alive(self):
+        """Check if the driver session is still valid"""
+        if not self.driver:
+            return False
+        try:
+            # Simple command to check if session is alive
+            self.driver.current_url
+            return True
+        except Exception:
+            return False
+
+    def restart_driver_if_needed(self):
+        """Restart the driver if it's dead"""
+        if not self.is_driver_alive():
+            logger.warning("Browser session died, restarting...")
+            try:
+                if self.driver:
+                    try:
+                        self.driver.quit()
+                    except Exception:
+                        pass
+                self.setup_driver()
+                logger.info(f"Loading webcam URL: {self.url}")
+                self.driver.get(self.url)
+                self.wait_for_page_load()
+                return True
+            except Exception as e:
+                logger.error(f"Failed to restart driver: {e}")
+                return False
+        return False
+
+    def capture_snapshot(self):
+        """Capture a snapshot with retries and auto-restart"""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"webcam_snapshot_{timestamp}.png"
+        filepath = os.path.join(self.output_dir, filename)
+
+        # Try up to 3 times
+        for attempt in range(1, 4):
+            try:
+                # Check if driver needs restart
+                if not self.is_driver_alive():
+                    if not self.restart_driver_if_needed():
+                        logger.error("Failed to restart browser, skipping this capture")
+                        return None
+                
+                # Prefer capturing the media element if present (video/canvas/img)
+                target = None
+                try:
+                    candidates = []
+                    # Gather potential media elements
+                    for tag in ("video", "canvas", "img"):
+                        try:
+                            els = self.driver.find_elements(By.TAG_NAME, tag)
+                            candidates.extend(els)
+                        except Exception:
+                            pass
+                    # Choose the largest visible element by rendered size
+                    max_area = 0
+                    for el in candidates:
+                        try:
+                            size = el.size
+                            area = (size.get("width", 0) or 0) * (size.get("height", 0) or 0)
+                            if area > max_area and el.is_displayed():
+                                max_area = area
+                                target = el
+                        except Exception:
+                            continue
+                except Exception:
+                    target = None
+
+                if target:
+                    try:
+                        # Scroll element into view and center it
+                        self.driver.execute_script(
+                            "arguments[0].scrollIntoView({block: 'center', inline: 'center'});",
+                            target,
+                        )
+                        time.sleep(0.3)
+                        target.screenshot(filepath)
+                    except Exception:
+                        # Fallback to full page screenshot
+                        self.driver.save_screenshot(filepath)
+                else:
+                    # Fallback to full page screenshot
+                    self.driver.save_screenshot(filepath)
+                
+                # Get file size for logging
+                file_size = os.path.getsize(filepath) / (1024 * 1024)  # Size in MB
+                logger.info(f"Saved: {filename} | Size: {file_size:.1f}MB")
+                
+                return filepath
+                
+            except Exception as e:
+                logger.error(f"Error on attempt {attempt}/3: {e}")
+                if attempt == 3:
+                    # On last attempt, try restarting the browser
+                    self.restart_driver_if_needed()
+                time.sleep(2)
+        return None
+            
+    def wait_for_page_load(self):
+        """Wait for page to load and video/canvas to appear"""
+        try:
+            # Wait for document ready state
+            WebDriverWait(self.driver, 60).until(
+                lambda d: d.execute_script("return document.readyState") in ("interactive", "complete")
+            )
+            # Wait for video/canvas (best effort)
+            try:
+                WebDriverWait(self.driver, 30).until(
+                    lambda d: d.find_elements(By.TAG_NAME, "video") or d.find_elements(By.TAG_NAME, "canvas")
+                )
+                logger.info("Found video/canvas element")
+            except Exception as e:
+                logger.warning(f"No video/canvas found, will try screenshot anyway: {e}")
+            
+            # Apply zoom if requested
+            try:
+                if isinstance(self.zoom, (int, float)) and self.zoom != 1.0:
+                    # Use CSS zoom for simplicity and reliability in headless Chrome
+                    percent = f"{self.zoom * 100:.0f}%"
+                    self.driver.execute_script("document.body.style.zoom = arguments[0];", percent)
+                    logger.info(f"Applied page zoom: {percent}")
+                    time.sleep(0.5)
+            except Exception as e:
+                logger.warning(f"Failed to apply zoom: {e}")
+
+            time.sleep(3)  # Small buffer
+            logger.info("Page loaded successfully")
+        except Exception as e:
+            logger.warning(f"Page load issue: {e}")
+
+    def interact_with_player(self):
+        """Attempt to start playback and enter fullscreen on SkylineWebcams.
+
+        Strategy:
+        1) Try clicking known overlay play wrappers and play icons.
+        2) Try clicking the player's fullscreen button.
+        3) Fallback to requestFullscreen() on the <video> element.
+        4) As a last resort, force CSS-based fullscreen on the video element.
+        Works across top document and any iframes.
+        """
+        d = self.driver
+
+        def try_click_js(el):
+            try:
+                d.execute_script("arguments[0].scrollIntoView({block:'center', inline:'center'});", el)
+                time.sleep(0.2)
+                d.execute_script("arguments[0].click();", el)
+                return True
+            except Exception:
+                return False
+
+        def within_all_contexts():
+            """Yield within top-level and each iframe context."""
+            # Top-level first
+            yield None
+            # Then each iframe
+            try:
+                iframes = d.find_elements(By.TAG_NAME, "iframe")
+            except Exception:
+                iframes = []
+            for i, f in enumerate(iframes):
+                try:
+                    d.switch_to.frame(f)
+                    yield i
+                except Exception:
+                    continue
+                finally:
+                    d.switch_to.default_content()
+
+        # 1) Try clicking play overlay
+        played = False
+        for ctx in within_all_contexts():
+            try:
+                if ctx is not None:
+                    d.switch_to.frame(d.find_elements(By.TAG_NAME, "iframe")[ctx])
+                candidates = []
+                selectors = [
+                    "div.play-wrapper",
+                    "div[data-poster].play-wrapper",
+                    "div.poster, .poster-icon",
+                    "button[aria-label='Play'], button[aria-label='play']",
+                ]
+                for sel in selectors:
+                    try:
+                        candidates.extend(d.find_elements(By.CSS_SELECTOR, sel))
+                    except Exception:
+                        pass
+                # If no explicit overlay, try clicking center of the video element
+                if not candidates:
+                    vids = d.find_elements(By.TAG_NAME, "video")
+                    candidates.extend(vids)
+                for el in candidates:
+                    if try_click_js(el):
+                        played = True
+                        logger.info("Clicked play overlay/element")
+                        break
+            finally:
+                d.switch_to.default_content()
+            if played:
+                break
+
+        time.sleep(0.5)
+
+        # 2) Try clicking fullscreen button
+        entered_fs = False
+        for ctx in within_all_contexts():
+            try:
+                if ctx is not None:
+                    d.switch_to.frame(d.find_elements(By.TAG_NAME, "iframe")[ctx])
+                btns = []
+                for sel in (
+                    "button[data-fullscreen]",
+                    "button[aria-label='fullscreen']",
+                    ".media-control-right-panel button",
+                ):
+                    try:
+                        btns.extend(d.find_elements(By.CSS_SELECTOR, sel))
+                    except Exception:
+                        pass
+                for b in btns:
+                    # Use JS click in case element is covered
+                    if try_click_js(b):
+                        entered_fs = True
+                        logger.info("Clicked fullscreen button")
+                        break
+            finally:
+                d.switch_to.default_content()
+            if entered_fs:
+                break
+
+        # 3) requestFullscreen() on the video element
+        if not entered_fs:
+            try:
+                res = d.execute_script(
+                    "var v=document.querySelector('video');"
+                    "if(v){if(v.requestFullscreen){v.requestFullscreen();return 'ok';}"
+                    "var r=v.webkitRequestFullscreen||v.mozRequestFullScreen||v.msRequestFullscreen;"
+                    "if(r){r.call(v);return 'ok';}} return 'no-video';"
+                )
+                if res == 'ok':
+                    entered_fs = True
+                    logger.info("Requested fullscreen via JS on <video>")
+            except Exception as e:
+                logger.warning(f"requestFullscreen failed: {e}")
+
+        # 4) CSS fallback to simulate fullscreen
+        if not entered_fs:
+            try:
+                d.execute_script(
+                    "var v=document.querySelector('video');"
+                    "if(v){v.style.position='fixed';v.style.left='0';v.style.top='0';"
+                    "v.style.width='100vw';v.style.height='100vh';v.style.zIndex='999999';}"
+                )
+                logger.info("Applied CSS-based fullscreen to <video>")
+            except Exception as e:
+                logger.warning(f"CSS fullscreen fallback failed: {e}")
+            
+    def run(self):
+        """Run the capture process with auto-restart capability"""
+        start_time = time.time()
+        capture_count = 0
+        last_restart = 0
+        restart_count = 0
+        
+        try:
+            # Setup and navigate
+            self.setup_driver()
+            logger.info(f"Loading webcam URL: {self.url}")
+            self.driver.get(self.url)
+            self.wait_for_page_load()
+            # Try to interact with the player to start and fullscreen
+            self.interact_with_player()
+            
+            # Show info
+            logger.info(f"Capturing every {self.interval} seconds")
+            if self.max_runtime:
+                logger.info(f"Will run for {self.max_runtime} seconds")
+            else:
+                logger.info("Press Ctrl+C to stop")
+            logger.info(f"Saving to: {os.path.abspath(self.output_dir)}")
+            logger.info(f"Logging to: {os.path.abspath(log_file)}")
+            
+            # Main loop
+            while True:
+                # Check max runtime
+                if self.max_runtime and (time.time() - start_time) >= self.max_runtime:
+                    logger.info(f"Maximum runtime reached. Captured {capture_count} images.")
+                    break
+                
+                # Check if browser needs restart (periodic restart every 12 hours)
+                current_time = time.time()
+                if current_time - last_restart > 43200:  # 12 hours in seconds
+                    logger.info("Performing scheduled browser restart")
+                    self.restart_driver_if_needed()
+                    last_restart = current_time
+                    restart_count += 1
+                
+                # Take snapshot
+                if self.capture_snapshot():
+                    capture_count += 1
+                    if self.max_runtime:
+                        remaining = max(0, self.max_runtime - (time.time() - start_time))
+                        logger.info(f"Captures: {capture_count} | Remaining: {remaining:.0f}s | Restarts: {restart_count}")
+                    else:
+                        logger.info(f"Captures: {capture_count} | Restarts: {restart_count}")
+                else:
+                    logger.warning("Failed to capture snapshot")
+                
+                # Wait for next interval
+                time.sleep(self.interval)
+                
+        except KeyboardInterrupt:
+            elapsed = time.time() - start_time if 'start_time' in locals() else 0
+            logger.info(f"Stopped after {elapsed:.0f}s with {capture_count if 'capture_count' in locals() else 0} captures")
+        except Exception as e:
+            logger.error(f"Fatal error: {e}")
+            logger.error(traceback.format_exc())
+        finally:
+            if self.driver:
+                try:
+                    self.driver.quit()
+                    logger.info("Browser closed")
+                except Exception as e:
+                    logger.error(f"Error closing browser: {e}")
+
+
+def main():
+    """Parse arguments and start capture"""
+    parser = argparse.ArgumentParser(description="Webcam snapshot capture")
+    parser.add_argument(
+        "--url", type=str,
+        default = "https://www.skylinewebcams.com/zh/webcam/united-states/hawaii/maui/kahului.html",
+        help="URL of the webcam to capture"
+    )
+    parser.add_argument(
+        "--interval", type=float, default=5,
+        help="Seconds between snapshots (default: 5)"
+    )
+    parser.add_argument(
+        "--zoom", type=float, default=1.0,
+        help="Page zoom factor, e.g., 1.0 (no zoom), 1.25, 1.5 (default: 1.0)"
+    )
+    parser.add_argument(
+        "--max-runtime", type=int, default=30,
+        help="Total runtime in seconds; 0 = run until Ctrl+C (default: 30)"
+    )
+    parser.add_argument(
+        "--output-dir", type=str, default=None,
+        help="Directory to save images (default: images/{url})"
+    )
+    parser.add_argument(
+        "--log-file", type=str, default="webcam_capture.log",
+        help="Log file path (default: webcam_capture.log)"
+    )
+    args = parser.parse_args()
+    if args.output_dir is None:
+        args.output_dir = f"images/{urlparse(args.url).netloc}"
+
+    # Configure logging
+    global log_file
+    log_file = args.log_file
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+            logging.StreamHandler()
+        ]
+    )
+
+    # Handle max_runtime=0 meaning run indefinitely
+    max_runtime = args.max_runtime if args.max_runtime > 0 else None
+
+    logger.info(f"Starting webcam capture for {args.url}")
+    logger.info(f"Python version: {sys.version}")
+    
+    try:
+        # Create and run the capture
+        capture = WebcamCapture(
+            url=args.url,
+            output_dir=args.output_dir,
+            interval=args.interval,
+            max_runtime=max_runtime,
+            zoom=args.zoom
+        )
+        capture.run()
+    except Exception as e:
+        logger.error(f"Fatal error in main: {e}")
+        logger.error(traceback.format_exc())
+        return 1
+    
+    return 0
+
+
+if __name__ == "__main__":
+    main()
