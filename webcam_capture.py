@@ -33,7 +33,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class WebcamCapture:
-    def __init__(self, url, output_dir="images", interval=5, max_runtime=None):
+    def __init__(self, url, output_dir="images", interval=5, max_runtime=None, zoom=1.0):
         """Initialize webcam capture with a single URL"""
         self.url = url
         self.output_dir = output_dir
@@ -41,6 +41,7 @@ class WebcamCapture:
         self.max_runtime = max_runtime
         self.driver = None
         self.session_id = None
+        self.zoom = zoom
         
         # Create output directory
         os.makedirs(output_dir, exist_ok=True)
@@ -148,8 +149,46 @@ class WebcamCapture:
                         logger.error("Failed to restart browser, skipping this capture")
                         return None
                 
-                # Take screenshot
-                self.driver.save_screenshot(filepath)
+                # Prefer capturing the media element if present (video/canvas/img)
+                target = None
+                try:
+                    candidates = []
+                    # Gather potential media elements
+                    for tag in ("video", "canvas", "img"):
+                        try:
+                            els = self.driver.find_elements(By.TAG_NAME, tag)
+                            candidates.extend(els)
+                        except Exception:
+                            pass
+                    # Choose the largest visible element by rendered size
+                    max_area = 0
+                    for el in candidates:
+                        try:
+                            size = el.size
+                            area = (size.get("width", 0) or 0) * (size.get("height", 0) or 0)
+                            if area > max_area and el.is_displayed():
+                                max_area = area
+                                target = el
+                        except Exception:
+                            continue
+                except Exception:
+                    target = None
+
+                if target:
+                    try:
+                        # Scroll element into view and center it
+                        self.driver.execute_script(
+                            "arguments[0].scrollIntoView({block: 'center', inline: 'center'});",
+                            target,
+                        )
+                        time.sleep(0.3)
+                        target.screenshot(filepath)
+                    except Exception:
+                        # Fallback to full page screenshot
+                        self.driver.save_screenshot(filepath)
+                else:
+                    # Fallback to full page screenshot
+                    self.driver.save_screenshot(filepath)
                 
                 # Get file size for logging
                 file_size = os.path.getsize(filepath) / (1024 * 1024)  # Size in MB
@@ -181,6 +220,17 @@ class WebcamCapture:
             except Exception as e:
                 logger.warning(f"No video/canvas found, will try screenshot anyway: {e}")
             
+            # Apply zoom if requested
+            try:
+                if isinstance(self.zoom, (int, float)) and self.zoom != 1.0:
+                    # Use CSS zoom for simplicity and reliability in headless Chrome
+                    percent = f"{self.zoom * 100:.0f}%"
+                    self.driver.execute_script("document.body.style.zoom = arguments[0];", percent)
+                    logger.info(f"Applied page zoom: {percent}")
+                    time.sleep(0.5)
+            except Exception as e:
+                logger.warning(f"Failed to apply zoom: {e}")
+
             time.sleep(3)  # Small buffer
             logger.info("Page loaded successfully")
         except Exception as e:
@@ -267,6 +317,10 @@ def main():
         help="Seconds between snapshots (default: 5)"
     )
     parser.add_argument(
+        "--zoom", type=float, default=1.0,
+        help="Page zoom factor, e.g., 1.0 (no zoom), 1.25, 1.5 (default: 1.0)"
+    )
+    parser.add_argument(
         "--max-runtime", type=int, default=30,
         help="Total runtime in seconds; 0 = run until Ctrl+C (default: 30)"
     )
@@ -306,7 +360,8 @@ def main():
             url=args.url,
             output_dir=args.output_dir,
             interval=args.interval,
-            max_runtime=max_runtime
+            max_runtime=max_runtime,
+            zoom=args.zoom
         )
         capture.run()
     except Exception as e:
