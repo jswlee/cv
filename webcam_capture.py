@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Webcam Snapshot Capture Script
-Captures snapshots from a live webcam at specified intervals
+Captures snapshots from a live webcam and uploads to S3
 """
 
 import os
@@ -15,36 +15,52 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 import shutil
-from urllib.parse import urlparse
-import traceback
-import sys
+from utils import (
+    read_config,
+    create_s3_client,
+    ensure_bucket_access,
+    upload_bytes_to_s3,
+)
 
 
 # Configure logging
-log_file = "webcam_capture.log"
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_file),
+        logging.FileHandler("webcam_capture.log"),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
 class WebcamCapture:
-    def __init__(self, url, output_dir="images", interval=5, max_runtime=None, zoom=1.0):
-        """Initialize webcam capture with a single URL"""
+    def __init__(self, url, s3_bucket, s3_prefix=None, interval=5, max_runtime=None, zoom=1.0, aws_region='us-east-2'):
+        """Initialize webcam capture with S3 upload
+        
+        Args:
+            url: Webcam URL to capture
+            s3_bucket: S3 bucket name for uploads
+            s3_prefix: S3 key prefix for uploaded files (if None, defaults to 'webcam')
+            interval: Seconds between captures
+            max_runtime: Maximum runtime in seconds
+            zoom: Page zoom factor
+            aws_region: AWS region for S3 client
+        """
         self.url = url
-        self.output_dir = output_dir
+        self.s3_bucket = s3_bucket
+        self.s3_prefix = s3_prefix if s3_prefix else "webcam"
         self.interval = interval
         self.max_runtime = max_runtime
         self.driver = None
         self.session_id = None
         self.zoom = zoom
         
-        # Create output directory
-        os.makedirs(output_dir, exist_ok=True)
+        # Initialize S3 client via utils
+        self.s3_client = create_s3_client(aws_region)
+        ensure_bucket_access(self.s3_client, self.s3_bucket)
+        logger.info(f"S3 bucket '{self.s3_bucket}' is accessible")
+        logger.info(f"Using S3 prefix: {self.s3_prefix}")
 
     def setup_driver(self):
         """Setup Chrome/Chromium driver using system binaries"""
@@ -135,10 +151,9 @@ class WebcamCapture:
         return False
 
     def capture_snapshot(self):
-        """Capture a snapshot with retries and auto-restart"""
+        """Capture a snapshot and upload to S3"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"webcam_snapshot_{timestamp}.png"
-        filepath = os.path.join(self.output_dir, filename)
 
         # Try up to 3 times
         for attempt in range(1, 4):
@@ -149,31 +164,10 @@ class WebcamCapture:
                         logger.error("Failed to restart browser, skipping this capture")
                         return None
                 
-                # Prefer capturing the media element if present (video/canvas/img)
-                target = None
-                try:
-                    candidates = []
-                    # Gather potential media elements
-                    for tag in ("video", "canvas", "img"):
-                        try:
-                            els = self.driver.find_elements(By.TAG_NAME, tag)
-                            candidates.extend(els)
-                        except Exception:
-                            pass
-                    # Choose the largest visible element by rendered size
-                    max_area = 0
-                    for el in candidates:
-                        try:
-                            size = el.size
-                            area = (size.get("width", 0) or 0) * (size.get("height", 0) or 0)
-                            if area > max_area and el.is_displayed():
-                                max_area = area
-                                target = el
-                        except Exception:
-                            continue
-                except Exception:
-                    target = None
-
+                # Capture screenshot to memory
+                screenshot_data = None
+                target = self._find_best_media_element()
+                
                 if target:
                     try:
                         # Scroll element into view and center it
@@ -182,19 +176,27 @@ class WebcamCapture:
                             target,
                         )
                         time.sleep(0.3)
-                        target.screenshot(filepath)
+                        screenshot_data = target.screenshot_as_png
                     except Exception:
                         # Fallback to full page screenshot
-                        self.driver.save_screenshot(filepath)
+                        screenshot_data = self.driver.get_screenshot_as_png()
                 else:
                     # Fallback to full page screenshot
-                    self.driver.save_screenshot(filepath)
+                    screenshot_data = self.driver.get_screenshot_as_png()
                 
-                # Get file size for logging
-                file_size = os.path.getsize(filepath) / (1024 * 1024)  # Size in MB
-                logger.info(f"Saved: {filename} | Size: {file_size:.1f}MB")
+                # Upload to S3
+                file_size = len(screenshot_data) / (1024 * 1024)  # Size in MB
+                s3_key = f"{self.s3_prefix}/{filename}"
+                s3_url = upload_bytes_to_s3(self.s3_client, self.s3_bucket, s3_key, screenshot_data, content_type='image/png')
                 
-                return filepath
+                if s3_url:
+                    logger.info(f"Uploaded: {filename} | Size: {file_size:.1f}MB | Location: {s3_url}")
+                    return s3_url
+                else:
+                    logger.error("Failed to upload to S3")
+                    if attempt < 3:
+                        time.sleep(2)
+                    continue
                 
             except Exception as e:
                 logger.error(f"Error on attempt {attempt}/3: {e}")
@@ -203,6 +205,33 @@ class WebcamCapture:
                     self.restart_driver_if_needed()
                 time.sleep(2)
         return None
+    
+    def _find_best_media_element(self):
+        """Find the best media element to capture"""
+        try:
+            candidates = []
+            # Gather potential media elements
+            for tag in ("video", "canvas", "img"):
+                try:
+                    els = self.driver.find_elements(By.TAG_NAME, tag)
+                    candidates.extend(els)
+                except Exception:
+                    pass
+            # Choose the largest visible element by rendered size
+            max_area = 0
+            target = None
+            for el in candidates:
+                try:
+                    size = el.size
+                    area = (size.get("width", 0) or 0) * (size.get("height", 0) or 0)
+                    if area > max_area and el.is_displayed():
+                        max_area = area
+                        target = el
+                except Exception:
+                    continue
+            return target
+        except Exception:
+            return None
             
     def wait_for_page_load(self):
         """Wait for page to load and video/canvas to appear"""
@@ -235,6 +264,133 @@ class WebcamCapture:
             logger.info("Page loaded successfully")
         except Exception as e:
             logger.warning(f"Page load issue: {e}")
+
+    def interact_with_player(self):
+        """Attempt to start playback and enter fullscreen on interactive webcams.
+        
+        Strategy for SkylineWebcams and similar sites:
+        1) Try clicking known overlay play wrappers and play icons.
+        2) Try clicking the player's fullscreen button.
+        3) Fallback to requestFullscreen() on the <video> element.
+        4) As a last resort, force CSS-based fullscreen on the video element.
+        Works across top document and any iframes.
+        """
+        d = self.driver
+
+        def try_click_js(el):
+            try:
+                d.execute_script("arguments[0].scrollIntoView({block:'center', inline:'center'});", el)
+                time.sleep(0.2)
+                d.execute_script("arguments[0].click();", el)
+                return True
+            except Exception:
+                return False
+
+        def within_all_contexts():
+            """Yield within top-level and each iframe context."""
+            # Top-level first
+            yield None
+            # Then each iframe
+            try:
+                iframes = d.find_elements(By.TAG_NAME, "iframe")
+            except Exception:
+                iframes = []
+            for i, f in enumerate(iframes):
+                try:
+                    d.switch_to.frame(f)
+                    yield i
+                except Exception:
+                    continue
+                finally:
+                    d.switch_to.default_content()
+
+        # 1) Try clicking play overlay
+        played = False
+        for ctx in within_all_contexts():
+            try:
+                if ctx is not None:
+                    d.switch_to.frame(d.find_elements(By.TAG_NAME, "iframe")[ctx])
+                candidates = []
+                selectors = [
+                    "div.play-wrapper",
+                    "div[data-poster].play-wrapper",
+                    "div.poster, .poster-icon",
+                    "button[aria-label='Play'], button[aria-label='play']",
+                ]
+                for sel in selectors:
+                    try:
+                        candidates.extend(d.find_elements(By.CSS_SELECTOR, sel))
+                    except Exception:
+                        pass
+                # If no explicit overlay, try clicking center of the video element
+                if not candidates:
+                    vids = d.find_elements(By.TAG_NAME, "video")
+                    candidates.extend(vids)
+                for el in candidates:
+                    if try_click_js(el):
+                        played = True
+                        logger.info("Clicked play overlay/element")
+                        break
+            finally:
+                d.switch_to.default_content()
+            if played:
+                break
+
+        time.sleep(0.5)
+
+        # 2) Try clicking fullscreen button
+        entered_fs = False
+        for ctx in within_all_contexts():
+            try:
+                if ctx is not None:
+                    d.switch_to.frame(d.find_elements(By.TAG_NAME, "iframe")[ctx])
+                btns = []
+                for sel in (
+                    "button[data-fullscreen]",
+                    "button[aria-label='fullscreen']",
+                    ".media-control-right-panel button",
+                ):
+                    try:
+                        btns.extend(d.find_elements(By.CSS_SELECTOR, sel))
+                    except Exception:
+                        pass
+                for b in btns:
+                    # Use JS click in case element is covered
+                    if try_click_js(b):
+                        entered_fs = True
+                        logger.info("Clicked fullscreen button")
+                        break
+            finally:
+                d.switch_to.default_content()
+            if entered_fs:
+                break
+
+        # 3) requestFullscreen() on the video element
+        if not entered_fs:
+            try:
+                res = d.execute_script(
+                    "var v=document.querySelector('video');"
+                    "if(v){if(v.requestFullscreen){v.requestFullscreen();return 'ok';}"
+                    "var r=v.webkitRequestFullscreen||v.mozRequestFullScreen||v.msRequestFullscreen;"
+                    "if(r){r.call(v);return 'ok';}} return 'no-video';"
+                )
+                if res == 'ok':
+                    entered_fs = True
+                    logger.info("Requested fullscreen via JS on <video>")
+            except Exception as e:
+                logger.warning(f"requestFullscreen failed: {e}")
+
+        # 4) CSS fallback to simulate fullscreen
+        if not entered_fs:
+            try:
+                d.execute_script(
+                    "var v=document.querySelector('video');"
+                    "if(v){v.style.position='fixed';v.style.left='0';v.style.top='0';"
+                    "v.style.width='100vw';v.style.height='100vh';v.style.zIndex='999999';}"
+                )
+                logger.info("Applied CSS-based fullscreen to <video>")
+            except Exception as e:
+                logger.warning(f"CSS fullscreen fallback failed: {e}")
             
     def run(self):
         """Run the capture process with auto-restart capability"""
@@ -249,6 +405,8 @@ class WebcamCapture:
             logger.info(f"Loading webcam URL: {self.url}")
             self.driver.get(self.url)
             self.wait_for_page_load()
+            # Try to interact with the player to start and fullscreen
+            self.interact_with_player()
             
             # Show info
             logger.info(f"Capturing every {self.interval} seconds")
@@ -256,8 +414,8 @@ class WebcamCapture:
                 logger.info(f"Will run for {self.max_runtime} seconds")
             else:
                 logger.info("Press Ctrl+C to stop")
-            logger.info(f"Saving to: {os.path.abspath(self.output_dir)}")
-            logger.info(f"Logging to: {os.path.abspath(log_file)}")
+            s3_location = f"s3://{self.s3_bucket}/{self.s3_prefix}"
+            logger.info(f"Uploading to S3: {s3_location}")
             
             # Main loop
             while True:
@@ -307,10 +465,8 @@ def main():
     """Parse arguments and start capture"""
     parser = argparse.ArgumentParser(description="Webcam snapshot capture")
     parser.add_argument(
-        "--url", type=str,
-        # default="https://share.earthcam.net/tJ90CoLmq7TzrY396Yd88M3ySv9LnAn8E0UsZn2nKhs!/hilton_waikiki_beach/camera/live",
-        default = "https://www.nps.gov/media/webcam/view.htm?id=56F5E0DC-9116-8502-7F673D0FF0B8378A",
-        help="URL of the webcam to capture"
+        "--url", type=str, default=None,
+        help="URL of the webcam to capture (overrides config.yaml)"
     )
     parser.add_argument(
         "--interval", type=float, default=5,
@@ -325,48 +481,45 @@ def main():
         help="Total runtime in seconds; 0 = run until Ctrl+C (default: 30)"
     )
     parser.add_argument(
-        "--output-dir", type=str, default=None,
-        help="Directory to save images (default: images/{url})"
+        "--s3-bucket", type=str, required=True,
+        help="S3 bucket name for uploading images"
     )
     parser.add_argument(
-        "--log-file", type=str, default="webcam_capture.log",
-        help="Log file path (default: webcam_capture.log)"
+        "--s3-prefix", type=str, default=None,
+        help="S3 key prefix for uploaded files (default: 'webcam')"
+    )
+    parser.add_argument(
+        "--aws-region", type=str, default="us-east-2",
+        help="AWS region for S3 client (default: us-east-2)"
     )
     args = parser.parse_args()
-    if args.output_dir is None:
-        args.output_dir = f"images/{urlparse(args.url).netloc}"
-
-    # Configure logging
-    global log_file
-    log_file = args.log_file
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.FileHandler(log_file),
-            logging.StreamHandler()
-        ]
-    )
 
     # Handle max_runtime=0 meaning run indefinitely
     max_runtime = args.max_runtime if args.max_runtime > 0 else None
+    
+    # Resolve webcam URL: prefer explicit --url, otherwise use config.yaml
+    cfg = read_config() or {}
+    resolved_url = args.url or cfg.get("webcam_url")
+    if not resolved_url:
+        logger.error("No --url provided and no webcam_url specified in config.yaml")
+        return 1
 
-    logger.info(f"Starting webcam capture for {args.url}")
-    logger.info(f"Python version: {sys.version}")
+    logger.info(f"Starting webcam capture for {resolved_url}")
     
     try:
         # Create and run the capture
         capture = WebcamCapture(
-            url=args.url,
-            output_dir=args.output_dir,
+            url=resolved_url,
+            s3_bucket=args.s3_bucket,
+            s3_prefix=args.s3_prefix,
             interval=args.interval,
             max_runtime=max_runtime,
-            zoom=args.zoom
+            zoom=args.zoom,
+            aws_region=args.aws_region
         )
         capture.run()
     except Exception as e:
         logger.error(f"Fatal error in main: {e}")
-        logger.error(traceback.format_exc())
         return 1
     
     return 0
