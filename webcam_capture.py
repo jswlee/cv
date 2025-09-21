@@ -8,6 +8,7 @@ import os
 import argparse
 import time
 import logging
+import traceback
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -275,122 +276,134 @@ class WebcamCapture:
         4) As a last resort, force CSS-based fullscreen on the video element.
         Works across top document and any iframes.
         """
-        d = self.driver
+        try:
+            d = self.driver
 
-        def try_click_js(el):
-            try:
-                d.execute_script("arguments[0].scrollIntoView({block:'center', inline:'center'});", el)
-                time.sleep(0.2)
-                d.execute_script("arguments[0].click();", el)
-                return True
-            except Exception:
-                return False
-
-        def within_all_contexts():
-            """Yield within top-level and each iframe context."""
-            # Top-level first
-            yield None
-            # Then each iframe
-            try:
-                iframes = d.find_elements(By.TAG_NAME, "iframe")
-            except Exception:
-                iframes = []
-            for i, f in enumerate(iframes):
+            def try_click_js(el):
                 try:
-                    d.switch_to.frame(f)
-                    yield i
+                    d.execute_script("arguments[0].scrollIntoView({block:'center', inline:'center'});", el)
+                    time.sleep(0.2)
+                    d.execute_script("arguments[0].click();", el)
+                    return True
                 except Exception:
-                    continue
+                    return False
+
+            def within_all_contexts():
+                """Yield within top-level and each iframe context."""
+                # Top-level first
+                yield None
+                # Then each iframe
+                try:
+                    iframes = d.find_elements(By.TAG_NAME, "iframe")
+                except Exception:
+                    iframes = []
+                for i, f in enumerate(iframes):
+                    try:
+                        d.switch_to.frame(f)
+                        yield i
+                    except Exception:
+                        continue
+                    finally:
+                        d.switch_to.default_content()
+
+            # 1) Try clicking play overlay
+            played = False
+            for ctx in within_all_contexts():
+                try:
+                    if ctx is not None:
+                        iframes = d.find_elements(By.TAG_NAME, "iframe")
+                        if ctx < len(iframes):
+                            d.switch_to.frame(iframes[ctx])
+                        else:
+                            continue
+                    candidates = []
+                    selectors = [
+                        "div.play-wrapper",
+                        "div[data-poster].play-wrapper",
+                        "div.poster, .poster-icon",
+                        "button[aria-label='Play'], button[aria-label='play']",
+                    ]
+                    for sel in selectors:
+                        try:
+                            candidates.extend(d.find_elements(By.CSS_SELECTOR, sel))
+                        except Exception:
+                            pass
+                    # If no explicit overlay, try clicking center of the video element
+                    if not candidates:
+                        vids = d.find_elements(By.TAG_NAME, "video")
+                        candidates.extend(vids)
+                    for el in candidates:
+                        if try_click_js(el):
+                            played = True
+                            logger.info("Clicked play overlay/element")
+                            break
                 finally:
                     d.switch_to.default_content()
+                if played:
+                    break
 
-        # 1) Try clicking play overlay
-        played = False
-        for ctx in within_all_contexts():
-            try:
-                if ctx is not None:
-                    d.switch_to.frame(d.find_elements(By.TAG_NAME, "iframe")[ctx])
-                candidates = []
-                selectors = [
-                    "div.play-wrapper",
-                    "div[data-poster].play-wrapper",
-                    "div.poster, .poster-icon",
-                    "button[aria-label='Play'], button[aria-label='play']",
-                ]
-                for sel in selectors:
-                    try:
-                        candidates.extend(d.find_elements(By.CSS_SELECTOR, sel))
-                    except Exception:
-                        pass
-                # If no explicit overlay, try clicking center of the video element
-                if not candidates:
-                    vids = d.find_elements(By.TAG_NAME, "video")
-                    candidates.extend(vids)
-                for el in candidates:
-                    if try_click_js(el):
-                        played = True
-                        logger.info("Clicked play overlay/element")
-                        break
-            finally:
-                d.switch_to.default_content()
-            if played:
-                break
+            time.sleep(0.5)
 
-        time.sleep(0.5)
+            # 2) Try clicking fullscreen button
+            entered_fs = False
+            for ctx in within_all_contexts():
+                try:
+                    if ctx is not None:
+                        iframes = d.find_elements(By.TAG_NAME, "iframe")
+                        if ctx < len(iframes):
+                            d.switch_to.frame(iframes[ctx])
+                        else:
+                            continue
+                    btns = []
+                    for sel in (
+                        "button[data-fullscreen]",
+                        "button[aria-label='fullscreen']",
+                        ".media-control-right-panel button",
+                    ):
+                        try:
+                            btns.extend(d.find_elements(By.CSS_SELECTOR, sel))
+                        except Exception:
+                            pass
+                    for b in btns:
+                        # Use JS click in case element is covered
+                        if try_click_js(b):
+                            entered_fs = True
+                            logger.info("Clicked fullscreen button")
+                            break
+                finally:
+                    d.switch_to.default_content()
+                if entered_fs:
+                    break
 
-        # 2) Try clicking fullscreen button
-        entered_fs = False
-        for ctx in within_all_contexts():
-            try:
-                if ctx is not None:
-                    d.switch_to.frame(d.find_elements(By.TAG_NAME, "iframe")[ctx])
-                btns = []
-                for sel in (
-                    "button[data-fullscreen]",
-                    "button[aria-label='fullscreen']",
-                    ".media-control-right-panel button",
-                ):
-                    try:
-                        btns.extend(d.find_elements(By.CSS_SELECTOR, sel))
-                    except Exception:
-                        pass
-                for b in btns:
-                    # Use JS click in case element is covered
-                    if try_click_js(b):
+            # 3) requestFullscreen() on the video element
+            if not entered_fs:
+                try:
+                    res = d.execute_script(
+                        "var v=document.querySelector('video');"
+                        "if(v){if(v.requestFullscreen){v.requestFullscreen();return 'ok';}"
+                        "var r=v.webkitRequestFullscreen||v.mozRequestFullScreen||v.msRequestFullscreen;"
+                        "if(r){r.call(v);return 'ok';}} return 'no-video';"
+                    )
+                    if res == 'ok':
                         entered_fs = True
-                        logger.info("Clicked fullscreen button")
-                        break
-            finally:
-                d.switch_to.default_content()
-            if entered_fs:
-                break
+                        logger.info("Requested fullscreen via JS on <video>")
+                except Exception as e:
+                    logger.warning(f"requestFullscreen failed: {e}")
 
-        # 3) requestFullscreen() on the video element
-        if not entered_fs:
-            try:
-                res = d.execute_script(
-                    "var v=document.querySelector('video');"
-                    "if(v){if(v.requestFullscreen){v.requestFullscreen();return 'ok';}"
-                    "var r=v.webkitRequestFullscreen||v.mozRequestFullScreen||v.msRequestFullscreen;"
-                    "if(r){r.call(v);return 'ok';}} return 'no-video';"
-                )
-                if res == 'ok':
-                    entered_fs = True
-                    logger.info("Requested fullscreen via JS on <video>")
-            except Exception as e:
-                logger.warning(f"requestFullscreen failed: {e}")
-
-        # 4) CSS fallback to simulate fullscreen
-        if not entered_fs:
-            try:
-                d.execute_script(
-                    "var v=document.querySelector('video');"
-                    "if(v){v.style.position='fixed';v.style.left='0';v.style.top='0';"
-                    "v.style.width='100vw';v.style.height='100vh';v.style.zIndex='999999';}"
-                )
-                logger.info("Applied CSS-based fullscreen to <video>")
-            except Exception as e:
-                logger.warning(f"CSS fullscreen fallback failed: {e}")
+            # 4) CSS fallback to simulate fullscreen
+            if not entered_fs:
+                try:
+                    d.execute_script(
+                        "var v=document.querySelector('video');"
+                        "if(v){v.style.position='fixed';v.style.left='0';v.style.top='0';"
+                        "v.style.width='100vw';v.style.height='100vh';v.style.zIndex='999999';}"
+                    )
+                    logger.info("Applied CSS-based fullscreen to <video>")
+                except Exception as e:
+                    logger.warning(f"CSS fullscreen fallback failed: {e}")
+                    
+        except Exception as e:
+            logger.warning(f"Player interaction failed: {e}")
             
     def run(self):
         """Run the capture process with auto-restart capability"""

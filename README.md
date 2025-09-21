@@ -116,7 +116,7 @@ python3 webcam_capture.py --s3-bucket "your-bucket-name"
 python3 webcam_capture.py \
   --url "https://example.com/webcam" \
   --s3-bucket "your-bucket-name" \
-  --zoom 1.5 \
+  --zoom 1.0 \
   --interval 60
 ```
 
