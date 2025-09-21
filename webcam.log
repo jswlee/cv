@@ -1,1135 +1,519 @@
+nohup: ignoring input
+2025-09-06 15:04:39,697 - INFO - Starting webcam capture for https://www.nps.gov/media/webcam/view.htm?id=56F5E0DC-9116-8502-7F673D0FF0B8378A
+2025-09-06 15:04:39,697 - INFO - Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]
+2025-09-06 15:04:39,697 - INFO - Using browser binary: /usr/bin/chromium-browser
+2025-09-06 15:04:40,759 - INFO - Chrome driver initialized successfully (session: d17af65ab812e5f6723b1d2472d1f6bd)
+2025-09-06 15:04:40,759 - INFO - Loading webcam URL: https://www.nps.gov/media/webcam/view.htm?id=56F5E0DC-9116-8502-7F673D0FF0B8378A
+2025-09-06 15:05:12,638 - WARNING - No video/canvas found, will try screenshot anyway: Message: 
 
-2025-09-02 06:06:29,663 - INFO - Starting YouTube capture for https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:06:29,888 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:06:32,494 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:06:32,496 - INFO - Capturing every 150.0 seconds
-2025-09-02 06:06:32,496 - INFO - Will run for 43200 seconds
-2025-09-02 06:06:32,496 - INFO - Saving to: /Users/jlee/Desktop/github/cv/images/youtube_DNnj_9bVWGI
-2025-09-02 06:06:32,496 - INFO - Using fresh connection for each capture to prevent freezing
-2025-09-02 06:06:32,496 - INFO - Added error recovery with automatic retries
-2025-09-02 06:06:32,496 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:06:35,047 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:06:36,459 - INFO - Saved: youtube_snapshot_20250902_060636.jpg | Size: 1.4MB
-2025-09-02 06:06:36,459 - INFO - Captures: 1 | Remaining: 43193s
-2025-09-02 06:09:06,465 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:09:09,039 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:09:10,787 - INFO - Saved: youtube_snapshot_20250902_060910.jpg | Size: 1.4MB
-2025-09-02 06:09:10,788 - INFO - Captures: 2 | Remaining: 43039s
-2025-09-02 06:11:40,825 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:11:43,544 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:11:44,749 - INFO - Saved: youtube_snapshot_20250902_061144.jpg | Size: 1.4MB
-2025-09-02 06:11:44,749 - INFO - Captures: 3 | Remaining: 42885s
-2025-09-02 06:14:14,758 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:14:17,497 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:14:19,158 - INFO - Saved: youtube_snapshot_20250902_061419.jpg | Size: 1.4MB
-2025-09-02 06:14:19,158 - INFO - Captures: 4 | Remaining: 42731s
-2025-09-02 06:16:49,162 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:16:51,904 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:16:53,553 - INFO - Saved: youtube_snapshot_20250902_061653.jpg | Size: 1.4MB
-2025-09-02 06:16:53,553 - INFO - Captures: 5 | Remaining: 42576s
-2025-09-02 06:19:23,560 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:19:26,048 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:19:28,112 - INFO - Saved: youtube_snapshot_20250902_061928.jpg | Size: 1.5MB
-2025-09-02 06:19:28,113 - INFO - Captures: 6 | Remaining: 42422s
-2025-09-02 06:21:58,114 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:22:00,709 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:22:02,243 - INFO - Saved: youtube_snapshot_20250902_062202.jpg | Size: 1.4MB
-2025-09-02 06:22:02,243 - INFO - Captures: 7 | Remaining: 42267s
-2025-09-02 06:24:32,245 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:24:34,784 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:24:36,844 - INFO - Saved: youtube_snapshot_20250902_062436.jpg | Size: 1.5MB
-2025-09-02 06:24:36,845 - INFO - Captures: 8 | Remaining: 42113s
-2025-09-02 06:27:06,901 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:27:09,200 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:27:10,788 - INFO - Saved: youtube_snapshot_20250902_062710.jpg | Size: 1.5MB
-2025-09-02 06:27:10,790 - INFO - Captures: 9 | Remaining: 41959s
-2025-09-02 06:29:40,801 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:29:43,175 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:29:44,805 - INFO - Saved: youtube_snapshot_20250902_062944.jpg | Size: 1.5MB
-2025-09-02 06:29:44,805 - INFO - Captures: 10 | Remaining: 41805s
-2025-09-02 06:32:14,818 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:32:17,605 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:32:19,516 - INFO - Saved: youtube_snapshot_20250902_063219.jpg | Size: 1.5MB
-2025-09-02 06:32:19,516 - INFO - Captures: 11 | Remaining: 41650s
-2025-09-02 06:34:49,524 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:34:52,324 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:34:53,819 - INFO - Saved: youtube_snapshot_20250902_063453.jpg | Size: 1.5MB
-2025-09-02 06:34:53,819 - INFO - Captures: 12 | Remaining: 41496s
-2025-09-02 06:37:23,827 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:37:26,522 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:37:27,809 - INFO - Saved: youtube_snapshot_20250902_063727.jpg | Size: 1.4MB
-2025-09-02 06:37:27,809 - INFO - Captures: 13 | Remaining: 41342s
-2025-09-02 06:39:57,822 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:40:00,439 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:40:02,239 - INFO - Saved: youtube_snapshot_20250902_064002.jpg | Size: 1.4MB
-2025-09-02 06:40:02,239 - INFO - Captures: 14 | Remaining: 41187s
-2025-09-02 06:42:32,283 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:42:35,060 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:42:36,731 - INFO - Saved: youtube_snapshot_20250902_064236.jpg | Size: 1.5MB
-2025-09-02 06:42:36,731 - INFO - Captures: 15 | Remaining: 41033s
-2025-09-02 06:45:06,745 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:45:09,490 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:45:10,915 - INFO - Saved: youtube_snapshot_20250902_064510.jpg | Size: 1.5MB
-2025-09-02 06:45:10,915 - INFO - Captures: 16 | Remaining: 40879s
-2025-09-02 06:47:40,929 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:47:43,571 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:47:45,224 - INFO - Saved: youtube_snapshot_20250902_064745.jpg | Size: 1.5MB
-2025-09-02 06:47:45,225 - INFO - Captures: 17 | Remaining: 40724s
-2025-09-02 06:50:15,231 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:50:17,723 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:50:19,494 - INFO - Saved: youtube_snapshot_20250902_065019.jpg | Size: 1.5MB
-2025-09-02 06:50:19,494 - INFO - Captures: 18 | Remaining: 40570s
-2025-09-02 06:52:49,509 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:52:51,872 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:52:53,581 - INFO - Saved: youtube_snapshot_20250902_065253.jpg | Size: 1.5MB
-2025-09-02 06:52:53,581 - INFO - Captures: 19 | Remaining: 40416s
-2025-09-02 06:55:23,595 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:55:26,336 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:55:27,928 - INFO - Saved: youtube_snapshot_20250902_065527.jpg | Size: 1.5MB
-2025-09-02 06:55:27,929 - INFO - Captures: 20 | Remaining: 40262s
-2025-09-02 06:57:57,952 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 06:58:00,503 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 06:58:01,888 - INFO - Saved: youtube_snapshot_20250902_065801.jpg | Size: 1.5MB
-2025-09-02 06:58:01,888 - INFO - Captures: 21 | Remaining: 40108s
-2025-09-02 07:00:31,902 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:00:34,436 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:00:36,219 - INFO - Saved: youtube_snapshot_20250902_070036.jpg | Size: 1.5MB
-2025-09-02 07:00:36,219 - INFO - Captures: 22 | Remaining: 39953s
-2025-09-02 07:03:06,231 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:03:08,762 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:03:10,192 - INFO - Saved: youtube_snapshot_20250902_070310.jpg | Size: 1.5MB
-2025-09-02 07:03:10,193 - INFO - Captures: 23 | Remaining: 39799s
-2025-09-02 07:05:40,207 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:05:42,774 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:05:44,152 - INFO - Saved: youtube_snapshot_20250902_070544.jpg | Size: 1.6MB
-2025-09-02 07:05:44,152 - INFO - Captures: 24 | Remaining: 39646s
-2025-09-02 07:08:14,167 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:08:16,805 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:08:18,215 - INFO - Saved: youtube_snapshot_20250902_070818.jpg | Size: 1.6MB
-2025-09-02 07:08:18,215 - INFO - Captures: 25 | Remaining: 39491s
-2025-09-02 07:10:48,229 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:10:50,726 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:10:51,880 - INFO - Saved: youtube_snapshot_20250902_071051.jpg | Size: 1.6MB
-2025-09-02 07:10:51,881 - INFO - Captures: 26 | Remaining: 39338s
-2025-09-02 07:13:21,897 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:13:24,544 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:13:26,479 - INFO - Saved: youtube_snapshot_20250902_071326.jpg | Size: 1.6MB
-2025-09-02 07:13:26,479 - INFO - Captures: 27 | Remaining: 39183s
-2025-09-02 07:15:56,493 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:15:59,036 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:16:00,499 - INFO - Saved: youtube_snapshot_20250902_071600.jpg | Size: 1.5MB
-2025-09-02 07:16:00,499 - INFO - Captures: 28 | Remaining: 39029s
-2025-09-02 07:18:30,513 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:18:33,169 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:18:34,464 - INFO - Saved: youtube_snapshot_20250902_071834.jpg | Size: 1.6MB
-2025-09-02 07:18:34,464 - INFO - Captures: 29 | Remaining: 38875s
-2025-09-02 07:21:04,478 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:21:07,406 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:21:08,785 - INFO - Saved: youtube_snapshot_20250902_072108.jpg | Size: 1.6MB
-2025-09-02 07:21:08,786 - INFO - Captures: 30 | Remaining: 38721s
-2025-09-02 07:23:38,800 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:23:41,480 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:23:42,844 - INFO - Saved: youtube_snapshot_20250902_072342.jpg | Size: 1.6MB
-2025-09-02 07:23:42,845 - INFO - Captures: 31 | Remaining: 38567s
-2025-09-02 07:26:12,847 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:26:15,168 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:26:16,682 - INFO - Saved: youtube_snapshot_20250902_072616.jpg | Size: 1.6MB
-2025-09-02 07:26:16,682 - INFO - Captures: 32 | Remaining: 38413s
-2025-09-02 07:28:46,670 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:28:49,140 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:28:50,812 - INFO - Saved: youtube_snapshot_20250902_072850.jpg | Size: 1.6MB
-2025-09-02 07:28:50,813 - INFO - Captures: 33 | Remaining: 38259s
-2025-09-02 07:31:20,824 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:31:23,348 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:31:24,863 - INFO - Saved: youtube_snapshot_20250902_073124.jpg | Size: 1.6MB
-2025-09-02 07:31:24,864 - INFO - Captures: 34 | Remaining: 38105s
-2025-09-02 07:33:54,877 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:33:57,532 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:33:58,895 - INFO - Saved: youtube_snapshot_20250902_073358.jpg | Size: 1.6MB
-2025-09-02 07:33:58,895 - INFO - Captures: 35 | Remaining: 37951s
-2025-09-02 07:36:28,904 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:36:33,359 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:36:35,577 - INFO - Saved: youtube_snapshot_20250902_073635.jpg | Size: 1.5MB
-2025-09-02 07:36:35,577 - INFO - Captures: 36 | Remaining: 37794s
-2025-09-02 07:39:05,585 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:39:08,344 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:39:09,980 - INFO - Saved: youtube_snapshot_20250902_073909.jpg | Size: 1.6MB
-2025-09-02 07:39:09,980 - INFO - Captures: 37 | Remaining: 37640s
-2025-09-02 07:41:39,925 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:41:42,649 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:41:44,147 - INFO - Saved: youtube_snapshot_20250902_074144.jpg | Size: 1.6MB
-2025-09-02 07:41:44,147 - INFO - Captures: 38 | Remaining: 37486s
-2025-09-02 07:44:14,151 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:44:16,805 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:44:18,190 - INFO - Saved: youtube_snapshot_20250902_074418.jpg | Size: 1.6MB
-2025-09-02 07:44:18,191 - INFO - Captures: 39 | Remaining: 37331s
-2025-09-02 07:46:48,197 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:46:51,129 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:46:52,639 - INFO - Saved: youtube_snapshot_20250902_074652.jpg | Size: 1.6MB
-2025-09-02 07:46:52,639 - INFO - Captures: 40 | Remaining: 37177s
-2025-09-02 07:49:22,647 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:49:24,936 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:49:26,454 - INFO - Saved: youtube_snapshot_20250902_074926.jpg | Size: 1.6MB
-2025-09-02 07:49:26,454 - INFO - Captures: 41 | Remaining: 37023s
-2025-09-02 07:51:56,458 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:51:59,119 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:52:00,371 - INFO - Saved: youtube_snapshot_20250902_075200.jpg | Size: 1.6MB
-2025-09-02 07:52:00,371 - INFO - Captures: 42 | Remaining: 36869s
-2025-09-02 07:54:30,376 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:54:32,797 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:54:34,310 - INFO - Saved: youtube_snapshot_20250902_075434.jpg | Size: 1.6MB
-2025-09-02 07:54:34,310 - INFO - Captures: 43 | Remaining: 36715s
-2025-09-02 07:57:04,290 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:57:06,959 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:57:08,708 - INFO - Saved: youtube_snapshot_20250902_075708.jpg | Size: 1.6MB
-2025-09-02 07:57:08,709 - INFO - Captures: 44 | Remaining: 36561s
-2025-09-02 07:59:38,715 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 07:59:41,121 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 07:59:42,971 - INFO - Saved: youtube_snapshot_20250902_075942.jpg | Size: 1.5MB
-2025-09-02 07:59:42,972 - INFO - Captures: 45 | Remaining: 36407s
-2025-09-02 08:02:12,979 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:02:15,430 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:02:17,251 - INFO - Saved: youtube_snapshot_20250902_080217.jpg | Size: 1.5MB
-2025-09-02 08:02:17,252 - INFO - Captures: 46 | Remaining: 36252s
-2025-09-02 08:04:47,263 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:04:49,893 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:04:51,409 - INFO - Saved: youtube_snapshot_20250902_080451.jpg | Size: 1.5MB
-2025-09-02 08:04:51,409 - INFO - Captures: 47 | Remaining: 36098s
-2025-09-02 08:07:21,420 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:07:23,884 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:07:25,511 - INFO - Saved: youtube_snapshot_20250902_080725.jpg | Size: 1.6MB
-2025-09-02 08:07:25,512 - INFO - Captures: 48 | Remaining: 35944s
-2025-09-02 08:09:55,519 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:09:58,099 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:09:59,459 - INFO - Saved: youtube_snapshot_20250902_080959.jpg | Size: 1.6MB
-2025-09-02 08:09:59,459 - INFO - Captures: 49 | Remaining: 35790s
-2025-09-02 08:12:29,458 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:12:32,283 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:12:33,708 - INFO - Saved: youtube_snapshot_20250902_081233.jpg | Size: 1.6MB
-2025-09-02 08:12:33,709 - INFO - Captures: 50 | Remaining: 35636s
-2025-09-02 08:15:03,715 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:15:06,174 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:15:07,577 - INFO - Saved: youtube_snapshot_20250902_081507.jpg | Size: 1.5MB
-2025-09-02 08:15:07,577 - INFO - Captures: 51 | Remaining: 35482s
-2025-09-02 08:17:37,579 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:17:40,059 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:17:41,764 - INFO - Saved: youtube_snapshot_20250902_081741.jpg | Size: 1.5MB
-2025-09-02 08:17:41,764 - INFO - Captures: 52 | Remaining: 35328s
-2025-09-02 08:20:11,770 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:20:14,359 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:20:15,824 - INFO - Saved: youtube_snapshot_20250902_082015.jpg | Size: 1.5MB
-2025-09-02 08:20:15,824 - INFO - Captures: 53 | Remaining: 35174s
-2025-09-02 08:22:45,830 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:22:48,473 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:22:49,841 - INFO - Saved: youtube_snapshot_20250902_082249.jpg | Size: 1.6MB
-2025-09-02 08:22:49,842 - INFO - Captures: 54 | Remaining: 35020s
-2025-09-02 08:25:19,849 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:25:22,508 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:25:24,186 - INFO - Saved: youtube_snapshot_20250902_082524.jpg | Size: 1.6MB
-2025-09-02 08:25:24,186 - INFO - Captures: 55 | Remaining: 34865s
-2025-09-02 08:27:54,166 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:27:56,553 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:27:58,716 - INFO - Saved: youtube_snapshot_20250902_082758.jpg | Size: 1.5MB
-2025-09-02 08:27:58,716 - INFO - Captures: 56 | Remaining: 34711s
-2025-09-02 08:30:28,721 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:30:31,165 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:30:32,558 - INFO - Saved: youtube_snapshot_20250902_083032.jpg | Size: 1.5MB
-2025-09-02 08:30:32,558 - INFO - Captures: 57 | Remaining: 34557s
-2025-09-02 08:33:02,564 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:33:05,135 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:33:06,415 - INFO - Saved: youtube_snapshot_20250902_083306.jpg | Size: 1.5MB
-2025-09-02 08:33:06,415 - INFO - Captures: 58 | Remaining: 34403s
-2025-09-02 08:35:36,421 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:35:38,828 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:35:40,272 - INFO - Saved: youtube_snapshot_20250902_083540.jpg | Size: 1.5MB
-2025-09-02 08:35:40,273 - INFO - Captures: 59 | Remaining: 34249s
-2025-09-02 08:38:10,277 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:38:13,127 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:38:14,647 - INFO - Saved: youtube_snapshot_20250902_083814.jpg | Size: 1.4MB
-2025-09-02 08:38:14,647 - INFO - Captures: 60 | Remaining: 34095s
-2025-09-02 08:40:44,649 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:40:47,045 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:40:48,156 - INFO - Saved: youtube_snapshot_20250902_084048.jpg | Size: 1.5MB
-2025-09-02 08:40:48,156 - INFO - Captures: 61 | Remaining: 33942s
-2025-09-02 08:43:18,218 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:43:20,785 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:43:22,131 - INFO - Saved: youtube_snapshot_20250902_084322.jpg | Size: 1.5MB
-2025-09-02 08:43:22,131 - INFO - Captures: 62 | Remaining: 33788s
-2025-09-02 08:45:52,137 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:45:54,821 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:45:56,365 - INFO - Saved: youtube_snapshot_20250902_084556.jpg | Size: 1.6MB
-2025-09-02 08:45:56,365 - INFO - Captures: 63 | Remaining: 33633s
-2025-09-02 08:48:26,373 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:48:28,884 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:48:30,093 - INFO - Saved: youtube_snapshot_20250902_084830.jpg | Size: 1.5MB
-2025-09-02 08:48:30,093 - INFO - Captures: 64 | Remaining: 33480s
-2025-09-02 08:51:00,099 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:51:02,538 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:51:04,025 - INFO - Saved: youtube_snapshot_20250902_085104.jpg | Size: 1.5MB
-2025-09-02 08:51:04,025 - INFO - Captures: 65 | Remaining: 33326s
-2025-09-02 08:53:34,031 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:53:36,619 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:53:37,938 - INFO - Saved: youtube_snapshot_20250902_085337.jpg | Size: 1.5MB
-2025-09-02 08:53:37,938 - INFO - Captures: 66 | Remaining: 33172s
-2025-09-02 08:56:07,945 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:56:10,511 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:56:11,875 - INFO - Saved: youtube_snapshot_20250902_085611.jpg | Size: 1.5MB
-2025-09-02 08:56:11,875 - INFO - Captures: 67 | Remaining: 33018s
-2025-09-02 08:58:41,866 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 08:58:44,558 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 08:58:45,978 - INFO - Saved: youtube_snapshot_20250902_085845.jpg | Size: 1.5MB
-2025-09-02 08:58:45,978 - INFO - Captures: 68 | Remaining: 32864s
-2025-09-02 09:01:15,984 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:01:18,778 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:01:20,352 - INFO - Saved: youtube_snapshot_20250902_090120.jpg | Size: 1.5MB
-2025-09-02 09:01:20,353 - INFO - Captures: 69 | Remaining: 32709s
-2025-09-02 09:03:50,360 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:03:52,704 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:03:54,098 - INFO - Saved: youtube_snapshot_20250902_090354.jpg | Size: 1.5MB
-2025-09-02 09:03:54,098 - INFO - Captures: 70 | Remaining: 32556s
-2025-09-02 09:06:24,106 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:06:26,508 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:06:28,292 - INFO - Saved: youtube_snapshot_20250902_090628.jpg | Size: 1.5MB
-2025-09-02 09:06:28,292 - INFO - Captures: 71 | Remaining: 32401s
-2025-09-02 09:08:58,298 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:09:00,937 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:09:02,727 - INFO - Saved: youtube_snapshot_20250902_090902.jpg | Size: 1.5MB
-2025-09-02 09:09:02,728 - INFO - Captures: 72 | Remaining: 32247s
-2025-09-02 09:11:32,731 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:11:35,207 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:11:36,811 - INFO - Saved: youtube_snapshot_20250902_091136.jpg | Size: 1.5MB
-2025-09-02 09:11:36,811 - INFO - Captures: 73 | Remaining: 32093s
-2025-09-02 09:14:06,830 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:14:09,385 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:14:11,120 - INFO - Saved: youtube_snapshot_20250902_091411.jpg | Size: 1.5MB
-2025-09-02 09:14:11,121 - INFO - Captures: 74 | Remaining: 31939s
-2025-09-02 09:16:41,129 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:16:43,765 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:16:45,592 - INFO - Saved: youtube_snapshot_20250902_091645.jpg | Size: 1.6MB
-2025-09-02 09:16:45,593 - INFO - Captures: 75 | Remaining: 31784s
-2025-09-02 09:19:15,599 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:19:17,887 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:19:19,272 - INFO - Saved: youtube_snapshot_20250902_091919.jpg | Size: 1.5MB
-2025-09-02 09:19:19,272 - INFO - Captures: 76 | Remaining: 31630s
-2025-09-02 09:21:49,274 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:21:51,825 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:21:53,521 - INFO - Saved: youtube_snapshot_20250902_092153.jpg | Size: 1.5MB
-2025-09-02 09:21:53,521 - INFO - Captures: 77 | Remaining: 31476s
-2025-09-02 09:24:23,524 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:24:26,311 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:24:27,681 - INFO - Saved: youtube_snapshot_20250902_092427.jpg | Size: 1.5MB
-2025-09-02 09:24:27,681 - INFO - Captures: 78 | Remaining: 31322s
-2025-09-02 09:26:57,686 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:27:00,200 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:27:01,697 - INFO - Saved: youtube_snapshot_20250902_092701.jpg | Size: 1.5MB
-2025-09-02 09:27:01,697 - INFO - Captures: 79 | Remaining: 31168s
-2025-09-02 09:29:31,658 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:29:34,024 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:29:35,562 - INFO - Saved: youtube_snapshot_20250902_092935.jpg | Size: 1.5MB
-2025-09-02 09:29:35,562 - INFO - Captures: 80 | Remaining: 31014s
-2025-09-02 09:32:05,563 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:32:08,051 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:32:09,388 - INFO - Saved: youtube_snapshot_20250902_093209.jpg | Size: 1.5MB
-2025-09-02 09:32:09,388 - INFO - Captures: 81 | Remaining: 30860s
-2025-09-02 09:34:39,391 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:34:41,913 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:34:43,628 - INFO - Saved: youtube_snapshot_20250902_093443.jpg | Size: 1.6MB
-2025-09-02 09:34:43,628 - INFO - Captures: 82 | Remaining: 30706s
-2025-09-02 09:37:13,630 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:37:16,272 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:37:18,000 - INFO - Saved: youtube_snapshot_20250902_093717.jpg | Size: 1.5MB
-2025-09-02 09:37:18,002 - INFO - Captures: 83 | Remaining: 30552s
-2025-09-02 09:39:48,013 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:39:50,513 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:39:51,771 - INFO - Saved: youtube_snapshot_20250902_093951.jpg | Size: 1.5MB
-2025-09-02 09:39:51,772 - INFO - Captures: 84 | Remaining: 30398s
-2025-09-02 09:42:21,777 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:42:24,178 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:42:25,503 - INFO - Saved: youtube_snapshot_20250902_094225.jpg | Size: 1.6MB
-2025-09-02 09:42:25,504 - INFO - Captures: 85 | Remaining: 30244s
-2025-09-02 09:44:55,473 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:44:57,709 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:44:58,777 - INFO - Saved: youtube_snapshot_20250902_094458.jpg | Size: 1.6MB
-2025-09-02 09:44:58,777 - INFO - Captures: 86 | Remaining: 30091s
-2025-09-02 09:47:28,781 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:47:31,197 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:47:32,300 - INFO - Saved: youtube_snapshot_20250902_094732.jpg | Size: 1.5MB
-2025-09-02 09:47:32,301 - INFO - Captures: 87 | Remaining: 29937s
-2025-09-02 09:50:02,305 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:50:04,632 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:50:06,282 - INFO - Saved: youtube_snapshot_20250902_095006.jpg | Size: 1.6MB
-2025-09-02 09:50:06,282 - INFO - Captures: 88 | Remaining: 29783s
-2025-09-02 09:52:36,285 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:52:38,811 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:52:40,849 - INFO - Saved: youtube_snapshot_20250902_095240.jpg | Size: 1.5MB
-2025-09-02 09:52:40,849 - INFO - Captures: 89 | Remaining: 29629s
-2025-09-02 09:55:10,849 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:55:13,271 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:55:14,769 - INFO - Saved: youtube_snapshot_20250902_095514.jpg | Size: 1.6MB
-2025-09-02 09:55:14,770 - INFO - Captures: 90 | Remaining: 29475s
-2025-09-02 09:57:44,771 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 09:57:47,183 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 09:57:48,600 - INFO - Saved: youtube_snapshot_20250902_095748.jpg | Size: 1.6MB
-2025-09-02 09:57:48,601 - INFO - Captures: 91 | Remaining: 29321s
-2025-09-02 10:00:18,609 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:00:21,535 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:00:23,107 - INFO - Saved: youtube_snapshot_20250902_100023.jpg | Size: 1.5MB
-2025-09-02 10:00:23,108 - INFO - Captures: 92 | Remaining: 29167s
-2025-09-02 10:02:53,115 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:02:55,531 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:02:56,892 - INFO - Saved: youtube_snapshot_20250902_100256.jpg | Size: 1.5MB
-2025-09-02 10:02:56,893 - INFO - Captures: 93 | Remaining: 29013s
-2025-09-02 10:05:26,899 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:05:29,519 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:05:30,859 - INFO - Saved: youtube_snapshot_20250902_100530.jpg | Size: 1.5MB
-2025-09-02 10:05:30,860 - INFO - Captures: 94 | Remaining: 28859s
-2025-09-02 10:08:00,864 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:08:03,352 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:08:05,025 - INFO - Saved: youtube_snapshot_20250902_100805.jpg | Size: 1.5MB
-2025-09-02 10:08:05,026 - INFO - Captures: 95 | Remaining: 28705s
-2025-09-02 10:10:35,026 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:10:37,515 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:10:39,287 - INFO - Saved: youtube_snapshot_20250902_101039.jpg | Size: 1.6MB
-2025-09-02 10:10:39,288 - INFO - Captures: 96 | Remaining: 28550s
-2025-09-02 10:13:09,292 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:13:11,995 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:13:13,184 - INFO - Saved: youtube_snapshot_20250902_101313.jpg | Size: 1.5MB
-2025-09-02 10:13:13,184 - INFO - Captures: 97 | Remaining: 28396s
-2025-09-02 10:15:43,231 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:15:45,698 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:15:47,219 - INFO - Saved: youtube_snapshot_20250902_101547.jpg | Size: 1.5MB
-2025-09-02 10:15:47,219 - INFO - Captures: 98 | Remaining: 28242s
-2025-09-02 10:18:17,227 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:18:19,777 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:18:21,342 - INFO - Saved: youtube_snapshot_20250902_101821.jpg | Size: 1.5MB
-2025-09-02 10:18:21,343 - INFO - Captures: 99 | Remaining: 28088s
-2025-09-02 10:20:51,355 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:20:53,961 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:20:55,698 - INFO - Saved: youtube_snapshot_20250902_102055.jpg | Size: 1.6MB
-2025-09-02 10:20:55,698 - INFO - Captures: 100 | Remaining: 27934s
-2025-09-02 10:23:25,701 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:23:28,043 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:23:29,664 - INFO - Saved: youtube_snapshot_20250902_102329.jpg | Size: 1.6MB
-2025-09-02 10:23:29,664 - INFO - Captures: 101 | Remaining: 27780s
-2025-09-02 10:25:59,677 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:26:02,164 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:26:03,527 - INFO - Saved: youtube_snapshot_20250902_102603.jpg | Size: 1.6MB
-2025-09-02 10:26:03,527 - INFO - Captures: 102 | Remaining: 27626s
-2025-09-02 10:28:33,529 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:28:35,921 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:28:37,731 - INFO - Saved: youtube_snapshot_20250902_102837.jpg | Size: 1.6MB
-2025-09-02 10:28:37,732 - INFO - Captures: 103 | Remaining: 27472s
-2025-09-02 10:31:07,703 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:31:10,386 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:31:12,537 - INFO - Saved: youtube_snapshot_20250902_103112.jpg | Size: 1.6MB
-2025-09-02 10:31:12,538 - INFO - Captures: 104 | Remaining: 27317s
-2025-09-02 10:33:42,538 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:33:44,872 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:33:46,209 - INFO - Saved: youtube_snapshot_20250902_103346.jpg | Size: 1.6MB
-2025-09-02 10:33:46,209 - INFO - Captures: 105 | Remaining: 27163s
-2025-09-02 10:36:16,213 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:36:18,544 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:36:20,286 - INFO - Saved: youtube_snapshot_20250902_103620.jpg | Size: 1.6MB
-2025-09-02 10:36:20,287 - INFO - Captures: 106 | Remaining: 27009s
-2025-09-02 10:38:50,288 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:38:53,024 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:38:55,049 - INFO - Saved: youtube_snapshot_20250902_103855.jpg | Size: 1.6MB
-2025-09-02 10:38:55,049 - INFO - Captures: 107 | Remaining: 26855s
-2025-09-02 10:41:25,054 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:41:27,709 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:41:28,910 - INFO - Saved: youtube_snapshot_20250902_104128.jpg | Size: 1.6MB
-2025-09-02 10:41:28,910 - INFO - Captures: 108 | Remaining: 26701s
-2025-09-02 10:43:58,915 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:44:01,413 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:44:03,472 - INFO - Saved: youtube_snapshot_20250902_104403.jpg | Size: 1.6MB
-2025-09-02 10:44:03,472 - INFO - Captures: 109 | Remaining: 26546s
-2025-09-02 10:46:33,556 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:46:35,895 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:46:37,251 - INFO - Saved: youtube_snapshot_20250902_104637.jpg | Size: 1.6MB
-2025-09-02 10:46:37,252 - INFO - Captures: 110 | Remaining: 26392s
-2025-09-02 10:49:07,258 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:49:09,689 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:49:10,945 - INFO - Saved: youtube_snapshot_20250902_104910.jpg | Size: 1.6MB
-2025-09-02 10:49:10,945 - INFO - Captures: 111 | Remaining: 26239s
-2025-09-02 10:51:40,949 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:51:43,409 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:51:45,073 - INFO - Saved: youtube_snapshot_20250902_105145.jpg | Size: 1.6MB
-2025-09-02 10:51:45,073 - INFO - Captures: 112 | Remaining: 26085s
-2025-09-02 10:54:15,076 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:54:17,419 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:54:18,624 - INFO - Saved: youtube_snapshot_20250902_105418.jpg | Size: 1.6MB
-2025-09-02 10:54:18,624 - INFO - Captures: 113 | Remaining: 25931s
-2025-09-02 10:56:48,627 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:56:50,916 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:56:52,205 - INFO - Saved: youtube_snapshot_20250902_105652.jpg | Size: 1.6MB
-2025-09-02 10:56:52,205 - INFO - Captures: 114 | Remaining: 25777s
-2025-09-02 10:59:22,209 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 10:59:24,370 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 10:59:25,881 - INFO - Saved: youtube_snapshot_20250902_105925.jpg | Size: 1.6MB
-2025-09-02 10:59:25,881 - INFO - Captures: 115 | Remaining: 25624s
-2025-09-02 11:01:55,895 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:01:58,381 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:01:59,541 - INFO - Saved: youtube_snapshot_20250902_110159.jpg | Size: 1.6MB
-2025-09-02 11:01:59,542 - INFO - Captures: 116 | Remaining: 25470s
-2025-09-02 11:04:29,554 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:04:31,817 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:04:33,206 - INFO - Saved: youtube_snapshot_20250902_110433.jpg | Size: 1.5MB
-2025-09-02 11:04:33,207 - INFO - Captures: 117 | Remaining: 25316s
-2025-09-02 11:07:03,211 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:07:05,758 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:07:06,995 - INFO - Saved: youtube_snapshot_20250902_110706.jpg | Size: 1.6MB
-2025-09-02 11:07:06,996 - INFO - Captures: 118 | Remaining: 25163s
-2025-09-02 11:09:37,002 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:09:39,215 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:09:40,515 - INFO - Saved: youtube_snapshot_20250902_110940.jpg | Size: 1.5MB
-2025-09-02 11:09:40,515 - INFO - Captures: 119 | Remaining: 25009s
-2025-09-02 11:12:10,519 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:12:12,808 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:12:14,266 - INFO - Saved: youtube_snapshot_20250902_111214.jpg | Size: 1.5MB
-2025-09-02 11:12:14,266 - INFO - Captures: 120 | Remaining: 24855s
-2025-09-02 11:14:44,274 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:14:46,792 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:14:48,167 - INFO - Saved: youtube_snapshot_20250902_111448.jpg | Size: 1.5MB
-2025-09-02 11:14:48,167 - INFO - Captures: 121 | Remaining: 24701s
-2025-09-02 11:17:18,132 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:17:20,471 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:17:21,944 - INFO - Saved: youtube_snapshot_20250902_111721.jpg | Size: 1.5MB
-2025-09-02 11:17:21,945 - INFO - Captures: 122 | Remaining: 24548s
-2025-09-02 11:19:51,945 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:19:54,185 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:19:55,697 - INFO - Saved: youtube_snapshot_20250902_111955.jpg | Size: 1.5MB
-2025-09-02 11:19:55,698 - INFO - Captures: 123 | Remaining: 24394s
-2025-09-02 11:22:25,699 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:22:28,112 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:22:29,392 - INFO - Saved: youtube_snapshot_20250902_112229.jpg | Size: 1.6MB
-2025-09-02 11:22:29,393 - INFO - Captures: 124 | Remaining: 24240s
-2025-09-02 11:24:59,396 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:25:01,895 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:25:03,311 - INFO - Saved: youtube_snapshot_20250902_112503.jpg | Size: 1.5MB
-2025-09-02 11:25:03,311 - INFO - Captures: 125 | Remaining: 24086s
-2025-09-02 11:27:33,318 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:27:35,880 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:27:37,349 - INFO - Saved: youtube_snapshot_20250902_112737.jpg | Size: 1.6MB
-2025-09-02 11:27:37,350 - INFO - Captures: 126 | Remaining: 23932s
-2025-09-02 11:30:07,361 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:30:09,817 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:30:11,151 - INFO - Saved: youtube_snapshot_20250902_113011.jpg | Size: 1.6MB
-2025-09-02 11:30:11,151 - INFO - Captures: 127 | Remaining: 23779s
-2025-09-02 11:32:41,132 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:32:43,814 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:32:45,401 - INFO - Saved: youtube_snapshot_20250902_113245.jpg | Size: 1.6MB
-2025-09-02 11:32:45,401 - INFO - Captures: 128 | Remaining: 23624s
-2025-09-02 11:35:15,389 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:35:18,079 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:35:19,397 - INFO - Saved: youtube_snapshot_20250902_113519.jpg | Size: 1.5MB
-2025-09-02 11:35:19,398 - INFO - Captures: 129 | Remaining: 23470s
-2025-09-02 11:37:49,398 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:37:51,940 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:37:53,733 - INFO - Saved: youtube_snapshot_20250902_113753.jpg | Size: 1.5MB
-2025-09-02 11:37:53,733 - INFO - Captures: 130 | Remaining: 23316s
-2025-09-02 11:40:23,736 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:40:26,677 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:40:27,788 - INFO - Saved: youtube_snapshot_20250902_114027.jpg | Size: 1.5MB
-2025-09-02 11:40:27,788 - INFO - Captures: 131 | Remaining: 23162s
-2025-09-02 11:42:57,789 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:43:00,459 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:43:02,169 - INFO - Saved: youtube_snapshot_20250902_114302.jpg | Size: 1.5MB
-2025-09-02 11:43:02,170 - INFO - Captures: 132 | Remaining: 23007s
-2025-09-02 11:45:32,172 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:45:34,541 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:45:35,777 - INFO - Saved: youtube_snapshot_20250902_114535.jpg | Size: 1.5MB
-2025-09-02 11:45:35,777 - INFO - Captures: 133 | Remaining: 22854s
-2025-09-02 11:48:05,808 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:48:08,102 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:48:10,147 - INFO - Saved: youtube_snapshot_20250902_114810.jpg | Size: 1.5MB
-2025-09-02 11:48:10,147 - INFO - Captures: 134 | Remaining: 22700s
-2025-09-02 11:50:40,164 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:50:42,706 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:50:44,178 - INFO - Saved: youtube_snapshot_20250902_115044.jpg | Size: 1.5MB
-2025-09-02 11:50:44,178 - INFO - Captures: 135 | Remaining: 22545s
-2025-09-02 11:53:14,184 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:53:17,019 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:53:18,455 - INFO - Saved: youtube_snapshot_20250902_115318.jpg | Size: 1.5MB
-2025-09-02 11:53:18,455 - INFO - Captures: 136 | Remaining: 22391s
-2025-09-02 11:55:48,465 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:55:50,948 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:55:52,345 - INFO - Saved: youtube_snapshot_20250902_115552.jpg | Size: 1.5MB
-2025-09-02 11:55:52,345 - INFO - Captures: 137 | Remaining: 22237s
-2025-09-02 11:58:22,355 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 11:58:24,956 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 11:58:26,348 - INFO - Saved: youtube_snapshot_20250902_115826.jpg | Size: 1.5MB
-2025-09-02 11:58:26,349 - INFO - Captures: 138 | Remaining: 22083s
-2025-09-02 12:00:56,360 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:00:58,907 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:01:00,420 - INFO - Saved: youtube_snapshot_20250902_120100.jpg | Size: 1.5MB
-2025-09-02 12:01:00,420 - INFO - Captures: 139 | Remaining: 21929s
-2025-09-02 12:03:30,430 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:03:33,017 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:03:34,584 - INFO - Saved: youtube_snapshot_20250902_120334.jpg | Size: 1.5MB
-2025-09-02 12:03:34,585 - INFO - Captures: 140 | Remaining: 21775s
-2025-09-02 12:06:04,596 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:06:07,305 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:06:08,578 - INFO - Saved: youtube_snapshot_20250902_120608.jpg | Size: 1.5MB
-2025-09-02 12:06:08,578 - INFO - Captures: 141 | Remaining: 21621s
-2025-09-02 12:08:38,588 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:08:41,107 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:08:42,445 - INFO - Saved: youtube_snapshot_20250902_120842.jpg | Size: 1.5MB
-2025-09-02 12:08:42,446 - INFO - Captures: 142 | Remaining: 21467s
-2025-09-02 12:11:12,456 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:11:14,995 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:11:16,728 - INFO - Saved: youtube_snapshot_20250902_121116.jpg | Size: 1.5MB
-2025-09-02 12:11:16,728 - INFO - Captures: 143 | Remaining: 21313s
-2025-09-02 12:13:46,738 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:13:49,240 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:13:50,554 - INFO - Saved: youtube_snapshot_20250902_121350.jpg | Size: 1.5MB
-2025-09-02 12:13:50,554 - INFO - Captures: 144 | Remaining: 21159s
-2025-09-02 12:16:20,565 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:16:23,142 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:16:25,180 - INFO - Saved: youtube_snapshot_20250902_121625.jpg | Size: 1.6MB
-2025-09-02 12:16:25,180 - INFO - Captures: 145 | Remaining: 21004s
-2025-09-02 12:18:55,187 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:18:57,814 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:18:58,821 - INFO - Saved: youtube_snapshot_20250902_121858.jpg | Size: 1.6MB
-2025-09-02 12:18:58,821 - INFO - Captures: 146 | Remaining: 20851s
-2025-09-02 12:21:28,879 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:21:31,275 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:21:32,667 - INFO - Saved: youtube_snapshot_20250902_122132.jpg | Size: 1.6MB
-2025-09-02 12:21:32,667 - INFO - Captures: 147 | Remaining: 20697s
-2025-09-02 12:24:02,675 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:24:05,112 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:24:06,821 - INFO - Saved: youtube_snapshot_20250902_122406.jpg | Size: 1.6MB
-2025-09-02 12:24:06,822 - INFO - Captures: 148 | Remaining: 20543s
-2025-09-02 12:26:36,833 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:26:39,150 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:26:40,981 - INFO - Saved: youtube_snapshot_20250902_122640.jpg | Size: 1.6MB
-2025-09-02 12:26:40,982 - INFO - Captures: 149 | Remaining: 20389s
-2025-09-02 12:29:10,994 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:29:13,689 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:29:15,036 - INFO - Saved: youtube_snapshot_20250902_122915.jpg | Size: 1.6MB
-2025-09-02 12:29:15,037 - INFO - Captures: 150 | Remaining: 20235s
-2025-09-02 12:31:45,049 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:31:47,497 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:31:49,476 - INFO - Saved: youtube_snapshot_20250902_123149.jpg | Size: 1.6MB
-2025-09-02 12:31:49,476 - INFO - Captures: 151 | Remaining: 20080s
-2025-09-02 12:34:19,494 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:34:21,958 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:34:23,191 - INFO - Saved: youtube_snapshot_20250902_123423.jpg | Size: 1.6MB
-2025-09-02 12:34:23,191 - INFO - Captures: 152 | Remaining: 19926s
-2025-09-02 12:36:53,196 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:36:55,579 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:36:57,165 - INFO - Saved: youtube_snapshot_20250902_123657.jpg | Size: 1.6MB
-2025-09-02 12:36:57,165 - INFO - Captures: 153 | Remaining: 19772s
-2025-09-02 12:39:27,170 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:39:29,975 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:39:31,396 - INFO - Saved: youtube_snapshot_20250902_123931.jpg | Size: 1.6MB
-2025-09-02 12:39:31,397 - INFO - Captures: 154 | Remaining: 19618s
-2025-09-02 12:42:01,403 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:42:03,848 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:42:05,384 - INFO - Saved: youtube_snapshot_20250902_124205.jpg | Size: 1.6MB
-2025-09-02 12:42:05,385 - INFO - Captures: 155 | Remaining: 19464s
-2025-09-02 12:44:35,388 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:44:38,057 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:44:39,541 - INFO - Saved: youtube_snapshot_20250902_124439.jpg | Size: 1.6MB
-2025-09-02 12:44:39,542 - INFO - Captures: 156 | Remaining: 19310s
-2025-09-02 12:47:09,553 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:47:11,894 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:47:13,293 - INFO - Saved: youtube_snapshot_20250902_124713.jpg | Size: 1.6MB
-2025-09-02 12:47:13,294 - INFO - Captures: 157 | Remaining: 19156s
-2025-09-02 12:49:43,251 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:49:45,553 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:49:47,274 - INFO - Saved: youtube_snapshot_20250902_124947.jpg | Size: 1.6MB
-2025-09-02 12:49:47,275 - INFO - Captures: 158 | Remaining: 19002s
-2025-09-02 12:52:17,285 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:52:19,864 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:52:21,262 - INFO - Saved: youtube_snapshot_20250902_125221.jpg | Size: 1.6MB
-2025-09-02 12:52:21,262 - INFO - Captures: 159 | Remaining: 18848s
-2025-09-02 12:54:51,274 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:54:53,723 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:54:55,138 - INFO - Saved: youtube_snapshot_20250902_125455.jpg | Size: 1.6MB
-2025-09-02 12:54:55,138 - INFO - Captures: 160 | Remaining: 18695s
-2025-09-02 12:57:25,148 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 12:57:27,879 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 12:57:29,553 - INFO - Saved: youtube_snapshot_20250902_125729.jpg | Size: 1.7MB
-2025-09-02 12:57:29,553 - INFO - Captures: 161 | Remaining: 18540s
-2025-09-02 12:59:59,563 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:00:02,096 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:00:03,668 - INFO - Saved: youtube_snapshot_20250902_130003.jpg | Size: 1.7MB
-2025-09-02 13:00:03,668 - INFO - Captures: 162 | Remaining: 18386s
-2025-09-02 13:02:33,679 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:02:36,214 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:02:37,597 - INFO - Saved: youtube_snapshot_20250902_130237.jpg | Size: 1.6MB
-2025-09-02 13:02:37,597 - INFO - Captures: 163 | Remaining: 18232s
-2025-09-02 13:05:07,618 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:05:09,992 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:05:11,428 - INFO - Saved: youtube_snapshot_20250902_130511.jpg | Size: 1.7MB
-2025-09-02 13:05:11,429 - INFO - Captures: 164 | Remaining: 18078s
-2025-09-02 13:07:41,436 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:07:43,749 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:07:45,523 - INFO - Saved: youtube_snapshot_20250902_130745.jpg | Size: 1.6MB
-2025-09-02 13:07:45,523 - INFO - Captures: 165 | Remaining: 17924s
-2025-09-02 13:10:15,534 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:10:18,037 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:10:19,919 - INFO - Saved: youtube_snapshot_20250902_131019.jpg | Size: 1.7MB
-2025-09-02 13:10:19,920 - INFO - Captures: 166 | Remaining: 17770s
-2025-09-02 13:12:49,930 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:12:52,360 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:12:53,601 - INFO - Saved: youtube_snapshot_20250902_131253.jpg | Size: 1.6MB
-2025-09-02 13:12:53,601 - INFO - Captures: 167 | Remaining: 17616s
-2025-09-02 13:15:23,607 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:15:26,211 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:15:28,024 - INFO - Saved: youtube_snapshot_20250902_131528.jpg | Size: 1.7MB
-2025-09-02 13:15:28,024 - INFO - Captures: 168 | Remaining: 17462s
-2025-09-02 13:17:58,035 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:18:00,364 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:18:01,617 - INFO - Saved: youtube_snapshot_20250902_131801.jpg | Size: 1.7MB
-2025-09-02 13:18:01,617 - INFO - Captures: 169 | Remaining: 17308s
-2025-09-02 13:20:31,680 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:20:34,284 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:20:35,987 - INFO - Saved: youtube_snapshot_20250902_132035.jpg | Size: 1.6MB
-2025-09-02 13:20:35,988 - INFO - Captures: 170 | Remaining: 17154s
-2025-09-02 13:23:05,999 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:23:08,623 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:23:10,091 - INFO - Saved: youtube_snapshot_20250902_132310.jpg | Size: 1.6MB
-2025-09-02 13:23:10,091 - INFO - Captures: 171 | Remaining: 17000s
-2025-09-02 13:25:40,103 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:25:42,381 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:25:43,708 - INFO - Saved: youtube_snapshot_20250902_132543.jpg | Size: 1.6MB
-2025-09-02 13:25:43,709 - INFO - Captures: 172 | Remaining: 16846s
-2025-09-02 13:28:13,721 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:28:16,245 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:28:18,088 - INFO - Saved: youtube_snapshot_20250902_132818.jpg | Size: 1.6MB
-2025-09-02 13:28:18,089 - INFO - Captures: 173 | Remaining: 16692s
-2025-09-02 13:30:48,103 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:30:50,725 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:30:52,449 - INFO - Saved: youtube_snapshot_20250902_133052.jpg | Size: 1.6MB
-2025-09-02 13:30:52,450 - INFO - Captures: 174 | Remaining: 16537s
-2025-09-02 13:33:22,462 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:33:25,238 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:33:26,457 - INFO - Saved: youtube_snapshot_20250902_133326.jpg | Size: 1.7MB
-2025-09-02 13:33:26,457 - INFO - Captures: 175 | Remaining: 16383s
-2025-09-02 13:35:56,501 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:35:58,929 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:36:00,521 - INFO - Saved: youtube_snapshot_20250902_133600.jpg | Size: 1.6MB
-2025-09-02 13:36:00,522 - INFO - Captures: 176 | Remaining: 16229s
-2025-09-02 13:38:30,530 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:38:33,052 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:38:34,441 - INFO - Saved: youtube_snapshot_20250902_133834.jpg | Size: 1.6MB
-2025-09-02 13:38:34,441 - INFO - Captures: 177 | Remaining: 16075s
-2025-09-02 13:41:04,454 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:41:06,667 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:41:08,486 - INFO - Saved: youtube_snapshot_20250902_134108.jpg | Size: 1.6MB
-2025-09-02 13:41:08,487 - INFO - Captures: 178 | Remaining: 15921s
-2025-09-02 13:43:38,499 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:43:40,770 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:43:42,090 - INFO - Saved: youtube_snapshot_20250902_134342.jpg | Size: 1.6MB
-2025-09-02 13:43:42,090 - INFO - Captures: 179 | Remaining: 15768s
-2025-09-02 13:46:12,103 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:46:14,478 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:46:16,585 - INFO - Saved: youtube_snapshot_20250902_134616.jpg | Size: 1.6MB
-2025-09-02 13:46:16,586 - INFO - Captures: 180 | Remaining: 15613s
-2025-09-02 13:48:46,599 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:48:49,113 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:48:50,811 - INFO - Saved: youtube_snapshot_20250902_134850.jpg | Size: 1.7MB
-2025-09-02 13:48:50,812 - INFO - Captures: 181 | Remaining: 15459s
-2025-09-02 13:51:20,843 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:51:23,189 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:51:24,539 - INFO - Saved: youtube_snapshot_20250902_135124.jpg | Size: 1.7MB
-2025-09-02 13:51:24,540 - INFO - Captures: 182 | Remaining: 15305s
-2025-09-02 13:53:54,553 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:53:57,021 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:53:58,313 - INFO - Saved: youtube_snapshot_20250902_135358.jpg | Size: 1.7MB
-2025-09-02 13:53:58,314 - INFO - Captures: 183 | Remaining: 15151s
-2025-09-02 13:56:28,328 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:56:30,896 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:56:32,173 - INFO - Saved: youtube_snapshot_20250902_135632.jpg | Size: 1.7MB
-2025-09-02 13:56:32,173 - INFO - Captures: 184 | Remaining: 14997s
-2025-09-02 13:59:02,186 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 13:59:04,648 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 13:59:05,897 - INFO - Saved: youtube_snapshot_20250902_135905.jpg | Size: 1.7MB
-2025-09-02 13:59:05,897 - INFO - Captures: 185 | Remaining: 14844s
-2025-09-02 14:01:35,907 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:01:38,315 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:01:39,770 - INFO - Saved: youtube_snapshot_20250902_140139.jpg | Size: 1.7MB
-2025-09-02 14:01:39,771 - INFO - Captures: 186 | Remaining: 14690s
-2025-09-02 14:04:09,784 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:04:12,256 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:04:13,628 - INFO - Saved: youtube_snapshot_20250902_140413.jpg | Size: 1.7MB
-2025-09-02 14:04:13,629 - INFO - Captures: 187 | Remaining: 14536s
-2025-09-02 14:06:43,650 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:06:46,160 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:06:47,618 - INFO - Saved: youtube_snapshot_20250902_140647.jpg | Size: 1.6MB
-2025-09-02 14:06:47,619 - INFO - Captures: 188 | Remaining: 14382s
-2025-09-02 14:09:17,634 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:09:20,201 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:09:21,818 - INFO - Saved: youtube_snapshot_20250902_140921.jpg | Size: 1.7MB
-2025-09-02 14:09:21,818 - INFO - Captures: 189 | Remaining: 14228s
-2025-09-02 14:11:51,830 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:11:54,465 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:11:55,922 - INFO - Saved: youtube_snapshot_20250902_141155.jpg | Size: 1.7MB
-2025-09-02 14:11:55,923 - INFO - Captures: 190 | Remaining: 14074s
-2025-09-02 14:14:25,931 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:14:28,488 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:14:29,750 - INFO - Saved: youtube_snapshot_20250902_141429.jpg | Size: 1.6MB
-2025-09-02 14:14:29,750 - INFO - Captures: 191 | Remaining: 13920s
-2025-09-02 14:16:59,764 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:17:02,611 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:17:04,409 - INFO - Saved: youtube_snapshot_20250902_141704.jpg | Size: 1.6MB
-2025-09-02 14:17:04,410 - INFO - Captures: 192 | Remaining: 13765s
-2025-09-02 14:19:34,426 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:19:37,316 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:19:39,045 - INFO - Saved: youtube_snapshot_20250902_141939.jpg | Size: 1.6MB
-2025-09-02 14:19:39,045 - INFO - Captures: 193 | Remaining: 13611s
-2025-09-02 14:22:09,056 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:22:11,317 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:22:12,590 - INFO - Saved: youtube_snapshot_20250902_142212.jpg | Size: 1.6MB
-2025-09-02 14:22:12,590 - INFO - Captures: 194 | Remaining: 13457s
-2025-09-02 14:24:42,604 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:24:45,153 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:24:46,838 - INFO - Saved: youtube_snapshot_20250902_142446.jpg | Size: 1.6MB
-2025-09-02 14:24:46,839 - INFO - Captures: 195 | Remaining: 13303s
-2025-09-02 14:27:16,852 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:27:19,322 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:27:20,576 - INFO - Saved: youtube_snapshot_20250902_142720.jpg | Size: 1.6MB
-2025-09-02 14:27:20,576 - INFO - Captures: 196 | Remaining: 13149s
-2025-09-02 14:29:50,584 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:29:52,975 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:29:54,591 - INFO - Saved: youtube_snapshot_20250902_142954.jpg | Size: 1.6MB
-2025-09-02 14:29:54,592 - INFO - Captures: 197 | Remaining: 12995s
-2025-09-02 14:32:24,602 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:32:27,217 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:32:28,544 - INFO - Saved: youtube_snapshot_20250902_143228.jpg | Size: 1.7MB
-2025-09-02 14:32:28,545 - INFO - Captures: 198 | Remaining: 12841s
-2025-09-02 14:34:58,553 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:35:00,827 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:35:02,331 - INFO - Saved: youtube_snapshot_20250902_143502.jpg | Size: 1.6MB
-2025-09-02 14:35:02,332 - INFO - Captures: 199 | Remaining: 12687s
-2025-09-02 14:37:32,332 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:37:34,809 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:37:39,776 - INFO - Saved: youtube_snapshot_20250902_143739.jpg | Size: 1.5MB
-2025-09-02 14:37:39,777 - INFO - Captures: 200 | Remaining: 12530s
-2025-09-02 14:40:09,790 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:40:12,186 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:40:16,847 - INFO - Saved: youtube_snapshot_20250902_144016.jpg | Size: 1.6MB
-2025-09-02 14:40:16,847 - INFO - Captures: 201 | Remaining: 12373s
-2025-09-02 14:42:46,864 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:42:49,373 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:42:51,014 - INFO - Saved: youtube_snapshot_20250902_144251.jpg | Size: 1.6MB
-2025-09-02 14:42:51,014 - INFO - Captures: 202 | Remaining: 12219s
-2025-09-02 14:45:21,028 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:45:24,232 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:45:26,016 - INFO - Saved: youtube_snapshot_20250902_144526.jpg | Size: 1.6MB
-2025-09-02 14:45:26,016 - INFO - Captures: 203 | Remaining: 12064s
-2025-09-02 14:47:56,029 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:47:58,737 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:48:00,369 - INFO - Saved: youtube_snapshot_20250902_144800.jpg | Size: 1.6MB
-2025-09-02 14:48:00,370 - INFO - Captures: 204 | Remaining: 11909s
-2025-09-02 14:50:30,384 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:50:33,081 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:50:34,479 - INFO - Saved: youtube_snapshot_20250902_145034.jpg | Size: 1.6MB
-2025-09-02 14:50:34,479 - INFO - Captures: 205 | Remaining: 11755s
-2025-09-02 14:53:04,450 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:53:06,620 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:53:08,180 - INFO - Saved: youtube_snapshot_20250902_145308.jpg | Size: 1.7MB
-2025-09-02 14:53:08,181 - INFO - Captures: 206 | Remaining: 11601s
-2025-09-02 14:55:38,192 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:55:40,666 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:55:42,473 - INFO - Saved: youtube_snapshot_20250902_145542.jpg | Size: 1.7MB
-2025-09-02 14:55:42,474 - INFO - Captures: 207 | Remaining: 11447s
-2025-09-02 14:58:12,486 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 14:58:15,038 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 14:58:16,626 - INFO - Saved: youtube_snapshot_20250902_145816.jpg | Size: 1.7MB
-2025-09-02 14:58:16,626 - INFO - Captures: 208 | Remaining: 11293s
-2025-09-02 15:00:46,629 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:00:49,126 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:00:50,233 - INFO - Saved: youtube_snapshot_20250902_150050.jpg | Size: 1.7MB
-2025-09-02 15:00:50,234 - INFO - Captures: 209 | Remaining: 11139s
-2025-09-02 15:03:20,245 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:03:23,071 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:03:24,582 - INFO - Saved: youtube_snapshot_20250902_150324.jpg | Size: 1.7MB
-2025-09-02 15:03:24,583 - INFO - Captures: 210 | Remaining: 10985s
-2025-09-02 15:05:54,595 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:05:57,106 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:05:58,546 - INFO - Saved: youtube_snapshot_20250902_150558.jpg | Size: 1.6MB
-2025-09-02 15:05:58,547 - INFO - Captures: 211 | Remaining: 10831s
-2025-09-02 15:08:28,534 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:08:30,920 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:08:32,626 - INFO - Saved: youtube_snapshot_20250902_150832.jpg | Size: 1.7MB
-2025-09-02 15:08:32,627 - INFO - Captures: 212 | Remaining: 10677s
-2025-09-02 15:11:02,637 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:11:05,403 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:11:06,757 - INFO - Saved: youtube_snapshot_20250902_151106.jpg | Size: 1.6MB
-2025-09-02 15:11:06,757 - INFO - Captures: 213 | Remaining: 10523s
-2025-09-02 15:13:36,772 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:13:39,326 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:13:40,973 - INFO - Saved: youtube_snapshot_20250902_151340.jpg | Size: 1.7MB
-2025-09-02 15:13:40,973 - INFO - Captures: 214 | Remaining: 10369s
-2025-09-02 15:16:10,985 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:16:13,403 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:16:15,029 - INFO - Saved: youtube_snapshot_20250902_151615.jpg | Size: 1.6MB
-2025-09-02 15:16:15,030 - INFO - Captures: 215 | Remaining: 10215s
-2025-09-02 15:18:45,042 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:18:47,593 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:18:49,175 - INFO - Saved: youtube_snapshot_20250902_151849.jpg | Size: 1.6MB
-2025-09-02 15:18:49,176 - INFO - Captures: 216 | Remaining: 10060s
-2025-09-02 15:21:19,187 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:21:21,467 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:21:22,751 - INFO - Saved: youtube_snapshot_20250902_152122.jpg | Size: 1.6MB
-2025-09-02 15:21:22,751 - INFO - Captures: 217 | Remaining: 9907s
-2025-09-02 15:23:52,763 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:23:55,332 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:23:56,541 - INFO - Saved: youtube_snapshot_20250902_152356.jpg | Size: 1.6MB
-2025-09-02 15:23:56,542 - INFO - Captures: 218 | Remaining: 9753s
-2025-09-02 15:26:26,553 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:26:29,123 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:26:30,433 - INFO - Saved: youtube_snapshot_20250902_152630.jpg | Size: 1.7MB
-2025-09-02 15:26:30,434 - INFO - Captures: 219 | Remaining: 9599s
-2025-09-02 15:29:00,379 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:29:02,735 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:29:03,994 - INFO - Saved: youtube_snapshot_20250902_152903.jpg | Size: 1.7MB
-2025-09-02 15:29:03,994 - INFO - Captures: 220 | Remaining: 9446s
-2025-09-02 15:31:33,995 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:31:36,679 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:31:37,807 - INFO - Saved: youtube_snapshot_20250902_153137.jpg | Size: 1.7MB
-2025-09-02 15:31:37,807 - INFO - Captures: 221 | Remaining: 9292s
-2025-09-02 15:34:07,811 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:34:10,186 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:34:11,517 - INFO - Saved: youtube_snapshot_20250902_153411.jpg | Size: 1.7MB
-2025-09-02 15:34:11,517 - INFO - Captures: 222 | Remaining: 9138s
-2025-09-02 15:36:41,520 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:36:43,907 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:36:45,287 - INFO - Saved: youtube_snapshot_20250902_153645.jpg | Size: 1.7MB
-2025-09-02 15:36:45,288 - INFO - Captures: 223 | Remaining: 8984s
-2025-09-02 15:39:15,287 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:39:17,641 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:39:19,369 - INFO - Saved: youtube_snapshot_20250902_153919.jpg | Size: 1.7MB
-2025-09-02 15:39:19,370 - INFO - Captures: 224 | Remaining: 8830s
-2025-09-02 15:41:49,372 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:41:52,088 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:41:54,018 - INFO - Saved: youtube_snapshot_20250902_154154.jpg | Size: 1.6MB
-2025-09-02 15:41:54,018 - INFO - Captures: 225 | Remaining: 8676s
-2025-09-02 15:44:24,032 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:44:26,184 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:44:27,469 - INFO - Saved: youtube_snapshot_20250902_154427.jpg | Size: 1.7MB
-2025-09-02 15:44:27,470 - INFO - Captures: 226 | Remaining: 8522s
-2025-09-02 15:46:57,470 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:46:59,899 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:47:01,364 - INFO - Saved: youtube_snapshot_20250902_154701.jpg | Size: 1.7MB
-2025-09-02 15:47:01,364 - INFO - Captures: 227 | Remaining: 8368s
-2025-09-02 15:49:31,375 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:49:33,750 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:49:35,295 - INFO - Saved: youtube_snapshot_20250902_154935.jpg | Size: 1.7MB
-2025-09-02 15:49:35,296 - INFO - Captures: 228 | Remaining: 8214s
-2025-09-02 15:52:05,302 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:52:07,836 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:52:09,321 - INFO - Saved: youtube_snapshot_20250902_155209.jpg | Size: 1.7MB
-2025-09-02 15:52:09,322 - INFO - Captures: 229 | Remaining: 8060s
-2025-09-02 15:54:39,322 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:54:41,882 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:54:43,703 - INFO - Saved: youtube_snapshot_20250902_155443.jpg | Size: 1.7MB
-2025-09-02 15:54:43,704 - INFO - Captures: 230 | Remaining: 7906s
-2025-09-02 15:57:13,708 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:57:15,918 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:57:17,509 - INFO - Saved: youtube_snapshot_20250902_155717.jpg | Size: 1.7MB
-2025-09-02 15:57:17,509 - INFO - Captures: 231 | Remaining: 7752s
-2025-09-02 15:59:47,547 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 15:59:49,881 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 15:59:51,215 - INFO - Saved: youtube_snapshot_20250902_155951.jpg | Size: 1.7MB
-2025-09-02 15:59:51,215 - INFO - Captures: 232 | Remaining: 7598s
-2025-09-02 16:02:21,221 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:02:23,784 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:02:25,177 - INFO - Saved: youtube_snapshot_20250902_160225.jpg | Size: 1.7MB
-2025-09-02 16:02:25,177 - INFO - Captures: 233 | Remaining: 7444s
-2025-09-02 16:04:55,185 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:04:57,547 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:04:58,807 - INFO - Saved: youtube_snapshot_20250902_160458.jpg | Size: 1.7MB
-2025-09-02 16:04:58,808 - INFO - Captures: 234 | Remaining: 7291s
-2025-09-02 16:07:28,813 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:07:31,187 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:07:32,808 - INFO - Saved: youtube_snapshot_20250902_160732.jpg | Size: 1.7MB
-2025-09-02 16:07:32,808 - INFO - Captures: 235 | Remaining: 7137s
-2025-09-02 16:10:02,815 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:10:05,081 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:10:06,774 - INFO - Saved: youtube_snapshot_20250902_161006.jpg | Size: 1.6MB
-2025-09-02 16:10:06,775 - INFO - Captures: 236 | Remaining: 6983s
-2025-09-02 16:12:36,785 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:12:39,336 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:12:40,806 - INFO - Saved: youtube_snapshot_20250902_161240.jpg | Size: 1.6MB
-2025-09-02 16:12:40,806 - INFO - Captures: 237 | Remaining: 6829s
-2025-09-02 16:15:10,753 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:15:13,220 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:15:14,408 - INFO - Saved: youtube_snapshot_20250902_161514.jpg | Size: 1.6MB
-2025-09-02 16:15:14,408 - INFO - Captures: 238 | Remaining: 6675s
-2025-09-02 16:17:44,409 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:17:46,666 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:17:47,894 - INFO - Saved: youtube_snapshot_20250902_161747.jpg | Size: 1.6MB
-2025-09-02 16:17:47,894 - INFO - Captures: 239 | Remaining: 6522s
-2025-09-02 16:20:17,896 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:20:20,399 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:20:21,823 - INFO - Saved: youtube_snapshot_20250902_162021.jpg | Size: 1.7MB
-2025-09-02 16:20:21,823 - INFO - Captures: 240 | Remaining: 6368s
-2025-09-02 16:22:51,830 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:22:54,198 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:22:55,625 - INFO - Saved: youtube_snapshot_20250902_162255.jpg | Size: 1.7MB
-2025-09-02 16:22:55,625 - INFO - Captures: 241 | Remaining: 6214s
-2025-09-02 16:25:25,626 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:25:27,982 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:25:29,511 - INFO - Saved: youtube_snapshot_20250902_162529.jpg | Size: 1.7MB
-2025-09-02 16:25:29,511 - INFO - Captures: 242 | Remaining: 6060s
-2025-09-02 16:27:59,561 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:28:02,307 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:28:03,896 - INFO - Saved: youtube_snapshot_20250902_162803.jpg | Size: 1.7MB
-2025-09-02 16:28:03,897 - INFO - Captures: 243 | Remaining: 5906s
-2025-09-02 16:30:33,902 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:30:36,790 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:30:38,546 - INFO - Saved: youtube_snapshot_20250902_163038.jpg | Size: 1.7MB
-2025-09-02 16:30:38,547 - INFO - Captures: 244 | Remaining: 5751s
-2025-09-02 16:33:08,552 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:33:10,856 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:33:12,324 - INFO - Saved: youtube_snapshot_20250902_163312.jpg | Size: 1.7MB
-2025-09-02 16:33:12,325 - INFO - Captures: 245 | Remaining: 5597s
-2025-09-02 16:35:42,342 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:35:45,073 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:35:46,366 - INFO - Saved: youtube_snapshot_20250902_163546.jpg | Size: 1.7MB
-2025-09-02 16:35:46,366 - INFO - Captures: 246 | Remaining: 5443s
-2025-09-02 16:38:16,376 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:38:18,838 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:38:20,791 - INFO - Saved: youtube_snapshot_20250902_163820.jpg | Size: 1.7MB
-2025-09-02 16:38:20,792 - INFO - Captures: 247 | Remaining: 5289s
-2025-09-02 16:40:50,800 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:40:53,441 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:40:54,719 - INFO - Saved: youtube_snapshot_20250902_164054.jpg | Size: 1.7MB
-2025-09-02 16:40:54,719 - INFO - Captures: 248 | Remaining: 5135s
-2025-09-02 16:43:24,739 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:43:27,256 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:43:29,307 - INFO - Saved: youtube_snapshot_20250902_164329.jpg | Size: 1.6MB
-2025-09-02 16:43:29,308 - INFO - Captures: 249 | Remaining: 4980s
-2025-09-02 16:45:59,318 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:46:02,029 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:46:03,382 - INFO - Saved: youtube_snapshot_20250902_164603.jpg | Size: 1.7MB
-2025-09-02 16:46:03,382 - INFO - Captures: 250 | Remaining: 4826s
-2025-09-02 16:48:33,393 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:48:36,239 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:48:38,025 - INFO - Saved: youtube_snapshot_20250902_164838.jpg | Size: 1.7MB
-2025-09-02 16:48:38,026 - INFO - Captures: 251 | Remaining: 4672s
-2025-09-02 16:51:08,037 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:51:10,651 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:51:12,086 - INFO - Saved: youtube_snapshot_20250902_165112.jpg | Size: 1.6MB
-2025-09-02 16:51:12,087 - INFO - Captures: 252 | Remaining: 4518s
-2025-09-02 16:53:42,097 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:53:44,734 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:53:46,115 - INFO - Saved: youtube_snapshot_20250902_165346.jpg | Size: 1.6MB
-2025-09-02 16:53:46,115 - INFO - Captures: 253 | Remaining: 4364s
-2025-09-02 16:56:16,120 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:56:18,854 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:56:20,545 - INFO - Saved: youtube_snapshot_20250902_165620.jpg | Size: 1.7MB
-2025-09-02 16:56:20,546 - INFO - Captures: 254 | Remaining: 4209s
-2025-09-02 16:58:50,554 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 16:58:53,155 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 16:58:54,682 - INFO - Saved: youtube_snapshot_20250902_165854.jpg | Size: 1.7MB
-2025-09-02 16:58:54,682 - INFO - Captures: 255 | Remaining: 4055s
-2025-09-02 17:01:24,692 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:01:27,093 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:01:28,466 - INFO - Saved: youtube_snapshot_20250902_170128.jpg | Size: 1.7MB
-2025-09-02 17:01:28,467 - INFO - Captures: 256 | Remaining: 3901s
-2025-09-02 17:03:58,484 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:04:01,030 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:04:02,257 - INFO - Saved: youtube_snapshot_20250902_170402.jpg | Size: 1.7MB
-2025-09-02 17:04:02,258 - INFO - Captures: 257 | Remaining: 3747s
-2025-09-02 17:06:32,268 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:06:35,020 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:06:36,344 - INFO - Saved: youtube_snapshot_20250902_170636.jpg | Size: 1.7MB
-2025-09-02 17:06:36,344 - INFO - Captures: 258 | Remaining: 3593s
-2025-09-02 17:09:06,354 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:09:09,122 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:09:10,596 - INFO - Saved: youtube_snapshot_20250902_170910.jpg | Size: 1.7MB
-2025-09-02 17:09:10,596 - INFO - Captures: 259 | Remaining: 3439s
-2025-09-02 17:11:40,608 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:11:43,300 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:11:45,261 - INFO - Saved: youtube_snapshot_20250902_171145.jpg | Size: 1.7MB
-2025-09-02 17:11:45,262 - INFO - Captures: 260 | Remaining: 3284s
-2025-09-02 17:14:15,284 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:14:17,766 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:14:19,112 - INFO - Saved: youtube_snapshot_20250902_171419.jpg | Size: 1.7MB
-2025-09-02 17:14:19,112 - INFO - Captures: 261 | Remaining: 3131s
-2025-09-02 17:16:49,123 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:16:51,967 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:16:53,526 - INFO - Saved: youtube_snapshot_20250902_171653.jpg | Size: 1.7MB
-2025-09-02 17:16:53,527 - INFO - Captures: 262 | Remaining: 2976s
-2025-09-02 17:19:23,537 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:19:26,201 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:19:27,536 - INFO - Saved: youtube_snapshot_20250902_171927.jpg | Size: 1.7MB
-2025-09-02 17:19:27,536 - INFO - Captures: 263 | Remaining: 2822s
-2025-09-02 17:21:57,547 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:22:00,217 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:22:01,801 - INFO - Saved: youtube_snapshot_20250902_172201.jpg | Size: 1.7MB
-2025-09-02 17:22:01,801 - INFO - Captures: 264 | Remaining: 2668s
-2025-09-02 17:24:31,811 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:24:33,997 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:24:35,614 - INFO - Saved: youtube_snapshot_20250902_172435.jpg | Size: 1.7MB
-2025-09-02 17:24:35,615 - INFO - Captures: 265 | Remaining: 2514s
-2025-09-02 17:27:05,625 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:27:08,205 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:27:09,503 - INFO - Saved: youtube_snapshot_20250902_172709.jpg | Size: 1.7MB
-2025-09-02 17:27:09,503 - INFO - Captures: 266 | Remaining: 2360s
-2025-09-02 17:29:39,543 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:29:42,273 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:29:43,796 - INFO - Saved: youtube_snapshot_20250902_172943.jpg | Size: 1.7MB
-2025-09-02 17:29:43,796 - INFO - Captures: 267 | Remaining: 2206s
-2025-09-02 17:32:13,809 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:32:16,273 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:32:17,744 - INFO - Saved: youtube_snapshot_20250902_173217.jpg | Size: 1.6MB
-2025-09-02 17:32:17,744 - INFO - Captures: 268 | Remaining: 2052s
-2025-09-02 17:34:47,756 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:34:50,627 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:34:52,000 - INFO - Saved: youtube_snapshot_20250902_173451.jpg | Size: 1.7MB
-2025-09-02 17:34:52,001 - INFO - Captures: 269 | Remaining: 1898s
-2025-09-02 17:37:22,012 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:37:24,496 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:37:26,453 - INFO - Saved: youtube_snapshot_20250902_173726.jpg | Size: 1.6MB
-2025-09-02 17:37:26,454 - INFO - Captures: 270 | Remaining: 1743s
-2025-09-02 17:39:56,465 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:39:59,010 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:40:00,303 - INFO - Saved: youtube_snapshot_20250902_174000.jpg | Size: 1.6MB
-2025-09-02 17:40:00,303 - INFO - Captures: 271 | Remaining: 1589s
-2025-09-02 17:42:30,314 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:42:33,096 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:42:34,669 - INFO - Saved: youtube_snapshot_20250902_174234.jpg | Size: 1.6MB
-2025-09-02 17:42:34,670 - INFO - Captures: 272 | Remaining: 1435s
-2025-09-02 17:45:04,702 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:45:07,270 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:45:08,712 - INFO - Saved: youtube_snapshot_20250902_174508.jpg | Size: 1.6MB
-2025-09-02 17:45:08,712 - INFO - Captures: 273 | Remaining: 1281s
-2025-09-02 17:47:38,724 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:47:41,188 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:47:42,900 - INFO - Saved: youtube_snapshot_20250902_174742.jpg | Size: 1.6MB
-2025-09-02 17:47:42,900 - INFO - Captures: 274 | Remaining: 1127s
-2025-09-02 17:50:12,912 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:50:15,537 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:50:16,779 - INFO - Saved: youtube_snapshot_20250902_175016.jpg | Size: 1.6MB
-2025-09-02 17:50:16,780 - INFO - Captures: 275 | Remaining: 973s
-2025-09-02 17:52:46,792 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:52:49,221 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:52:50,614 - INFO - Saved: youtube_snapshot_20250902_175250.jpg | Size: 1.6MB
-2025-09-02 17:52:50,614 - INFO - Captures: 276 | Remaining: 819s
-2025-09-02 17:55:20,625 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:55:23,458 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:55:25,368 - INFO - Saved: youtube_snapshot_20250902_175525.jpg | Size: 1.6MB
-2025-09-02 17:55:25,369 - INFO - Captures: 277 | Remaining: 664s
-2025-09-02 17:57:55,381 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 17:57:58,008 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 17:57:59,679 - INFO - Saved: youtube_snapshot_20250902_175759.jpg | Size: 1.6MB
-2025-09-02 17:57:59,679 - INFO - Captures: 278 | Remaining: 510s
-2025-09-02 18:00:29,692 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 18:00:32,819 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 18:00:36,176 - INFO - Saved: youtube_snapshot_20250902_180036.jpg | Size: 1.6MB
-2025-09-02 18:00:36,177 - INFO - Captures: 279 | Remaining: 353s
-2025-09-02 18:03:06,188 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 18:03:08,676 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 18:03:10,123 - INFO - Saved: youtube_snapshot_20250902_180310.jpg | Size: 1.6MB
-2025-09-02 18:03:10,123 - INFO - Captures: 280 | Remaining: 200s
-2025-09-02 18:05:40,136 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=DNnj_9bVWGI
-2025-09-02 18:05:42,668 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
-2025-09-02 18:05:44,149 - INFO - Saved: youtube_snapshot_20250902_180544.jpg | Size: 1.6MB
-2025-09-02 18:05:44,149 - INFO - Captures: 281 | Remaining: 46s
-2025-09-02 18:08:14,161 - INFO - Maximum runtime reached. Captured 281 images.
-8336f3a6ac8509f3580615283e4fa21a487633c7
+2025-09-06 15:05:15,639 - INFO - Page loaded successfully
+2025-09-06 15:05:15,639 - INFO - Capturing every 1800.0 seconds
+2025-09-06 15:05:15,639 - INFO - Will run for 604800 seconds
+2025-09-06 15:05:15,639 - INFO - Saving to: /home/exouser/cv/images/www.nps.gov
+2025-09-06 15:05:15,639 - INFO - Logging to: /home/exouser/cv/webcam_capture.log
+2025-09-06 15:05:15,639 - INFO - Performing scheduled browser restart
+2025-09-06 15:05:16,322 - INFO - Saved: webcam_snapshot_20250906_150515.png | Size: 0.4MB
+2025-09-06 15:05:16,322 - INFO - Captures: 1 | Remaining: 604763s | Restarts: 1
+2025-09-06 15:35:17,226 - INFO - Saved: webcam_snapshot_20250906_153516.png | Size: 1.2MB
+2025-09-06 15:35:17,228 - INFO - Captures: 2 | Remaining: 602962s | Restarts: 1
+2025-09-06 16:05:18,023 - INFO - Saved: webcam_snapshot_20250906_160517.png | Size: 1.0MB
+2025-09-06 16:05:18,023 - INFO - Captures: 3 | Remaining: 601162s | Restarts: 1
+2025-09-06 16:35:18,860 - INFO - Saved: webcam_snapshot_20250906_163518.png | Size: 1.1MB
+2025-09-06 16:35:18,862 - INFO - Captures: 4 | Remaining: 599361s | Restarts: 1
+2025-09-06 17:05:19,709 - INFO - Saved: webcam_snapshot_20250906_170518.png | Size: 1.1MB
+2025-09-06 17:05:19,709 - INFO - Captures: 5 | Remaining: 597560s | Restarts: 1
+2025-09-06 17:35:19,783 - WARNING - Browser session died, restarting...
+2025-09-06 17:35:20,823 - INFO - Using browser binary: /usr/bin/chromium-browser
+2025-09-06 17:35:21,953 - INFO - Chrome driver initialized successfully (session: f08ca3780b93b5fdf67033bc6ca2e25f)
+2025-09-06 17:35:21,953 - INFO - Loading webcam URL: https://www.nps.gov/media/webcam/view.htm?id=56F5E0DC-9116-8502-7F673D0FF0B8378A
+2025-09-06 17:35:52,833 - WARNING - No video/canvas found, will try screenshot anyway: Message: 
+
+2025-09-06 17:35:55,833 - INFO - Page loaded successfully
+2025-09-06 17:35:56,702 - INFO - Saved: webcam_snapshot_20250906_173519.png | Size: 1.3MB
+2025-09-06 17:35:56,702 - INFO - Captures: 6 | Remaining: 595723s | Restarts: 1
+2025-09-06 18:05:57,606 - INFO - Saved: webcam_snapshot_20250906_180556.png | Size: 1.2MB
+2025-09-06 18:05:57,608 - INFO - Captures: 7 | Remaining: 593922s | Restarts: 1
+2025-09-06 18:35:58,507 - INFO - Saved: webcam_snapshot_20250906_183557.png | Size: 1.1MB
+2025-09-06 18:35:58,507 - INFO - Captures: 8 | Remaining: 592121s | Restarts: 1
+2025-09-06 19:05:59,375 - INFO - Saved: webcam_snapshot_20250906_190558.png | Size: 1.2MB
+2025-09-06 19:05:59,375 - INFO - Captures: 9 | Remaining: 590320s | Restarts: 1
+2025-09-06 19:36:00,252 - INFO - Saved: webcam_snapshot_20250906_193559.png | Size: 1.3MB
+2025-09-06 19:36:00,252 - INFO - Captures: 10 | Remaining: 588519s | Restarts: 1
+2025-09-06 20:06:01,104 - INFO - Saved: webcam_snapshot_20250906_200600.png | Size: 1.4MB
+2025-09-06 20:06:01,105 - INFO - Captures: 11 | Remaining: 586719s | Restarts: 1
+2025-09-06 20:36:01,946 - INFO - Saved: webcam_snapshot_20250906_203601.png | Size: 1.4MB
+2025-09-06 20:36:01,947 - INFO - Captures: 12 | Remaining: 584918s | Restarts: 1
+2025-09-06 21:06:02,762 - INFO - Saved: webcam_snapshot_20250906_210601.png | Size: 1.4MB
+2025-09-06 21:06:02,763 - INFO - Captures: 13 | Remaining: 583117s | Restarts: 1
+2025-09-06 21:36:03,616 - INFO - Saved: webcam_snapshot_20250906_213602.png | Size: 1.4MB
+2025-09-06 21:36:03,617 - INFO - Captures: 14 | Remaining: 581316s | Restarts: 1
+2025-09-06 22:06:04,485 - INFO - Saved: webcam_snapshot_20250906_220603.png | Size: 1.4MB
+2025-09-06 22:06:04,486 - INFO - Captures: 15 | Remaining: 579515s | Restarts: 1
+2025-09-06 22:36:05,367 - INFO - Saved: webcam_snapshot_20250906_223604.png | Size: 1.3MB
+2025-09-06 22:36:05,367 - INFO - Captures: 16 | Remaining: 577714s | Restarts: 1
+2025-09-06 23:06:06,251 - INFO - Saved: webcam_snapshot_20250906_230605.png | Size: 1.3MB
+2025-09-06 23:06:06,252 - INFO - Captures: 17 | Remaining: 575913s | Restarts: 1
+2025-09-06 23:36:07,152 - INFO - Saved: webcam_snapshot_20250906_233606.png | Size: 1.3MB
+2025-09-06 23:36:07,153 - INFO - Captures: 18 | Remaining: 574113s | Restarts: 1
+2025-09-07 00:06:08,045 - INFO - Saved: webcam_snapshot_20250907_000607.png | Size: 1.2MB
+2025-09-07 00:06:08,046 - INFO - Captures: 19 | Remaining: 572312s | Restarts: 1
+2025-09-07 00:36:08,958 - INFO - Saved: webcam_snapshot_20250907_003608.png | Size: 1.2MB
+2025-09-07 00:36:08,959 - INFO - Captures: 20 | Remaining: 570511s | Restarts: 1
+2025-09-07 01:06:09,884 - INFO - Saved: webcam_snapshot_20250907_010608.png | Size: 1.1MB
+2025-09-07 01:06:09,885 - INFO - Captures: 21 | Remaining: 568710s | Restarts: 1
+2025-09-07 01:36:10,759 - INFO - Saved: webcam_snapshot_20250907_013609.png | Size: 1.2MB
+2025-09-07 01:36:10,760 - INFO - Captures: 22 | Remaining: 566909s | Restarts: 1
+2025-09-07 02:06:11,626 - INFO - Saved: webcam_snapshot_20250907_020610.png | Size: 1.2MB
+2025-09-07 02:06:11,626 - INFO - Captures: 23 | Remaining: 565108s | Restarts: 1
+2025-09-07 02:36:12,521 - INFO - Saved: webcam_snapshot_20250907_023611.png | Size: 1.2MB
+2025-09-07 02:36:12,522 - INFO - Captures: 24 | Remaining: 563307s | Restarts: 1
+2025-09-07 03:06:12,523 - INFO - Performing scheduled browser restart
+2025-09-07 03:06:13,437 - INFO - Saved: webcam_snapshot_20250907_030612.png | Size: 1.1MB
+2025-09-07 03:06:13,438 - INFO - Captures: 25 | Remaining: 561506s | Restarts: 2
+2025-09-07 03:36:14,369 - INFO - Saved: webcam_snapshot_20250907_033613.png | Size: 1.3MB
+2025-09-07 03:36:14,370 - INFO - Captures: 26 | Remaining: 559705s | Restarts: 2
+2025-09-07 04:06:15,182 - INFO - Saved: webcam_snapshot_20250907_040614.png | Size: 1.0MB
+2025-09-07 04:06:15,182 - INFO - Captures: 27 | Remaining: 557905s | Restarts: 2
+2025-09-07 04:36:15,991 - INFO - Saved: webcam_snapshot_20250907_043615.png | Size: 1.0MB
+2025-09-07 04:36:15,992 - INFO - Captures: 28 | Remaining: 556104s | Restarts: 2
+2025-09-07 05:06:16,826 - INFO - Saved: webcam_snapshot_20250907_050615.png | Size: 1.2MB
+2025-09-07 05:06:16,827 - INFO - Captures: 29 | Remaining: 554303s | Restarts: 2
+2025-09-07 05:36:17,656 - INFO - Saved: webcam_snapshot_20250907_053616.png | Size: 0.7MB
+2025-09-07 05:36:17,658 - INFO - Captures: 30 | Remaining: 552502s | Restarts: 2
+2025-09-07 06:06:18,474 - INFO - Saved: webcam_snapshot_20250907_060617.png | Size: 0.8MB
+2025-09-07 06:06:18,474 - INFO - Captures: 31 | Remaining: 550701s | Restarts: 2
+2025-09-07 06:36:19,330 - INFO - Saved: webcam_snapshot_20250907_063618.png | Size: 0.9MB
+2025-09-07 06:36:19,331 - INFO - Captures: 32 | Remaining: 548900s | Restarts: 2
+2025-09-07 07:06:20,146 - INFO - Saved: webcam_snapshot_20250907_070619.png | Size: 0.8MB
+2025-09-07 07:06:20,147 - INFO - Captures: 33 | Remaining: 547100s | Restarts: 2
+2025-09-07 07:36:20,989 - INFO - Saved: webcam_snapshot_20250907_073620.png | Size: 0.9MB
+2025-09-07 07:36:20,990 - INFO - Captures: 34 | Remaining: 545299s | Restarts: 2
+2025-09-07 08:06:21,808 - INFO - Saved: webcam_snapshot_20250907_080620.png | Size: 0.9MB
+2025-09-07 08:06:21,809 - INFO - Captures: 35 | Remaining: 543498s | Restarts: 2
+2025-09-07 08:36:22,628 - INFO - Saved: webcam_snapshot_20250907_083621.png | Size: 0.9MB
+2025-09-07 08:36:22,628 - INFO - Captures: 36 | Remaining: 541697s | Restarts: 2
+2025-09-07 09:06:23,452 - INFO - Saved: webcam_snapshot_20250907_090622.png | Size: 0.9MB
+2025-09-07 09:06:23,453 - INFO - Captures: 37 | Remaining: 539896s | Restarts: 2
+2025-09-07 09:36:24,259 - INFO - Saved: webcam_snapshot_20250907_093623.png | Size: 0.9MB
+2025-09-07 09:36:24,260 - INFO - Captures: 38 | Remaining: 538095s | Restarts: 2
+2025-09-07 10:06:25,068 - INFO - Saved: webcam_snapshot_20250907_100624.png | Size: 0.9MB
+2025-09-07 10:06:25,069 - INFO - Captures: 39 | Remaining: 536295s | Restarts: 2
+2025-09-07 10:36:25,906 - INFO - Saved: webcam_snapshot_20250907_103625.png | Size: 0.9MB
+2025-09-07 10:36:25,906 - INFO - Captures: 40 | Remaining: 534494s | Restarts: 2
+2025-09-07 11:06:26,734 - INFO - Saved: webcam_snapshot_20250907_110625.png | Size: 0.9MB
+2025-09-07 11:06:26,734 - INFO - Captures: 41 | Remaining: 532693s | Restarts: 2
+2025-09-07 11:36:27,552 - INFO - Saved: webcam_snapshot_20250907_113626.png | Size: 0.9MB
+2025-09-07 11:36:27,553 - INFO - Captures: 42 | Remaining: 530892s | Restarts: 2
+2025-09-07 12:06:28,412 - INFO - Saved: webcam_snapshot_20250907_120627.png | Size: 0.9MB
+2025-09-07 12:06:28,413 - INFO - Captures: 43 | Remaining: 529091s | Restarts: 2
+2025-09-07 12:36:29,303 - INFO - Saved: webcam_snapshot_20250907_123628.png | Size: 0.9MB
+2025-09-07 12:36:29,304 - INFO - Captures: 44 | Remaining: 527290s | Restarts: 2
+2025-09-07 13:06:30,145 - INFO - Saved: webcam_snapshot_20250907_130629.png | Size: 0.9MB
+2025-09-07 13:06:30,146 - INFO - Captures: 45 | Remaining: 525490s | Restarts: 2
+2025-09-07 13:36:31,037 - INFO - Saved: webcam_snapshot_20250907_133630.png | Size: 0.9MB
+2025-09-07 13:36:31,038 - INFO - Captures: 46 | Remaining: 523689s | Restarts: 2
+2025-09-07 14:06:31,869 - INFO - Saved: webcam_snapshot_20250907_140631.png | Size: 0.9MB
+2025-09-07 14:06:31,870 - INFO - Captures: 47 | Remaining: 521888s | Restarts: 2
+2025-09-07 14:36:32,716 - INFO - Saved: webcam_snapshot_20250907_143631.png | Size: 0.9MB
+2025-09-07 14:36:32,717 - INFO - Captures: 48 | Remaining: 520087s | Restarts: 2
+2025-09-07 15:06:32,718 - INFO - Performing scheduled browser restart
+2025-09-07 15:06:33,560 - INFO - Saved: webcam_snapshot_20250907_150632.png | Size: 0.6MB
+2025-09-07 15:06:33,560 - INFO - Captures: 49 | Remaining: 518286s | Restarts: 3
+2025-09-07 15:36:34,454 - INFO - Saved: webcam_snapshot_20250907_153633.png | Size: 1.1MB
+2025-09-07 15:36:34,454 - INFO - Captures: 50 | Remaining: 516485s | Restarts: 3
+2025-09-07 16:06:35,271 - INFO - Saved: webcam_snapshot_20250907_160634.png | Size: 0.8MB
+2025-09-07 16:06:35,272 - INFO - Captures: 51 | Remaining: 514684s | Restarts: 3
+2025-09-07 16:36:36,114 - INFO - Saved: webcam_snapshot_20250907_163635.png | Size: 1.0MB
+2025-09-07 16:36:36,114 - INFO - Captures: 52 | Remaining: 512884s | Restarts: 3
+2025-09-07 17:06:36,950 - INFO - Saved: webcam_snapshot_20250907_170636.png | Size: 0.8MB
+2025-09-07 17:06:36,951 - INFO - Captures: 53 | Remaining: 511083s | Restarts: 3
+2025-09-07 17:36:37,764 - INFO - Saved: webcam_snapshot_20250907_173636.png | Size: 0.9MB
+2025-09-07 17:36:37,764 - INFO - Captures: 54 | Remaining: 509282s | Restarts: 3
+2025-09-07 18:06:38,539 - INFO - Saved: webcam_snapshot_20250907_180637.png | Size: 0.8MB
+2025-09-07 18:06:38,540 - INFO - Captures: 55 | Remaining: 507481s | Restarts: 3
+2025-09-07 18:36:39,339 - INFO - Saved: webcam_snapshot_20250907_183638.png | Size: 1.0MB
+2025-09-07 18:36:39,339 - INFO - Captures: 56 | Remaining: 505680s | Restarts: 3
+2025-09-07 19:06:40,208 - INFO - Saved: webcam_snapshot_20250907_190639.png | Size: 1.1MB
+2025-09-07 19:06:40,208 - INFO - Captures: 57 | Remaining: 503879s | Restarts: 3
+2025-09-07 19:36:41,040 - INFO - Saved: webcam_snapshot_20250907_193640.png | Size: 1.1MB
+2025-09-07 19:36:41,041 - INFO - Captures: 58 | Remaining: 502079s | Restarts: 3
+2025-09-07 20:06:41,916 - INFO - Saved: webcam_snapshot_20250907_200641.png | Size: 1.0MB
+2025-09-07 20:06:41,917 - INFO - Captures: 59 | Remaining: 500278s | Restarts: 3
+2025-09-07 20:36:42,772 - INFO - Saved: webcam_snapshot_20250907_203641.png | Size: 1.0MB
+2025-09-07 20:36:42,773 - INFO - Captures: 60 | Remaining: 498477s | Restarts: 3
+2025-09-07 21:06:43,716 - INFO - Saved: webcam_snapshot_20250907_210642.png | Size: 1.2MB
+2025-09-07 21:06:43,717 - INFO - Captures: 61 | Remaining: 496676s | Restarts: 3
+2025-09-07 21:36:44,578 - INFO - Saved: webcam_snapshot_20250907_213643.png | Size: 0.9MB
+2025-09-07 21:36:44,579 - INFO - Captures: 62 | Remaining: 494875s | Restarts: 3
+2025-09-07 22:06:45,462 - INFO - Saved: webcam_snapshot_20250907_220644.png | Size: 1.2MB
+2025-09-07 22:06:45,462 - INFO - Captures: 63 | Remaining: 493074s | Restarts: 3
+2025-09-07 22:36:46,276 - INFO - Saved: webcam_snapshot_20250907_223645.png | Size: 0.9MB
+2025-09-07 22:36:46,277 - INFO - Captures: 64 | Remaining: 491273s | Restarts: 3
+2025-09-07 23:06:47,150 - INFO - Saved: webcam_snapshot_20250907_230646.png | Size: 1.2MB
+2025-09-07 23:06:47,151 - INFO - Captures: 65 | Remaining: 489473s | Restarts: 3
+2025-09-07 23:36:48,050 - INFO - Saved: webcam_snapshot_20250907_233647.png | Size: 1.3MB
+2025-09-07 23:36:48,050 - INFO - Captures: 66 | Remaining: 487672s | Restarts: 3
+2025-09-08 00:06:48,938 - INFO - Saved: webcam_snapshot_20250908_000648.png | Size: 1.2MB
+2025-09-08 00:06:48,939 - INFO - Captures: 67 | Remaining: 485871s | Restarts: 3
+2025-09-08 00:36:49,813 - INFO - Saved: webcam_snapshot_20250908_003648.png | Size: 1.2MB
+2025-09-08 00:36:49,813 - INFO - Captures: 68 | Remaining: 484070s | Restarts: 3
+2025-09-08 01:06:50,680 - INFO - Saved: webcam_snapshot_20250908_010649.png | Size: 1.3MB
+2025-09-08 01:06:50,681 - INFO - Captures: 69 | Remaining: 482269s | Restarts: 3
+2025-09-08 01:36:51,533 - INFO - Saved: webcam_snapshot_20250908_013650.png | Size: 1.0MB
+2025-09-08 01:36:51,534 - INFO - Captures: 70 | Remaining: 480468s | Restarts: 3
+2025-09-08 02:06:52,381 - INFO - Saved: webcam_snapshot_20250908_020651.png | Size: 1.2MB
+2025-09-08 02:06:52,381 - INFO - Captures: 71 | Remaining: 478667s | Restarts: 3
+2025-09-08 02:36:53,299 - INFO - Saved: webcam_snapshot_20250908_023652.png | Size: 1.2MB
+2025-09-08 02:36:53,300 - INFO - Captures: 72 | Remaining: 476866s | Restarts: 3
+2025-09-08 03:06:53,301 - INFO - Performing scheduled browser restart
+2025-09-08 03:06:54,218 - INFO - Saved: webcam_snapshot_20250908_030653.png | Size: 1.1MB
+2025-09-08 03:06:54,218 - INFO - Captures: 73 | Remaining: 475065s | Restarts: 4
+2025-09-08 03:36:55,081 - INFO - Saved: webcam_snapshot_20250908_033654.png | Size: 1.1MB
+2025-09-08 03:36:55,082 - INFO - Captures: 74 | Remaining: 473265s | Restarts: 4
+2025-09-08 04:06:55,886 - INFO - Saved: webcam_snapshot_20250908_040655.png | Size: 1.0MB
+2025-09-08 04:06:55,887 - INFO - Captures: 75 | Remaining: 471464s | Restarts: 4
+2025-09-08 04:36:56,733 - INFO - Saved: webcam_snapshot_20250908_043655.png | Size: 1.1MB
+2025-09-08 04:36:56,735 - INFO - Captures: 76 | Remaining: 469663s | Restarts: 4
+2025-09-08 05:06:57,553 - INFO - Saved: webcam_snapshot_20250908_050656.png | Size: 1.5MB
+2025-09-08 05:06:57,554 - INFO - Captures: 77 | Remaining: 467862s | Restarts: 4
+2025-09-08 05:36:58,402 - INFO - Saved: webcam_snapshot_20250908_053657.png | Size: 0.8MB
+2025-09-08 05:36:58,403 - INFO - Captures: 78 | Remaining: 466061s | Restarts: 4
+2025-09-08 06:06:59,211 - INFO - Saved: webcam_snapshot_20250908_060658.png | Size: 0.8MB
+2025-09-08 06:06:59,211 - INFO - Captures: 79 | Remaining: 464260s | Restarts: 4
+2025-09-08 06:37:00,005 - INFO - Saved: webcam_snapshot_20250908_063659.png | Size: 0.8MB
+2025-09-08 06:37:00,006 - INFO - Captures: 80 | Remaining: 462460s | Restarts: 4
+2025-09-08 07:07:00,799 - INFO - Saved: webcam_snapshot_20250908_070700.png | Size: 0.9MB
+2025-09-08 07:07:00,799 - INFO - Captures: 81 | Remaining: 460659s | Restarts: 4
+2025-09-08 07:37:01,642 - INFO - Saved: webcam_snapshot_20250908_073700.png | Size: 0.9MB
+2025-09-08 07:37:01,643 - INFO - Captures: 82 | Remaining: 458858s | Restarts: 4
+2025-09-08 08:07:02,461 - INFO - Saved: webcam_snapshot_20250908_080701.png | Size: 0.9MB
+2025-09-08 08:07:02,461 - INFO - Captures: 83 | Remaining: 457057s | Restarts: 4
+2025-09-08 08:37:03,264 - INFO - Saved: webcam_snapshot_20250908_083702.png | Size: 0.9MB
+2025-09-08 08:37:03,265 - INFO - Captures: 84 | Remaining: 455256s | Restarts: 4
+2025-09-08 09:07:04,074 - INFO - Saved: webcam_snapshot_20250908_090703.png | Size: 0.8MB
+2025-09-08 09:07:04,075 - INFO - Captures: 85 | Remaining: 453456s | Restarts: 4
+2025-09-08 09:37:04,861 - INFO - Saved: webcam_snapshot_20250908_093704.png | Size: 0.8MB
+2025-09-08 09:37:04,862 - INFO - Captures: 86 | Remaining: 451655s | Restarts: 4
+2025-09-08 10:07:05,697 - INFO - Saved: webcam_snapshot_20250908_100704.png | Size: 0.8MB
+2025-09-08 10:07:05,698 - INFO - Captures: 87 | Remaining: 449854s | Restarts: 4
+2025-09-08 10:37:06,555 - INFO - Saved: webcam_snapshot_20250908_103705.png | Size: 0.9MB
+2025-09-08 10:37:06,555 - INFO - Captures: 88 | Remaining: 448053s | Restarts: 4
+2025-09-08 11:07:07,364 - INFO - Saved: webcam_snapshot_20250908_110706.png | Size: 0.9MB
+2025-09-08 11:07:07,364 - INFO - Captures: 89 | Remaining: 446252s | Restarts: 4
+2025-09-08 11:37:08,201 - INFO - Saved: webcam_snapshot_20250908_113707.png | Size: 0.8MB
+2025-09-08 11:37:08,202 - INFO - Captures: 90 | Remaining: 444451s | Restarts: 4
+2025-09-08 12:07:09,010 - INFO - Saved: webcam_snapshot_20250908_120708.png | Size: 0.9MB
+2025-09-08 12:07:09,010 - INFO - Captures: 91 | Remaining: 442651s | Restarts: 4
+2025-09-08 12:37:09,850 - INFO - Saved: webcam_snapshot_20250908_123709.png | Size: 0.9MB
+2025-09-08 12:37:09,851 - INFO - Captures: 92 | Remaining: 440850s | Restarts: 4
+2025-09-08 13:07:10,708 - INFO - Saved: webcam_snapshot_20250908_130709.png | Size: 0.9MB
+2025-09-08 13:07:10,708 - INFO - Captures: 93 | Remaining: 439049s | Restarts: 4
+2025-09-08 13:37:11,570 - INFO - Saved: webcam_snapshot_20250908_133710.png | Size: 0.9MB
+2025-09-08 13:37:11,570 - INFO - Captures: 94 | Remaining: 437248s | Restarts: 4
+2025-09-08 14:07:12,368 - INFO - Saved: webcam_snapshot_20250908_140711.png | Size: 0.9MB
+2025-09-08 14:07:12,369 - INFO - Captures: 95 | Remaining: 435447s | Restarts: 4
+2025-09-08 14:37:13,191 - INFO - Saved: webcam_snapshot_20250908_143712.png | Size: 0.9MB
+2025-09-08 14:37:13,191 - INFO - Captures: 96 | Remaining: 433647s | Restarts: 4
+2025-09-08 15:07:13,193 - INFO - Performing scheduled browser restart
+2025-09-08 15:07:14,018 - INFO - Saved: webcam_snapshot_20250908_150713.png | Size: 0.7MB
+2025-09-08 15:07:14,018 - INFO - Captures: 97 | Remaining: 431846s | Restarts: 5
+2025-09-08 15:37:14,890 - INFO - Saved: webcam_snapshot_20250908_153714.png | Size: 1.0MB
+2025-09-08 15:37:14,891 - INFO - Captures: 98 | Remaining: 430045s | Restarts: 5
+2025-09-08 16:07:15,694 - INFO - Saved: webcam_snapshot_20250908_160714.png | Size: 0.9MB
+2025-09-08 16:07:15,694 - INFO - Captures: 99 | Remaining: 428244s | Restarts: 5
+2025-09-08 16:37:16,630 - INFO - Saved: webcam_snapshot_20250908_163715.png | Size: 1.1MB
+2025-09-08 16:37:16,631 - INFO - Captures: 100 | Remaining: 426443s | Restarts: 5
+2025-09-08 17:07:17,499 - INFO - Saved: webcam_snapshot_20250908_170716.png | Size: 1.1MB
+2025-09-08 17:07:17,500 - INFO - Captures: 101 | Remaining: 424642s | Restarts: 5
+2025-09-08 17:37:18,425 - INFO - Saved: webcam_snapshot_20250908_173717.png | Size: 1.2MB
+2025-09-08 17:37:18,425 - INFO - Captures: 102 | Remaining: 422841s | Restarts: 5
+2025-09-08 18:07:19,316 - INFO - Saved: webcam_snapshot_20250908_180718.png | Size: 1.1MB
+2025-09-08 18:07:19,316 - INFO - Captures: 103 | Remaining: 421040s | Restarts: 5
+2025-09-08 18:37:20,174 - INFO - Saved: webcam_snapshot_20250908_183719.png | Size: 1.1MB
+2025-09-08 18:37:20,174 - INFO - Captures: 104 | Remaining: 419240s | Restarts: 5
+2025-09-08 19:07:21,013 - INFO - Saved: webcam_snapshot_20250908_190720.png | Size: 1.1MB
+2025-09-08 19:07:21,014 - INFO - Captures: 105 | Remaining: 417439s | Restarts: 5
+2025-09-08 19:37:21,870 - INFO - Saved: webcam_snapshot_20250908_193721.png | Size: 1.2MB
+2025-09-08 19:37:21,871 - INFO - Captures: 106 | Remaining: 415638s | Restarts: 5
+2025-09-08 20:07:22,749 - INFO - Saved: webcam_snapshot_20250908_200721.png | Size: 1.2MB
+2025-09-08 20:07:22,749 - INFO - Captures: 107 | Remaining: 413837s | Restarts: 5
+2025-09-08 20:37:23,569 - INFO - Saved: webcam_snapshot_20250908_203722.png | Size: 1.2MB
+2025-09-08 20:37:23,569 - INFO - Captures: 108 | Remaining: 412036s | Restarts: 5
+2025-09-08 21:07:24,380 - INFO - Saved: webcam_snapshot_20250908_210723.png | Size: 1.3MB
+2025-09-08 21:07:24,380 - INFO - Captures: 109 | Remaining: 410235s | Restarts: 5
+2025-09-08 21:37:25,192 - INFO - Saved: webcam_snapshot_20250908_213724.png | Size: 1.3MB
+2025-09-08 21:37:25,192 - INFO - Captures: 110 | Remaining: 408435s | Restarts: 5
+2025-09-08 22:07:25,998 - INFO - Saved: webcam_snapshot_20250908_220725.png | Size: 1.3MB
+2025-09-08 22:07:25,998 - INFO - Captures: 111 | Remaining: 406634s | Restarts: 5
+2025-09-08 22:37:26,824 - INFO - Saved: webcam_snapshot_20250908_223725.png | Size: 1.3MB
+2025-09-08 22:37:26,824 - INFO - Captures: 112 | Remaining: 404833s | Restarts: 5
+2025-09-08 23:07:27,636 - INFO - Saved: webcam_snapshot_20250908_230726.png | Size: 1.2MB
+2025-09-08 23:07:27,637 - INFO - Captures: 113 | Remaining: 403032s | Restarts: 5
+2025-09-08 23:37:28,472 - INFO - Saved: webcam_snapshot_20250908_233727.png | Size: 1.2MB
+2025-09-08 23:37:28,472 - INFO - Captures: 114 | Remaining: 401231s | Restarts: 5
+2025-09-09 00:07:29,398 - INFO - Saved: webcam_snapshot_20250909_000728.png | Size: 1.2MB
+2025-09-09 00:07:29,399 - INFO - Captures: 115 | Remaining: 399430s | Restarts: 5
+2025-09-09 00:37:30,272 - INFO - Saved: webcam_snapshot_20250909_003729.png | Size: 1.2MB
+2025-09-09 00:37:30,273 - INFO - Captures: 116 | Remaining: 397629s | Restarts: 5
+2025-09-09 01:07:31,093 - INFO - Saved: webcam_snapshot_20250909_010730.png | Size: 1.1MB
+2025-09-09 01:07:31,093 - INFO - Captures: 117 | Remaining: 395829s | Restarts: 5
+2025-09-09 01:37:31,990 - INFO - Saved: webcam_snapshot_20250909_013731.png | Size: 1.1MB
+2025-09-09 01:37:31,990 - INFO - Captures: 118 | Remaining: 394028s | Restarts: 5
+2025-09-09 02:07:32,734 - INFO - Saved: webcam_snapshot_20250909_020731.png | Size: 0.6MB
+2025-09-09 02:07:32,734 - INFO - Captures: 119 | Remaining: 392227s | Restarts: 5
+2025-09-09 02:37:33,551 - INFO - Saved: webcam_snapshot_20250909_023732.png | Size: 0.9MB
+2025-09-09 02:37:33,551 - INFO - Captures: 120 | Remaining: 390426s | Restarts: 5
+2025-09-09 03:07:33,553 - INFO - Performing scheduled browser restart
+2025-09-09 03:07:34,377 - INFO - Saved: webcam_snapshot_20250909_030733.png | Size: 1.0MB
+2025-09-09 03:07:34,377 - INFO - Captures: 121 | Remaining: 388625s | Restarts: 6
+2025-09-09 03:37:35,183 - INFO - Saved: webcam_snapshot_20250909_033734.png | Size: 0.7MB
+2025-09-09 03:37:35,184 - INFO - Captures: 122 | Remaining: 386825s | Restarts: 6
+2025-09-09 04:07:35,984 - INFO - Saved: webcam_snapshot_20250909_040735.png | Size: 1.0MB
+2025-09-09 04:07:35,984 - INFO - Captures: 123 | Remaining: 385024s | Restarts: 6
+2025-09-09 04:37:36,833 - INFO - Saved: webcam_snapshot_20250909_043735.png | Size: 1.4MB
+2025-09-09 04:37:36,834 - INFO - Captures: 124 | Remaining: 383223s | Restarts: 6
+2025-09-09 05:07:37,701 - INFO - Saved: webcam_snapshot_20250909_050736.png | Size: 1.0MB
+2025-09-09 05:07:37,702 - INFO - Captures: 125 | Remaining: 381422s | Restarts: 6
+2025-09-09 05:37:38,522 - INFO - Saved: webcam_snapshot_20250909_053737.png | Size: 0.7MB
+2025-09-09 05:37:38,523 - INFO - Captures: 126 | Remaining: 379621s | Restarts: 6
+2025-09-09 06:07:39,372 - INFO - Saved: webcam_snapshot_20250909_060738.png | Size: 0.7MB
+2025-09-09 06:07:39,372 - INFO - Captures: 127 | Remaining: 377820s | Restarts: 6
+2025-09-09 06:37:40,179 - INFO - Saved: webcam_snapshot_20250909_063739.png | Size: 0.9MB
+2025-09-09 06:37:40,180 - INFO - Captures: 128 | Remaining: 376020s | Restarts: 6
+2025-09-09 07:07:41,057 - INFO - Saved: webcam_snapshot_20250909_070740.png | Size: 1.0MB
+2025-09-09 07:07:41,058 - INFO - Captures: 129 | Remaining: 374219s | Restarts: 6
+2025-09-09 07:37:41,900 - INFO - Saved: webcam_snapshot_20250909_073741.png | Size: 1.0MB
+2025-09-09 07:37:41,900 - INFO - Captures: 130 | Remaining: 372418s | Restarts: 6
+2025-09-09 08:07:42,748 - INFO - Saved: webcam_snapshot_20250909_080741.png | Size: 0.7MB
+2025-09-09 08:07:42,749 - INFO - Captures: 131 | Remaining: 370617s | Restarts: 6
+2025-09-09 08:37:43,602 - INFO - Saved: webcam_snapshot_20250909_083742.png | Size: 0.9MB
+2025-09-09 08:37:43,603 - INFO - Captures: 132 | Remaining: 368816s | Restarts: 6
+2025-09-09 09:07:44,465 - INFO - Saved: webcam_snapshot_20250909_090743.png | Size: 0.7MB
+2025-09-09 09:07:44,466 - INFO - Captures: 133 | Remaining: 367015s | Restarts: 6
+2025-09-09 09:37:45,311 - INFO - Saved: webcam_snapshot_20250909_093744.png | Size: 0.8MB
+2025-09-09 09:37:45,312 - INFO - Captures: 134 | Remaining: 365214s | Restarts: 6
+2025-09-09 10:07:46,147 - INFO - Saved: webcam_snapshot_20250909_100745.png | Size: 0.9MB
+2025-09-09 10:07:46,147 - INFO - Captures: 135 | Remaining: 363414s | Restarts: 6
+2025-09-09 10:37:47,006 - INFO - Saved: webcam_snapshot_20250909_103746.png | Size: 0.8MB
+2025-09-09 10:37:47,006 - INFO - Captures: 136 | Remaining: 361613s | Restarts: 6
+2025-09-09 11:07:47,862 - INFO - Saved: webcam_snapshot_20250909_110747.png | Size: 0.9MB
+2025-09-09 11:07:47,863 - INFO - Captures: 137 | Remaining: 359812s | Restarts: 6
+2025-09-09 11:37:48,748 - INFO - Saved: webcam_snapshot_20250909_113747.png | Size: 0.8MB
+2025-09-09 11:37:48,748 - INFO - Captures: 138 | Remaining: 358011s | Restarts: 6
+2025-09-09 12:07:49,597 - INFO - Saved: webcam_snapshot_20250909_120748.png | Size: 0.8MB
+2025-09-09 12:07:49,598 - INFO - Captures: 139 | Remaining: 356210s | Restarts: 6
+2025-09-09 12:37:50,473 - INFO - Saved: webcam_snapshot_20250909_123749.png | Size: 0.8MB
+2025-09-09 12:37:50,473 - INFO - Captures: 140 | Remaining: 354409s | Restarts: 6
+2025-09-09 13:07:51,335 - INFO - Saved: webcam_snapshot_20250909_130750.png | Size: 0.8MB
+2025-09-09 13:07:51,335 - INFO - Captures: 141 | Remaining: 352608s | Restarts: 6
+2025-09-09 13:37:52,209 - INFO - Saved: webcam_snapshot_20250909_133751.png | Size: 0.8MB
+2025-09-09 13:37:52,209 - INFO - Captures: 142 | Remaining: 350807s | Restarts: 6
+2025-09-09 14:07:53,078 - INFO - Saved: webcam_snapshot_20250909_140752.png | Size: 0.8MB
+2025-09-09 14:07:53,078 - INFO - Captures: 143 | Remaining: 349007s | Restarts: 6
+2025-09-09 14:37:53,937 - INFO - Saved: webcam_snapshot_20250909_143753.png | Size: 0.8MB
+2025-09-09 14:37:53,937 - INFO - Captures: 144 | Remaining: 347206s | Restarts: 6
+2025-09-09 15:07:53,938 - INFO - Performing scheduled browser restart
+2025-09-09 15:07:54,740 - INFO - Saved: webcam_snapshot_20250909_150753.png | Size: 0.6MB
+2025-09-09 15:07:54,740 - INFO - Captures: 145 | Remaining: 345405s | Restarts: 7
+2025-09-09 15:37:55,569 - INFO - Saved: webcam_snapshot_20250909_153754.png | Size: 1.2MB
+2025-09-09 15:37:55,569 - INFO - Captures: 146 | Remaining: 343604s | Restarts: 7
+2025-09-09 16:07:56,453 - INFO - Saved: webcam_snapshot_20250909_160755.png | Size: 1.0MB
+2025-09-09 16:07:56,454 - INFO - Captures: 147 | Remaining: 341803s | Restarts: 7
+2025-09-09 16:37:57,334 - INFO - Saved: webcam_snapshot_20250909_163756.png | Size: 1.1MB
+2025-09-09 16:37:57,334 - INFO - Captures: 148 | Remaining: 340002s | Restarts: 7
+2025-09-09 17:07:58,228 - INFO - Saved: webcam_snapshot_20250909_170757.png | Size: 1.1MB
+2025-09-09 17:07:58,229 - INFO - Captures: 149 | Remaining: 338201s | Restarts: 7
+2025-09-09 17:37:59,079 - INFO - Saved: webcam_snapshot_20250909_173758.png | Size: 1.3MB
+2025-09-09 17:37:59,080 - INFO - Captures: 150 | Remaining: 336401s | Restarts: 7
+2025-09-09 18:07:59,956 - INFO - Saved: webcam_snapshot_20250909_180759.png | Size: 1.2MB
+2025-09-09 18:07:59,957 - INFO - Captures: 151 | Remaining: 334600s | Restarts: 7
+2025-09-09 18:38:00,823 - INFO - Saved: webcam_snapshot_20250909_183759.png | Size: 1.2MB
+2025-09-09 18:38:00,824 - INFO - Captures: 152 | Remaining: 332799s | Restarts: 7
+2025-09-09 19:08:01,713 - INFO - Saved: webcam_snapshot_20250909_190800.png | Size: 1.2MB
+2025-09-09 19:08:01,713 - INFO - Captures: 153 | Remaining: 330998s | Restarts: 7
+2025-09-09 19:38:02,588 - INFO - Saved: webcam_snapshot_20250909_193801.png | Size: 1.3MB
+2025-09-09 19:38:02,588 - INFO - Captures: 154 | Remaining: 329197s | Restarts: 7
+2025-09-09 20:08:03,426 - INFO - Saved: webcam_snapshot_20250909_200802.png | Size: 1.3MB
+2025-09-09 20:08:03,427 - INFO - Captures: 155 | Remaining: 327396s | Restarts: 7
+2025-09-09 20:38:04,276 - INFO - Saved: webcam_snapshot_20250909_203803.png | Size: 1.3MB
+2025-09-09 20:38:04,276 - INFO - Captures: 156 | Remaining: 325595s | Restarts: 7
+2025-09-09 21:08:05,134 - INFO - Saved: webcam_snapshot_20250909_210804.png | Size: 1.1MB
+2025-09-09 21:08:05,135 - INFO - Captures: 157 | Remaining: 323795s | Restarts: 7
+2025-09-09 21:38:05,987 - INFO - Saved: webcam_snapshot_20250909_213805.png | Size: 1.3MB
+2025-09-09 21:38:05,987 - INFO - Captures: 158 | Remaining: 321994s | Restarts: 7
+2025-09-09 22:08:06,863 - INFO - Saved: webcam_snapshot_20250909_220805.png | Size: 1.3MB
+2025-09-09 22:08:06,864 - INFO - Captures: 159 | Remaining: 320193s | Restarts: 7
+2025-09-09 22:38:07,740 - INFO - Saved: webcam_snapshot_20250909_223806.png | Size: 1.2MB
+2025-09-09 22:38:07,740 - INFO - Captures: 160 | Remaining: 318392s | Restarts: 7
+2025-09-09 23:08:08,586 - INFO - Saved: webcam_snapshot_20250909_230807.png | Size: 1.1MB
+2025-09-09 23:08:08,587 - INFO - Captures: 161 | Remaining: 316591s | Restarts: 7
+2025-09-09 23:38:09,465 - INFO - Saved: webcam_snapshot_20250909_233808.png | Size: 1.2MB
+2025-09-09 23:38:09,465 - INFO - Captures: 162 | Remaining: 314790s | Restarts: 7
+2025-09-10 00:08:10,333 - INFO - Saved: webcam_snapshot_20250910_000809.png | Size: 1.0MB
+2025-09-10 00:08:10,334 - INFO - Captures: 163 | Remaining: 312989s | Restarts: 7
+2025-09-10 00:38:11,133 - INFO - Saved: webcam_snapshot_20250910_003810.png | Size: 0.8MB
+2025-09-10 00:38:11,134 - INFO - Captures: 164 | Remaining: 311189s | Restarts: 7
+2025-09-10 01:08:11,974 - INFO - Saved: webcam_snapshot_20250910_010811.png | Size: 0.8MB
+2025-09-10 01:08:11,974 - INFO - Captures: 165 | Remaining: 309388s | Restarts: 7
+2025-09-10 01:38:12,820 - INFO - Saved: webcam_snapshot_20250910_013811.png | Size: 1.1MB
+2025-09-10 01:38:12,820 - INFO - Captures: 166 | Remaining: 307587s | Restarts: 7
+2025-09-10 02:08:13,671 - INFO - Saved: webcam_snapshot_20250910_020812.png | Size: 1.1MB
+2025-09-10 02:08:13,672 - INFO - Captures: 167 | Remaining: 305786s | Restarts: 7
+2025-09-10 02:38:14,513 - INFO - Saved: webcam_snapshot_20250910_023813.png | Size: 1.0MB
+2025-09-10 02:38:14,514 - INFO - Captures: 168 | Remaining: 303985s | Restarts: 7
+2025-09-10 03:08:14,515 - INFO - Performing scheduled browser restart
+2025-09-10 03:08:15,380 - INFO - Saved: webcam_snapshot_20250910_030814.png | Size: 1.0MB
+2025-09-10 03:08:15,380 - INFO - Captures: 169 | Remaining: 302184s | Restarts: 8
+2025-09-10 03:38:16,192 - INFO - Saved: webcam_snapshot_20250910_033815.png | Size: 0.9MB
+2025-09-10 03:38:16,193 - INFO - Captures: 170 | Remaining: 300384s | Restarts: 8
+2025-09-10 04:08:17,034 - INFO - Saved: webcam_snapshot_20250910_040816.png | Size: 0.8MB
+2025-09-10 04:08:17,035 - INFO - Captures: 171 | Remaining: 298583s | Restarts: 8
+2025-09-10 04:38:17,886 - INFO - Saved: webcam_snapshot_20250910_043817.png | Size: 0.8MB
+2025-09-10 04:38:17,887 - INFO - Captures: 172 | Remaining: 296782s | Restarts: 8
+2025-09-10 05:08:18,721 - INFO - Saved: webcam_snapshot_20250910_050817.png | Size: 1.7MB
+2025-09-10 05:08:18,721 - INFO - Captures: 173 | Remaining: 294981s | Restarts: 8
+2025-09-10 05:38:19,552 - INFO - Saved: webcam_snapshot_20250910_053818.png | Size: 0.7MB
+2025-09-10 05:38:19,552 - INFO - Captures: 174 | Remaining: 293180s | Restarts: 8
+2025-09-10 06:08:20,261 - INFO - Saved: webcam_snapshot_20250910_060819.png | Size: 0.4MB
+2025-09-10 06:08:20,264 - INFO - Captures: 175 | Remaining: 291379s | Restarts: 8
+2025-09-10 06:38:21,067 - INFO - Saved: webcam_snapshot_20250910_063820.png | Size: 0.6MB
+2025-09-10 06:38:21,067 - INFO - Captures: 176 | Remaining: 289579s | Restarts: 8
+2025-09-10 07:08:21,875 - INFO - Saved: webcam_snapshot_20250910_070821.png | Size: 0.6MB
+2025-09-10 07:08:21,876 - INFO - Captures: 177 | Remaining: 287778s | Restarts: 8
+2025-09-10 07:38:22,744 - INFO - Saved: webcam_snapshot_20250910_073821.png | Size: 0.7MB
+2025-09-10 07:38:22,745 - INFO - Captures: 178 | Remaining: 285977s | Restarts: 8
+2025-09-10 08:08:23,585 - INFO - Saved: webcam_snapshot_20250910_080822.png | Size: 0.9MB
+2025-09-10 08:08:23,586 - INFO - Captures: 179 | Remaining: 284176s | Restarts: 8
+2025-09-10 08:38:24,462 - INFO - Saved: webcam_snapshot_20250910_083823.png | Size: 0.9MB
+2025-09-10 08:38:24,463 - INFO - Captures: 180 | Remaining: 282375s | Restarts: 8
+2025-09-10 09:08:25,268 - INFO - Saved: webcam_snapshot_20250910_090824.png | Size: 0.9MB
+2025-09-10 09:08:25,268 - INFO - Captures: 181 | Remaining: 280574s | Restarts: 8
+2025-09-10 09:38:26,102 - INFO - Saved: webcam_snapshot_20250910_093825.png | Size: 0.8MB
+2025-09-10 09:38:26,103 - INFO - Captures: 182 | Remaining: 278774s | Restarts: 8
+2025-09-10 10:08:26,933 - INFO - Saved: webcam_snapshot_20250910_100826.png | Size: 0.8MB
+2025-09-10 10:08:26,933 - INFO - Captures: 183 | Remaining: 276973s | Restarts: 8
+2025-09-10 10:38:27,756 - INFO - Saved: webcam_snapshot_20250910_103826.png | Size: 0.8MB
+2025-09-10 10:38:27,757 - INFO - Captures: 184 | Remaining: 275172s | Restarts: 8
+2025-09-10 11:08:28,631 - INFO - Saved: webcam_snapshot_20250910_110827.png | Size: 0.8MB
+2025-09-10 11:08:28,631 - INFO - Captures: 185 | Remaining: 273371s | Restarts: 8
+2025-09-10 11:38:29,476 - INFO - Saved: webcam_snapshot_20250910_113828.png | Size: 0.8MB
+2025-09-10 11:38:29,477 - INFO - Captures: 186 | Remaining: 271570s | Restarts: 8
+2025-09-10 12:08:30,362 - INFO - Saved: webcam_snapshot_20250910_120829.png | Size: 0.8MB
+2025-09-10 12:08:30,363 - INFO - Captures: 187 | Remaining: 269769s | Restarts: 8
+2025-09-10 12:38:31,201 - INFO - Saved: webcam_snapshot_20250910_123830.png | Size: 0.8MB
+2025-09-10 12:38:31,202 - INFO - Captures: 188 | Remaining: 267968s | Restarts: 8
+2025-09-10 13:08:32,122 - INFO - Saved: webcam_snapshot_20250910_130831.png | Size: 0.8MB
+2025-09-10 13:08:32,123 - INFO - Captures: 189 | Remaining: 266168s | Restarts: 8
+2025-09-10 13:38:32,992 - INFO - Saved: webcam_snapshot_20250910_133832.png | Size: 0.8MB
+2025-09-10 13:38:32,992 - INFO - Captures: 190 | Remaining: 264367s | Restarts: 8
+2025-09-10 14:08:33,851 - INFO - Saved: webcam_snapshot_20250910_140832.png | Size: 0.8MB
+2025-09-10 14:08:33,851 - INFO - Captures: 191 | Remaining: 262566s | Restarts: 8
+2025-09-10 14:38:34,698 - INFO - Saved: webcam_snapshot_20250910_143833.png | Size: 0.8MB
+2025-09-10 14:38:34,699 - INFO - Captures: 192 | Remaining: 260765s | Restarts: 8
+2025-09-10 15:08:34,699 - INFO - Performing scheduled browser restart
+2025-09-10 15:08:35,496 - INFO - Saved: webcam_snapshot_20250910_150834.png | Size: 0.6MB
+2025-09-10 15:08:35,496 - INFO - Captures: 193 | Remaining: 258964s | Restarts: 9
+2025-09-10 15:38:36,352 - INFO - Saved: webcam_snapshot_20250910_153835.png | Size: 1.2MB
+2025-09-10 15:38:36,354 - INFO - Captures: 194 | Remaining: 257163s | Restarts: 9
+2025-09-10 16:08:37,111 - INFO - Saved: webcam_snapshot_20250910_160836.png | Size: 1.0MB
+2025-09-10 16:08:37,111 - INFO - Captures: 195 | Remaining: 255363s | Restarts: 9
+2025-09-10 16:38:38,000 - INFO - Saved: webcam_snapshot_20250910_163837.png | Size: 1.1MB
+2025-09-10 16:38:38,001 - INFO - Captures: 196 | Remaining: 253562s | Restarts: 9
+2025-09-10 17:08:38,969 - INFO - Saved: webcam_snapshot_20250910_170838.png | Size: 1.1MB
+2025-09-10 17:08:38,971 - INFO - Captures: 197 | Remaining: 251761s | Restarts: 9
+2025-09-10 17:38:39,817 - INFO - Saved: webcam_snapshot_20250910_173838.png | Size: 1.3MB
+2025-09-10 17:38:39,818 - INFO - Captures: 198 | Remaining: 249960s | Restarts: 9
+2025-09-10 18:08:40,708 - INFO - Saved: webcam_snapshot_20250910_180839.png | Size: 1.0MB
+2025-09-10 18:08:40,708 - INFO - Captures: 199 | Remaining: 248159s | Restarts: 9
+2025-09-10 18:38:41,511 - INFO - Saved: webcam_snapshot_20250910_183840.png | Size: 0.6MB
+2025-09-10 18:38:41,512 - INFO - Captures: 200 | Remaining: 246358s | Restarts: 9
+2025-09-10 19:08:42,295 - INFO - Saved: webcam_snapshot_20250910_190841.png | Size: 0.6MB
+2025-09-10 19:08:42,295 - INFO - Captures: 201 | Remaining: 244557s | Restarts: 9
+2025-09-10 19:38:43,096 - INFO - Saved: webcam_snapshot_20250910_193842.png | Size: 0.8MB
+2025-09-10 19:38:43,097 - INFO - Captures: 202 | Remaining: 242757s | Restarts: 9
+2025-09-10 20:08:43,997 - INFO - Saved: webcam_snapshot_20250910_200843.png | Size: 1.3MB
+2025-09-10 20:08:43,997 - INFO - Captures: 203 | Remaining: 240956s | Restarts: 9
+2025-09-10 20:38:44,865 - INFO - Saved: webcam_snapshot_20250910_203843.png | Size: 1.3MB
+2025-09-10 20:38:44,865 - INFO - Captures: 204 | Remaining: 239155s | Restarts: 9
+2025-09-10 21:08:45,741 - INFO - Saved: webcam_snapshot_20250910_210844.png | Size: 1.3MB
+2025-09-10 21:08:45,742 - INFO - Captures: 205 | Remaining: 237354s | Restarts: 9
+2025-09-10 21:38:46,604 - INFO - Saved: webcam_snapshot_20250910_213845.png | Size: 1.2MB
+2025-09-10 21:38:46,604 - INFO - Captures: 206 | Remaining: 235553s | Restarts: 9
+2025-09-10 22:08:47,473 - INFO - Saved: webcam_snapshot_20250910_220846.png | Size: 1.2MB
+2025-09-10 22:08:47,473 - INFO - Captures: 207 | Remaining: 233752s | Restarts: 9
+2025-09-10 22:38:48,335 - INFO - Saved: webcam_snapshot_20250910_223847.png | Size: 1.2MB
+2025-09-10 22:38:48,336 - INFO - Captures: 208 | Remaining: 231951s | Restarts: 9
+2025-09-10 23:08:49,212 - INFO - Saved: webcam_snapshot_20250910_230848.png | Size: 1.1MB
+2025-09-10 23:08:49,213 - INFO - Captures: 209 | Remaining: 230150s | Restarts: 9
+2025-09-10 23:38:50,174 - INFO - Saved: webcam_snapshot_20250910_233849.png | Size: 0.9MB
+2025-09-10 23:38:50,175 - INFO - Captures: 210 | Remaining: 228350s | Restarts: 9
+2025-09-11 00:08:50,971 - INFO - Saved: webcam_snapshot_20250911_000850.png | Size: 0.7MB
+2025-09-11 00:08:50,971 - INFO - Captures: 211 | Remaining: 226549s | Restarts: 9
+2025-09-11 00:38:51,803 - INFO - Saved: webcam_snapshot_20250911_003850.png | Size: 0.7MB
+2025-09-11 00:38:51,804 - INFO - Captures: 212 | Remaining: 224748s | Restarts: 9
+2025-09-11 01:08:52,599 - INFO - Saved: webcam_snapshot_20250911_010851.png | Size: 0.8MB
+2025-09-11 01:08:52,600 - INFO - Captures: 213 | Remaining: 222947s | Restarts: 9
+2025-09-11 01:38:53,522 - INFO - Saved: webcam_snapshot_20250911_013852.png | Size: 1.0MB
+2025-09-11 01:38:53,522 - INFO - Captures: 214 | Remaining: 221146s | Restarts: 9
+2025-09-11 02:08:54,378 - INFO - Saved: webcam_snapshot_20250911_020853.png | Size: 0.8MB
+2025-09-11 02:08:54,378 - INFO - Captures: 215 | Remaining: 219345s | Restarts: 9
+2025-09-11 02:38:55,241 - INFO - Saved: webcam_snapshot_20250911_023854.png | Size: 0.8MB
+2025-09-11 02:38:55,242 - INFO - Captures: 216 | Remaining: 217544s | Restarts: 9
+2025-09-11 03:08:55,243 - INFO - Performing scheduled browser restart
+2025-09-11 03:08:56,094 - INFO - Saved: webcam_snapshot_20250911_030855.png | Size: 1.2MB
+2025-09-11 03:08:56,094 - INFO - Captures: 217 | Remaining: 215744s | Restarts: 10
+2025-09-11 03:38:56,899 - INFO - Saved: webcam_snapshot_20250911_033856.png | Size: 1.2MB
+2025-09-11 03:38:56,900 - INFO - Captures: 218 | Remaining: 213943s | Restarts: 10
+2025-09-11 04:08:57,645 - INFO - Saved: webcam_snapshot_20250911_040856.png | Size: 0.9MB
+2025-09-11 04:08:57,646 - INFO - Captures: 219 | Remaining: 212142s | Restarts: 10
+2025-09-11 04:38:58,455 - INFO - Saved: webcam_snapshot_20250911_043857.png | Size: 1.1MB
+2025-09-11 04:38:58,455 - INFO - Captures: 220 | Remaining: 210341s | Restarts: 10
+2025-09-11 05:08:59,289 - INFO - Saved: webcam_snapshot_20250911_050858.png | Size: 0.8MB
+2025-09-11 05:08:59,290 - INFO - Captures: 221 | Remaining: 208540s | Restarts: 10
+2025-09-11 05:39:00,098 - INFO - Saved: webcam_snapshot_20250911_053859.png | Size: 0.7MB
+2025-09-11 05:39:00,099 - INFO - Captures: 222 | Remaining: 206740s | Restarts: 10
+2025-09-11 06:09:00,924 - INFO - Saved: webcam_snapshot_20250911_060900.png | Size: 0.7MB
+2025-09-11 06:09:00,924 - INFO - Captures: 223 | Remaining: 204939s | Restarts: 10
+2025-09-11 06:39:01,757 - INFO - Saved: webcam_snapshot_20250911_063900.png | Size: 0.7MB
+2025-09-11 06:39:01,758 - INFO - Captures: 224 | Remaining: 203138s | Restarts: 10
+2025-09-11 07:09:02,458 - INFO - Saved: webcam_snapshot_20250911_070901.png | Size: 0.4MB
+2025-09-11 07:09:02,458 - INFO - Captures: 225 | Remaining: 201337s | Restarts: 10
+2025-09-11 07:39:03,264 - INFO - Saved: webcam_snapshot_20250911_073902.png | Size: 0.9MB
+2025-09-11 07:39:03,265 - INFO - Captures: 226 | Remaining: 199536s | Restarts: 10
+2025-09-11 08:09:04,033 - INFO - Saved: webcam_snapshot_20250911_080903.png | Size: 0.9MB
+2025-09-11 08:09:04,033 - INFO - Captures: 227 | Remaining: 197736s | Restarts: 10
+2025-09-11 08:39:04,846 - INFO - Saved: webcam_snapshot_20250911_083904.png | Size: 0.8MB
+2025-09-11 08:39:04,846 - INFO - Captures: 228 | Remaining: 195935s | Restarts: 10
+2025-09-11 09:09:05,670 - INFO - Saved: webcam_snapshot_20250911_090904.png | Size: 0.8MB
+2025-09-11 09:09:05,670 - INFO - Captures: 229 | Remaining: 194134s | Restarts: 10
+2025-09-11 09:39:06,477 - INFO - Saved: webcam_snapshot_20250911_093905.png | Size: 0.8MB
+2025-09-11 09:39:06,477 - INFO - Captures: 230 | Remaining: 192333s | Restarts: 10
+2025-09-11 10:09:07,286 - INFO - Saved: webcam_snapshot_20250911_100906.png | Size: 0.8MB
+2025-09-11 10:09:07,287 - INFO - Captures: 231 | Remaining: 190532s | Restarts: 10
+2025-09-11 10:39:08,096 - INFO - Saved: webcam_snapshot_20250911_103907.png | Size: 0.8MB
+2025-09-11 10:39:08,096 - INFO - Captures: 232 | Remaining: 188732s | Restarts: 10
+2025-09-11 11:09:08,895 - INFO - Saved: webcam_snapshot_20250911_110908.png | Size: 0.8MB
+2025-09-11 11:09:08,895 - INFO - Captures: 233 | Remaining: 186931s | Restarts: 10
+2025-09-11 11:39:09,690 - INFO - Saved: webcam_snapshot_20250911_113908.png | Size: 0.8MB
+2025-09-11 11:39:09,690 - INFO - Captures: 234 | Remaining: 185130s | Restarts: 10
+2025-09-11 12:09:10,556 - INFO - Saved: webcam_snapshot_20250911_120909.png | Size: 0.8MB
+2025-09-11 12:09:10,556 - INFO - Captures: 235 | Remaining: 183329s | Restarts: 10
+2025-09-11 12:39:11,347 - INFO - Saved: webcam_snapshot_20250911_123910.png | Size: 0.8MB
+2025-09-11 12:39:11,348 - INFO - Captures: 236 | Remaining: 181528s | Restarts: 10
+2025-09-11 13:09:12,123 - INFO - Saved: webcam_snapshot_20250911_130911.png | Size: 0.8MB
+2025-09-11 13:09:12,123 - INFO - Captures: 237 | Remaining: 179728s | Restarts: 10
+2025-09-11 13:39:12,943 - INFO - Saved: webcam_snapshot_20250911_133912.png | Size: 0.8MB
+2025-09-11 13:39:12,943 - INFO - Captures: 238 | Remaining: 177927s | Restarts: 10
+2025-09-11 14:09:13,757 - INFO - Saved: webcam_snapshot_20250911_140912.png | Size: 0.9MB
+2025-09-11 14:09:13,757 - INFO - Captures: 239 | Remaining: 176126s | Restarts: 10
+2025-09-11 14:39:14,563 - INFO - Saved: webcam_snapshot_20250911_143913.png | Size: 0.8MB
+2025-09-11 14:39:14,563 - INFO - Captures: 240 | Remaining: 174325s | Restarts: 10
+2025-09-11 15:09:14,564 - INFO - Performing scheduled browser restart
+2025-09-11 15:09:15,316 - INFO - Saved: webcam_snapshot_20250911_150914.png | Size: 0.5MB
+2025-09-11 15:09:15,316 - INFO - Captures: 241 | Remaining: 172524s | Restarts: 11
+2025-09-11 15:39:16,091 - INFO - Saved: webcam_snapshot_20250911_153915.png | Size: 1.2MB
+2025-09-11 15:39:16,092 - INFO - Captures: 242 | Remaining: 170724s | Restarts: 11
+2025-09-11 16:09:16,863 - INFO - Saved: webcam_snapshot_20250911_160916.png | Size: 1.0MB
+2025-09-11 16:09:16,863 - INFO - Captures: 243 | Remaining: 168923s | Restarts: 11
+2025-09-11 16:39:17,696 - INFO - Saved: webcam_snapshot_20250911_163916.png | Size: 1.2MB
+2025-09-11 16:39:17,696 - INFO - Captures: 244 | Remaining: 167122s | Restarts: 11

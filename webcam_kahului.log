@@ -1,0 +1,702 @@
+nohup: ignoring input
+2025-09-11 16:59:31,597 - INFO - Starting webcam capture for https://www.skylinewebcams.com/zh/webcam/united-states/hawaii/maui/kahului.html
+2025-09-11 16:59:31,597 - INFO - Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]
+2025-09-11 16:59:31,598 - INFO - Using browser binary: /usr/bin/chromium-browser
+2025-09-11 16:59:32,603 - INFO - Chrome driver initialized successfully (session: 7e96087c44387957dcd04a4775e2b34d)
+2025-09-11 16:59:32,603 - INFO - Loading webcam URL: https://www.skylinewebcams.com/zh/webcam/united-states/hawaii/maui/kahului.html
+2025-09-11 16:59:34,939 - INFO - Found video/canvas element
+2025-09-11 16:59:37,939 - INFO - Page loaded successfully
+2025-09-11 16:59:38,245 - INFO - Clicked play overlay/element
+2025-09-11 16:59:38,992 - INFO - Clicked fullscreen button
+2025-09-11 16:59:38,996 - INFO - Capturing every 1800.0 seconds
+2025-09-11 16:59:38,996 - INFO - Will run for 604800 seconds
+2025-09-11 16:59:38,996 - INFO - Saving to: /home/exouser/cv/images/www.skylinewebcams.com
+2025-09-11 16:59:38,997 - INFO - Logging to: /home/exouser/cv/webcam_capture.log
+2025-09-11 16:59:38,997 - INFO - Performing scheduled browser restart
+2025-09-11 16:59:39,889 - INFO - Saved: webcam_snapshot_20250911_165939.png | Size: 0.4MB
+2025-09-11 16:59:39,889 - INFO - Captures: 1 | Remaining: 604792s | Restarts: 1
+2025-09-11 17:29:40,713 - INFO - Saved: webcam_snapshot_20250911_172939.png | Size: 0.4MB
+2025-09-11 17:29:40,713 - INFO - Captures: 2 | Remaining: 602991s | Restarts: 1
+2025-09-11 17:59:41,554 - INFO - Saved: webcam_snapshot_20250911_175940.png | Size: 0.4MB
+2025-09-11 17:59:41,554 - INFO - Captures: 3 | Remaining: 601190s | Restarts: 1
+2025-09-11 18:29:42,405 - INFO - Saved: webcam_snapshot_20250911_182941.png | Size: 0.4MB
+2025-09-11 18:29:42,406 - INFO - Captures: 4 | Remaining: 599389s | Restarts: 1
+2025-09-11 18:59:43,283 - INFO - Saved: webcam_snapshot_20250911_185942.png | Size: 0.4MB
+2025-09-11 18:59:43,284 - INFO - Captures: 5 | Remaining: 597588s | Restarts: 1
+2025-09-11 19:29:44,101 - INFO - Saved: webcam_snapshot_20250911_192943.png | Size: 0.4MB
+2025-09-11 19:29:44,101 - INFO - Captures: 6 | Remaining: 595787s | Restarts: 1
+2025-09-11 19:59:44,962 - INFO - Saved: webcam_snapshot_20250911_195944.png | Size: 0.4MB
+2025-09-11 19:59:44,962 - INFO - Captures: 7 | Remaining: 593987s | Restarts: 1
+2025-09-11 20:29:45,804 - INFO - Saved: webcam_snapshot_20250911_202944.png | Size: 0.5MB
+2025-09-11 20:29:45,807 - INFO - Captures: 8 | Remaining: 592186s | Restarts: 1
+2025-09-11 20:59:46,705 - INFO - Saved: webcam_snapshot_20250911_205945.png | Size: 0.5MB
+2025-09-11 20:59:46,705 - INFO - Captures: 9 | Remaining: 590385s | Restarts: 1
+2025-09-11 21:29:47,531 - INFO - Saved: webcam_snapshot_20250911_212946.png | Size: 0.5MB
+2025-09-11 21:29:47,532 - INFO - Captures: 10 | Remaining: 588584s | Restarts: 1
+2025-09-11 21:59:48,421 - INFO - Saved: webcam_snapshot_20250911_215947.png | Size: 0.5MB
+2025-09-11 21:59:48,425 - INFO - Captures: 11 | Remaining: 586783s | Restarts: 1
+2025-09-11 22:29:49,288 - INFO - Saved: webcam_snapshot_20250911_222948.png | Size: 0.5MB
+2025-09-11 22:29:49,289 - INFO - Captures: 12 | Remaining: 584982s | Restarts: 1
+2025-09-11 22:59:50,129 - INFO - Saved: webcam_snapshot_20250911_225949.png | Size: 0.5MB
+2025-09-11 22:59:50,130 - INFO - Captures: 13 | Remaining: 583181s | Restarts: 1
+2025-09-11 23:29:50,931 - INFO - Saved: webcam_snapshot_20250911_232950.png | Size: 0.5MB
+2025-09-11 23:29:50,932 - INFO - Captures: 14 | Remaining: 581381s | Restarts: 1
+2025-09-11 23:59:51,743 - INFO - Saved: webcam_snapshot_20250911_235950.png | Size: 0.5MB
+2025-09-11 23:59:51,744 - INFO - Captures: 15 | Remaining: 579580s | Restarts: 1
+2025-09-12 00:29:52,574 - INFO - Saved: webcam_snapshot_20250912_002951.png | Size: 0.5MB
+2025-09-12 00:29:52,574 - INFO - Captures: 16 | Remaining: 577779s | Restarts: 1
+2025-09-12 00:59:53,384 - INFO - Saved: webcam_snapshot_20250912_005952.png | Size: 0.4MB
+2025-09-12 00:59:53,384 - INFO - Captures: 17 | Remaining: 575978s | Restarts: 1
+2025-09-12 01:29:54,233 - INFO - Saved: webcam_snapshot_20250912_012953.png | Size: 0.5MB
+2025-09-12 01:29:54,234 - INFO - Captures: 18 | Remaining: 574177s | Restarts: 1
+2025-09-12 01:59:55,067 - INFO - Saved: webcam_snapshot_20250912_015954.png | Size: 0.4MB
+2025-09-12 01:59:55,068 - INFO - Captures: 19 | Remaining: 572377s | Restarts: 1
+2025-09-12 02:29:55,872 - INFO - Saved: webcam_snapshot_20250912_022955.png | Size: 0.4MB
+2025-09-12 02:29:55,872 - INFO - Captures: 20 | Remaining: 570576s | Restarts: 1
+2025-09-12 02:59:56,709 - INFO - Saved: webcam_snapshot_20250912_025955.png | Size: 0.4MB
+2025-09-12 02:59:56,709 - INFO - Captures: 21 | Remaining: 568775s | Restarts: 1
+2025-09-12 03:29:57,548 - INFO - Saved: webcam_snapshot_20250912_032956.png | Size: 0.3MB
+2025-09-12 03:29:57,548 - INFO - Captures: 22 | Remaining: 566974s | Restarts: 1
+2025-09-12 03:59:58,359 - INFO - Saved: webcam_snapshot_20250912_035957.png | Size: 0.4MB
+2025-09-12 03:59:58,359 - INFO - Captures: 23 | Remaining: 565173s | Restarts: 1
+2025-09-12 04:29:59,250 - INFO - Saved: webcam_snapshot_20250912_042958.png | Size: 0.4MB
+2025-09-12 04:29:59,250 - INFO - Captures: 24 | Remaining: 563372s | Restarts: 1
+2025-09-12 04:59:59,251 - INFO - Performing scheduled browser restart
+2025-09-12 05:00:00,086 - INFO - Saved: webcam_snapshot_20250912_045959.png | Size: 0.4MB
+2025-09-12 05:00:00,086 - INFO - Captures: 25 | Remaining: 561572s | Restarts: 2
+2025-09-12 05:30:00,843 - INFO - Saved: webcam_snapshot_20250912_053000.png | Size: 0.3MB
+2025-09-12 05:30:00,844 - INFO - Captures: 26 | Remaining: 559771s | Restarts: 2
+2025-09-12 06:00:01,660 - INFO - Saved: webcam_snapshot_20250912_060000.png | Size: 0.3MB
+2025-09-12 06:00:01,661 - INFO - Captures: 27 | Remaining: 557970s | Restarts: 2
+2025-09-12 06:30:02,377 - INFO - Saved: webcam_snapshot_20250912_063001.png | Size: 0.2MB
+2025-09-12 06:30:02,378 - INFO - Captures: 28 | Remaining: 556169s | Restarts: 2
+2025-09-12 07:00:03,118 - INFO - Saved: webcam_snapshot_20250912_070002.png | Size: 0.2MB
+2025-09-12 07:00:03,119 - INFO - Captures: 29 | Remaining: 554368s | Restarts: 2
+2025-09-12 07:30:03,894 - INFO - Saved: webcam_snapshot_20250912_073003.png | Size: 0.2MB
+2025-09-12 07:30:03,895 - INFO - Captures: 30 | Remaining: 552568s | Restarts: 2
+2025-09-12 08:00:04,630 - INFO - Saved: webcam_snapshot_20250912_080003.png | Size: 0.2MB
+2025-09-12 08:00:04,631 - INFO - Captures: 31 | Remaining: 550767s | Restarts: 2
+2025-09-12 08:30:05,362 - INFO - Saved: webcam_snapshot_20250912_083004.png | Size: 0.2MB
+2025-09-12 08:30:05,363 - INFO - Captures: 32 | Remaining: 548966s | Restarts: 2
+2025-09-12 09:00:06,092 - INFO - Saved: webcam_snapshot_20250912_090005.png | Size: 0.2MB
+2025-09-12 09:00:06,093 - INFO - Captures: 33 | Remaining: 547166s | Restarts: 2
+2025-09-12 09:30:06,828 - INFO - Saved: webcam_snapshot_20250912_093006.png | Size: 0.2MB
+2025-09-12 09:30:06,828 - INFO - Captures: 34 | Remaining: 545365s | Restarts: 2
+2025-09-12 10:00:07,566 - INFO - Saved: webcam_snapshot_20250912_100006.png | Size: 0.2MB
+2025-09-12 10:00:07,567 - INFO - Captures: 35 | Remaining: 543564s | Restarts: 2
+2025-09-12 10:30:08,284 - INFO - Saved: webcam_snapshot_20250912_103007.png | Size: 0.2MB
+2025-09-12 10:30:08,286 - INFO - Captures: 36 | Remaining: 541763s | Restarts: 2
+2025-09-12 11:00:09,017 - INFO - Saved: webcam_snapshot_20250912_110008.png | Size: 0.2MB
+2025-09-12 11:00:09,017 - INFO - Captures: 37 | Remaining: 539963s | Restarts: 2
+2025-09-12 11:30:09,758 - INFO - Saved: webcam_snapshot_20250912_113009.png | Size: 0.2MB
+2025-09-12 11:30:09,759 - INFO - Captures: 38 | Remaining: 538162s | Restarts: 2
+2025-09-12 12:00:10,498 - INFO - Saved: webcam_snapshot_20250912_120009.png | Size: 0.2MB
+2025-09-12 12:00:10,500 - INFO - Captures: 39 | Remaining: 536361s | Restarts: 2
+2025-09-12 12:30:11,240 - INFO - Saved: webcam_snapshot_20250912_123010.png | Size: 0.2MB
+2025-09-12 12:30:11,240 - INFO - Captures: 40 | Remaining: 534560s | Restarts: 2
+2025-09-12 13:00:12,035 - INFO - Saved: webcam_snapshot_20250912_130011.png | Size: 0.2MB
+2025-09-12 13:00:12,036 - INFO - Captures: 41 | Remaining: 532760s | Restarts: 2
+2025-09-12 13:30:12,770 - INFO - Saved: webcam_snapshot_20250912_133012.png | Size: 0.2MB
+2025-09-12 13:30:12,772 - INFO - Captures: 42 | Remaining: 530959s | Restarts: 2
+2025-09-12 14:00:13,481 - INFO - Saved: webcam_snapshot_20250912_140012.png | Size: 0.2MB
+2025-09-12 14:00:13,482 - INFO - Captures: 43 | Remaining: 529158s | Restarts: 2
+2025-09-12 14:30:14,199 - INFO - Saved: webcam_snapshot_20250912_143013.png | Size: 0.2MB
+2025-09-12 14:30:14,200 - INFO - Captures: 44 | Remaining: 527357s | Restarts: 2
+2025-09-12 15:00:14,955 - INFO - Saved: webcam_snapshot_20250912_150014.png | Size: 0.2MB
+2025-09-12 15:00:14,956 - INFO - Captures: 45 | Remaining: 525557s | Restarts: 2
+2025-09-12 15:30:15,744 - INFO - Saved: webcam_snapshot_20250912_153014.png | Size: 0.3MB
+2025-09-12 15:30:15,745 - INFO - Captures: 46 | Remaining: 523756s | Restarts: 2
+2025-09-12 16:00:16,481 - INFO - Saved: webcam_snapshot_20250912_160015.png | Size: 0.3MB
+2025-09-12 16:00:16,481 - INFO - Captures: 47 | Remaining: 521955s | Restarts: 2
+2025-09-12 16:30:17,296 - INFO - Saved: webcam_snapshot_20250912_163016.png | Size: 0.3MB
+2025-09-12 16:30:17,297 - INFO - Captures: 48 | Remaining: 520154s | Restarts: 2
+2025-09-12 17:00:17,299 - INFO - Performing scheduled browser restart
+2025-09-12 17:00:18,122 - INFO - Saved: webcam_snapshot_20250912_170017.png | Size: 0.3MB
+2025-09-12 17:00:18,123 - INFO - Captures: 49 | Remaining: 518353s | Restarts: 3
+2025-09-12 17:30:18,924 - INFO - Saved: webcam_snapshot_20250912_173018.png | Size: 0.4MB
+2025-09-12 17:30:18,927 - INFO - Captures: 50 | Remaining: 516553s | Restarts: 3
+2025-09-12 18:00:19,748 - INFO - Saved: webcam_snapshot_20250912_180018.png | Size: 0.4MB
+2025-09-12 18:00:19,749 - INFO - Captures: 51 | Remaining: 514752s | Restarts: 3
+2025-09-12 18:30:20,585 - INFO - Saved: webcam_snapshot_20250912_183019.png | Size: 0.4MB
+2025-09-12 18:30:20,586 - INFO - Captures: 52 | Remaining: 512951s | Restarts: 3
+2025-09-12 19:00:21,428 - INFO - Saved: webcam_snapshot_20250912_190020.png | Size: 0.4MB
+2025-09-12 19:00:21,429 - INFO - Captures: 53 | Remaining: 511150s | Restarts: 3
+2025-09-12 19:30:22,228 - INFO - Saved: webcam_snapshot_20250912_193021.png | Size: 0.4MB
+2025-09-12 19:30:22,228 - INFO - Captures: 54 | Remaining: 509349s | Restarts: 3
+2025-09-12 20:00:23,052 - INFO - Saved: webcam_snapshot_20250912_200022.png | Size: 0.4MB
+2025-09-12 20:00:23,053 - INFO - Captures: 55 | Remaining: 507549s | Restarts: 3
+2025-09-12 20:30:23,948 - INFO - Saved: webcam_snapshot_20250912_203023.png | Size: 0.5MB
+2025-09-12 20:30:23,949 - INFO - Captures: 56 | Remaining: 505748s | Restarts: 3
+2025-09-12 21:00:24,761 - INFO - Saved: webcam_snapshot_20250912_210023.png | Size: 0.5MB
+2025-09-12 21:00:24,762 - INFO - Captures: 57 | Remaining: 503947s | Restarts: 3
+2025-09-12 21:30:25,604 - INFO - Saved: webcam_snapshot_20250912_213024.png | Size: 0.5MB
+2025-09-12 21:30:25,605 - INFO - Captures: 58 | Remaining: 502146s | Restarts: 3
+2025-09-12 22:00:26,421 - INFO - Saved: webcam_snapshot_20250912_220025.png | Size: 0.5MB
+2025-09-12 22:00:26,422 - INFO - Captures: 59 | Remaining: 500345s | Restarts: 3
+2025-09-12 22:30:27,242 - INFO - Saved: webcam_snapshot_20250912_223026.png | Size: 0.5MB
+2025-09-12 22:30:27,242 - INFO - Captures: 60 | Remaining: 498544s | Restarts: 3
+2025-09-12 23:00:28,025 - INFO - Saved: webcam_snapshot_20250912_230027.png | Size: 0.5MB
+2025-09-12 23:00:28,025 - INFO - Captures: 61 | Remaining: 496744s | Restarts: 3
+2025-09-12 23:30:28,889 - INFO - Saved: webcam_snapshot_20250912_233028.png | Size: 0.5MB
+2025-09-12 23:30:28,890 - INFO - Captures: 62 | Remaining: 494943s | Restarts: 3
+2025-09-13 00:00:29,722 - INFO - Saved: webcam_snapshot_20250913_000028.png | Size: 0.5MB
+2025-09-13 00:00:29,723 - INFO - Captures: 63 | Remaining: 493142s | Restarts: 3
+2025-09-13 00:30:30,539 - INFO - Saved: webcam_snapshot_20250913_003029.png | Size: 0.5MB
+2025-09-13 00:30:30,540 - INFO - Captures: 64 | Remaining: 491341s | Restarts: 3
+2025-09-13 01:00:31,407 - INFO - Saved: webcam_snapshot_20250913_010030.png | Size: 0.5MB
+2025-09-13 01:00:31,407 - INFO - Captures: 65 | Remaining: 489540s | Restarts: 3
+2025-09-13 01:30:32,222 - INFO - Saved: webcam_snapshot_20250913_013031.png | Size: 0.5MB
+2025-09-13 01:30:32,222 - INFO - Captures: 66 | Remaining: 487739s | Restarts: 3
+2025-09-13 02:00:33,091 - INFO - Saved: webcam_snapshot_20250913_020032.png | Size: 0.5MB
+2025-09-13 02:00:33,092 - INFO - Captures: 67 | Remaining: 485939s | Restarts: 3
+2025-09-13 02:30:33,909 - INFO - Saved: webcam_snapshot_20250913_023033.png | Size: 0.5MB
+2025-09-13 02:30:33,909 - INFO - Captures: 68 | Remaining: 484138s | Restarts: 3
+2025-09-13 03:00:34,706 - INFO - Saved: webcam_snapshot_20250913_030033.png | Size: 0.5MB
+2025-09-13 03:00:34,707 - INFO - Captures: 69 | Remaining: 482337s | Restarts: 3
+2025-09-13 03:30:35,518 - INFO - Saved: webcam_snapshot_20250913_033034.png | Size: 0.4MB
+2025-09-13 03:30:35,518 - INFO - Captures: 70 | Remaining: 480536s | Restarts: 3
+2025-09-13 04:00:36,379 - INFO - Saved: webcam_snapshot_20250913_040035.png | Size: 0.4MB
+2025-09-13 04:00:36,380 - INFO - Captures: 71 | Remaining: 478735s | Restarts: 3
+2025-09-13 04:30:37,171 - INFO - Saved: webcam_snapshot_20250913_043036.png | Size: 0.4MB
+2025-09-13 04:30:37,171 - INFO - Captures: 72 | Remaining: 476934s | Restarts: 3
+2025-09-13 05:00:37,172 - INFO - Performing scheduled browser restart
+2025-09-13 05:00:38,012 - INFO - Saved: webcam_snapshot_20250913_050037.png | Size: 0.4MB
+2025-09-13 05:00:38,012 - INFO - Captures: 73 | Remaining: 475134s | Restarts: 4
+2025-09-13 05:30:38,821 - INFO - Saved: webcam_snapshot_20250913_053038.png | Size: 0.3MB
+2025-09-13 05:30:38,822 - INFO - Captures: 74 | Remaining: 473333s | Restarts: 4
+2025-09-13 06:00:39,607 - INFO - Saved: webcam_snapshot_20250913_060038.png | Size: 0.3MB
+2025-09-13 06:00:39,608 - INFO - Captures: 75 | Remaining: 471532s | Restarts: 4
+2025-09-13 06:30:40,366 - INFO - Saved: webcam_snapshot_20250913_063039.png | Size: 0.3MB
+2025-09-13 06:30:40,367 - INFO - Captures: 76 | Remaining: 469731s | Restarts: 4
+2025-09-13 07:00:41,147 - INFO - Saved: webcam_snapshot_20250913_070040.png | Size: 0.3MB
+2025-09-13 07:00:41,148 - INFO - Captures: 77 | Remaining: 467930s | Restarts: 4
+2025-09-13 07:30:41,855 - INFO - Saved: webcam_snapshot_20250913_073041.png | Size: 0.2MB
+2025-09-13 07:30:41,856 - INFO - Captures: 78 | Remaining: 466130s | Restarts: 4
+2025-09-13 08:00:42,572 - INFO - Saved: webcam_snapshot_20250913_080041.png | Size: 0.2MB
+2025-09-13 08:00:42,572 - INFO - Captures: 79 | Remaining: 464329s | Restarts: 4
+2025-09-13 08:30:43,313 - INFO - Saved: webcam_snapshot_20250913_083042.png | Size: 0.2MB
+2025-09-13 08:30:43,313 - INFO - Captures: 80 | Remaining: 462528s | Restarts: 4
+2025-09-13 09:00:44,020 - INFO - Saved: webcam_snapshot_20250913_090043.png | Size: 0.2MB
+2025-09-13 09:00:44,021 - INFO - Captures: 81 | Remaining: 460728s | Restarts: 4
+2025-09-13 09:30:44,751 - INFO - Saved: webcam_snapshot_20250913_093044.png | Size: 0.2MB
+2025-09-13 09:30:44,752 - INFO - Captures: 82 | Remaining: 458927s | Restarts: 4
+2025-09-13 10:00:45,480 - INFO - Saved: webcam_snapshot_20250913_100044.png | Size: 0.2MB
+2025-09-13 10:00:45,482 - INFO - Captures: 83 | Remaining: 457126s | Restarts: 4
+2025-09-13 10:30:46,188 - INFO - Saved: webcam_snapshot_20250913_103045.png | Size: 0.2MB
+2025-09-13 10:30:46,188 - INFO - Captures: 84 | Remaining: 455325s | Restarts: 4
+2025-09-13 11:00:46,920 - INFO - Saved: webcam_snapshot_20250913_110046.png | Size: 0.2MB
+2025-09-13 11:00:46,921 - INFO - Captures: 85 | Remaining: 453525s | Restarts: 4
+2025-09-13 11:30:47,644 - INFO - Saved: webcam_snapshot_20250913_113046.png | Size: 0.2MB
+2025-09-13 11:30:47,644 - INFO - Captures: 86 | Remaining: 451724s | Restarts: 4
+2025-09-13 12:00:48,343 - INFO - Saved: webcam_snapshot_20250913_120047.png | Size: 0.2MB
+2025-09-13 12:00:48,343 - INFO - Captures: 87 | Remaining: 449923s | Restarts: 4
+2025-09-13 12:30:49,133 - INFO - Saved: webcam_snapshot_20250913_123048.png | Size: 0.2MB
+2025-09-13 12:30:49,133 - INFO - Captures: 88 | Remaining: 448122s | Restarts: 4
+2025-09-13 13:00:49,865 - INFO - Saved: webcam_snapshot_20250913_130049.png | Size: 0.2MB
+2025-09-13 13:00:49,865 - INFO - Captures: 89 | Remaining: 446322s | Restarts: 4
+2025-09-13 13:30:50,608 - INFO - Saved: webcam_snapshot_20250913_133049.png | Size: 0.2MB
+2025-09-13 13:30:50,608 - INFO - Captures: 90 | Remaining: 444521s | Restarts: 4
+2025-09-13 14:00:51,349 - INFO - Saved: webcam_snapshot_20250913_140050.png | Size: 0.2MB
+2025-09-13 14:00:51,350 - INFO - Captures: 91 | Remaining: 442720s | Restarts: 4
+2025-09-13 14:30:52,061 - INFO - Saved: webcam_snapshot_20250913_143051.png | Size: 0.2MB
+2025-09-13 14:30:52,062 - INFO - Captures: 92 | Remaining: 440920s | Restarts: 4
+2025-09-13 15:00:52,766 - INFO - Saved: webcam_snapshot_20250913_150052.png | Size: 0.2MB
+2025-09-13 15:00:52,769 - INFO - Captures: 93 | Remaining: 439119s | Restarts: 4
+2025-09-13 15:30:53,521 - INFO - Saved: webcam_snapshot_20250913_153052.png | Size: 0.3MB
+2025-09-13 15:30:53,523 - INFO - Captures: 94 | Remaining: 437318s | Restarts: 4
+2025-09-13 16:00:54,306 - INFO - Saved: webcam_snapshot_20250913_160053.png | Size: 0.3MB
+2025-09-13 16:00:54,307 - INFO - Captures: 95 | Remaining: 435517s | Restarts: 4
+2025-09-13 16:30:55,137 - INFO - Saved: webcam_snapshot_20250913_163054.png | Size: 0.3MB
+2025-09-13 16:30:55,138 - INFO - Captures: 96 | Remaining: 433716s | Restarts: 4
+2025-09-13 17:00:55,139 - INFO - Performing scheduled browser restart
+2025-09-13 17:00:55,973 - INFO - Saved: webcam_snapshot_20250913_170055.png | Size: 0.3MB
+2025-09-13 17:00:55,973 - INFO - Captures: 97 | Remaining: 431916s | Restarts: 5
+2025-09-13 17:30:56,899 - INFO - Saved: webcam_snapshot_20250913_173055.png | Size: 0.4MB
+2025-09-13 17:30:56,900 - INFO - Captures: 98 | Remaining: 430115s | Restarts: 5
+2025-09-13 18:00:57,703 - INFO - Saved: webcam_snapshot_20250913_180056.png | Size: 0.3MB
+2025-09-13 18:00:57,703 - INFO - Captures: 99 | Remaining: 428314s | Restarts: 5
+2025-09-13 18:30:58,507 - INFO - Saved: webcam_snapshot_20250913_183057.png | Size: 0.4MB
+2025-09-13 18:30:58,508 - INFO - Captures: 100 | Remaining: 426513s | Restarts: 5
+2025-09-13 19:00:59,303 - INFO - Saved: webcam_snapshot_20250913_190058.png | Size: 0.4MB
+2025-09-13 19:00:59,303 - INFO - Captures: 101 | Remaining: 424712s | Restarts: 5
+2025-09-13 19:31:00,052 - INFO - Saved: webcam_snapshot_20250913_193059.png | Size: 0.4MB
+2025-09-13 19:31:00,052 - INFO - Captures: 102 | Remaining: 422912s | Restarts: 5
+2025-09-13 20:01:00,839 - INFO - Saved: webcam_snapshot_20250913_200100.png | Size: 0.4MB
+2025-09-13 20:01:00,839 - INFO - Captures: 103 | Remaining: 421111s | Restarts: 5
+2025-09-13 20:31:01,638 - INFO - Saved: webcam_snapshot_20250913_203100.png | Size: 0.4MB
+2025-09-13 20:31:01,638 - INFO - Captures: 104 | Remaining: 419310s | Restarts: 5
+2025-09-13 21:01:02,435 - INFO - Saved: webcam_snapshot_20250913_210101.png | Size: 0.4MB
+2025-09-13 21:01:02,435 - INFO - Captures: 105 | Remaining: 417509s | Restarts: 5
+2025-09-13 21:31:03,223 - INFO - Saved: webcam_snapshot_20250913_213102.png | Size: 0.4MB
+2025-09-13 21:31:03,224 - INFO - Captures: 106 | Remaining: 415708s | Restarts: 5
+2025-09-13 22:01:04,048 - INFO - Saved: webcam_snapshot_20250913_220103.png | Size: 0.4MB
+2025-09-13 22:01:04,050 - INFO - Captures: 107 | Remaining: 413908s | Restarts: 5
+2025-09-13 22:31:04,885 - INFO - Saved: webcam_snapshot_20250913_223104.png | Size: 0.4MB
+2025-09-13 22:31:04,885 - INFO - Captures: 108 | Remaining: 412107s | Restarts: 5
+2025-09-13 23:01:05,731 - INFO - Saved: webcam_snapshot_20250913_230104.png | Size: 0.4MB
+2025-09-13 23:01:05,732 - INFO - Captures: 109 | Remaining: 410306s | Restarts: 5
+2025-09-13 23:31:06,553 - INFO - Saved: webcam_snapshot_20250913_233105.png | Size: 0.4MB
+2025-09-13 23:31:06,553 - INFO - Captures: 110 | Remaining: 408505s | Restarts: 5
+2025-09-14 00:01:07,366 - INFO - Saved: webcam_snapshot_20250914_000106.png | Size: 0.4MB
+2025-09-14 00:01:07,367 - INFO - Captures: 111 | Remaining: 406704s | Restarts: 5
+2025-09-14 00:31:08,186 - INFO - Saved: webcam_snapshot_20250914_003107.png | Size: 0.4MB
+2025-09-14 00:31:08,187 - INFO - Captures: 112 | Remaining: 404903s | Restarts: 5
+2025-09-14 01:01:09,007 - INFO - Saved: webcam_snapshot_20250914_010108.png | Size: 0.4MB
+2025-09-14 01:01:09,008 - INFO - Captures: 113 | Remaining: 403103s | Restarts: 5
+2025-09-14 01:31:09,791 - INFO - Saved: webcam_snapshot_20250914_013109.png | Size: 0.4MB
+2025-09-14 01:31:09,791 - INFO - Captures: 114 | Remaining: 401302s | Restarts: 5
+2025-09-14 02:01:10,605 - INFO - Saved: webcam_snapshot_20250914_020109.png | Size: 0.4MB
+2025-09-14 02:01:10,605 - INFO - Captures: 115 | Remaining: 399501s | Restarts: 5
+2025-09-14 02:31:11,337 - INFO - Saved: webcam_snapshot_20250914_023110.png | Size: 0.4MB
+2025-09-14 02:31:11,338 - INFO - Captures: 116 | Remaining: 397700s | Restarts: 5
+2025-09-14 03:01:12,124 - INFO - Saved: webcam_snapshot_20250914_030111.png | Size: 0.4MB
+2025-09-14 03:01:12,124 - INFO - Captures: 117 | Remaining: 395899s | Restarts: 5
+2025-09-14 03:31:12,894 - INFO - Saved: webcam_snapshot_20250914_033112.png | Size: 0.4MB
+2025-09-14 03:31:12,894 - INFO - Captures: 118 | Remaining: 394099s | Restarts: 5
+2025-09-14 04:01:13,711 - INFO - Saved: webcam_snapshot_20250914_040112.png | Size: 0.4MB
+2025-09-14 04:01:13,712 - INFO - Captures: 119 | Remaining: 392298s | Restarts: 5
+2025-09-14 04:31:14,468 - INFO - Saved: webcam_snapshot_20250914_043113.png | Size: 0.4MB
+2025-09-14 04:31:14,468 - INFO - Captures: 120 | Remaining: 390497s | Restarts: 5
+2025-09-14 05:01:14,469 - INFO - Performing scheduled browser restart
+2025-09-14 05:01:15,282 - INFO - Saved: webcam_snapshot_20250914_050114.png | Size: 0.4MB
+2025-09-14 05:01:15,282 - INFO - Captures: 121 | Remaining: 388696s | Restarts: 6
+2025-09-14 05:31:16,110 - INFO - Saved: webcam_snapshot_20250914_053115.png | Size: 0.4MB
+2025-09-14 05:31:16,110 - INFO - Captures: 122 | Remaining: 386895s | Restarts: 6
+2025-09-14 06:01:16,925 - INFO - Saved: webcam_snapshot_20250914_060116.png | Size: 0.4MB
+2025-09-14 06:01:16,926 - INFO - Captures: 123 | Remaining: 385095s | Restarts: 6
+2025-09-14 06:31:17,739 - INFO - Saved: webcam_snapshot_20250914_063116.png | Size: 0.4MB
+2025-09-14 06:31:17,739 - INFO - Captures: 124 | Remaining: 383294s | Restarts: 6
+2025-09-14 07:01:18,523 - INFO - Saved: webcam_snapshot_20250914_070117.png | Size: 0.4MB
+2025-09-14 07:01:18,523 - INFO - Captures: 125 | Remaining: 381493s | Restarts: 6
+2025-09-14 07:31:19,348 - INFO - Saved: webcam_snapshot_20250914_073118.png | Size: 0.4MB
+2025-09-14 07:31:19,349 - INFO - Captures: 126 | Remaining: 379692s | Restarts: 6
+2025-09-14 08:01:20,154 - INFO - Saved: webcam_snapshot_20250914_080119.png | Size: 0.4MB
+2025-09-14 08:01:20,155 - INFO - Captures: 127 | Remaining: 377891s | Restarts: 6
+2025-09-14 08:31:20,918 - INFO - Saved: webcam_snapshot_20250914_083120.png | Size: 0.4MB
+2025-09-14 08:31:20,918 - INFO - Captures: 128 | Remaining: 376091s | Restarts: 6
+2025-09-14 09:01:21,695 - INFO - Saved: webcam_snapshot_20250914_090120.png | Size: 0.4MB
+2025-09-14 09:01:21,696 - INFO - Captures: 129 | Remaining: 374290s | Restarts: 6
+2025-09-14 09:31:22,445 - INFO - Saved: webcam_snapshot_20250914_093121.png | Size: 0.4MB
+2025-09-14 09:31:22,446 - INFO - Captures: 130 | Remaining: 372489s | Restarts: 6
+2025-09-14 10:01:23,270 - INFO - Saved: webcam_snapshot_20250914_100122.png | Size: 0.4MB
+2025-09-14 10:01:23,271 - INFO - Captures: 131 | Remaining: 370688s | Restarts: 6
+2025-09-14 10:31:24,028 - INFO - Saved: webcam_snapshot_20250914_103123.png | Size: 0.4MB
+2025-09-14 10:31:24,028 - INFO - Captures: 132 | Remaining: 368888s | Restarts: 6
+2025-09-14 11:01:24,788 - INFO - Saved: webcam_snapshot_20250914_110124.png | Size: 0.4MB
+2025-09-14 11:01:24,788 - INFO - Captures: 133 | Remaining: 367087s | Restarts: 6
+2025-09-14 11:31:25,597 - INFO - Saved: webcam_snapshot_20250914_113124.png | Size: 0.4MB
+2025-09-14 11:31:25,600 - INFO - Captures: 134 | Remaining: 365286s | Restarts: 6
+2025-09-14 12:01:26,409 - INFO - Saved: webcam_snapshot_20250914_120125.png | Size: 0.4MB
+2025-09-14 12:01:26,409 - INFO - Captures: 135 | Remaining: 363485s | Restarts: 6
+2025-09-14 12:31:27,184 - INFO - Saved: webcam_snapshot_20250914_123126.png | Size: 0.4MB
+2025-09-14 12:31:27,185 - INFO - Captures: 136 | Remaining: 361684s | Restarts: 6
+2025-09-14 13:01:28,010 - INFO - Saved: webcam_snapshot_20250914_130127.png | Size: 0.4MB
+2025-09-14 13:01:28,011 - INFO - Captures: 137 | Remaining: 359884s | Restarts: 6
+2025-09-14 13:31:28,829 - INFO - Saved: webcam_snapshot_20250914_133128.png | Size: 0.4MB
+2025-09-14 13:31:28,829 - INFO - Captures: 138 | Remaining: 358083s | Restarts: 6
+2025-09-14 14:01:29,604 - INFO - Saved: webcam_snapshot_20250914_140128.png | Size: 0.4MB
+2025-09-14 14:01:29,604 - INFO - Captures: 139 | Remaining: 356282s | Restarts: 6
+2025-09-14 14:31:30,367 - INFO - Saved: webcam_snapshot_20250914_143129.png | Size: 0.4MB
+2025-09-14 14:31:30,367 - INFO - Captures: 140 | Remaining: 354481s | Restarts: 6
+2025-09-14 15:01:31,170 - INFO - Saved: webcam_snapshot_20250914_150130.png | Size: 0.4MB
+2025-09-14 15:01:31,170 - INFO - Captures: 141 | Remaining: 352680s | Restarts: 6
+2025-09-14 15:31:31,954 - INFO - Saved: webcam_snapshot_20250914_153131.png | Size: 0.4MB
+2025-09-14 15:31:31,955 - INFO - Captures: 142 | Remaining: 350880s | Restarts: 6
+2025-09-14 16:01:32,816 - INFO - Saved: webcam_snapshot_20250914_160131.png | Size: 0.4MB
+2025-09-14 16:01:32,816 - INFO - Captures: 143 | Remaining: 349079s | Restarts: 6
+2025-09-14 16:31:33,584 - INFO - Saved: webcam_snapshot_20250914_163132.png | Size: 0.4MB
+2025-09-14 16:31:33,584 - INFO - Captures: 144 | Remaining: 347278s | Restarts: 6
+2025-09-14 17:01:33,586 - INFO - Performing scheduled browser restart
+2025-09-14 17:01:34,422 - INFO - Saved: webcam_snapshot_20250914_170133.png | Size: 0.4MB
+2025-09-14 17:01:34,422 - INFO - Captures: 145 | Remaining: 345477s | Restarts: 7
+2025-09-14 17:31:35,219 - INFO - Saved: webcam_snapshot_20250914_173134.png | Size: 0.4MB
+2025-09-14 17:31:35,219 - INFO - Captures: 146 | Remaining: 343676s | Restarts: 7
+2025-09-14 18:01:35,979 - INFO - Saved: webcam_snapshot_20250914_180135.png | Size: 0.4MB
+2025-09-14 18:01:35,979 - INFO - Captures: 147 | Remaining: 341876s | Restarts: 7
+2025-09-14 18:31:36,743 - INFO - Saved: webcam_snapshot_20250914_183135.png | Size: 0.4MB
+2025-09-14 18:31:36,744 - INFO - Captures: 148 | Remaining: 340075s | Restarts: 7
+2025-09-14 19:01:37,530 - INFO - Saved: webcam_snapshot_20250914_190136.png | Size: 0.4MB
+2025-09-14 19:01:37,531 - INFO - Captures: 149 | Remaining: 338274s | Restarts: 7
+2025-09-14 19:31:38,333 - INFO - Saved: webcam_snapshot_20250914_193137.png | Size: 0.4MB
+2025-09-14 19:31:38,334 - INFO - Captures: 150 | Remaining: 336473s | Restarts: 7
+2025-09-14 20:01:39,186 - INFO - Saved: webcam_snapshot_20250914_200138.png | Size: 0.4MB
+2025-09-14 20:01:39,186 - INFO - Captures: 151 | Remaining: 334672s | Restarts: 7
+2025-09-14 20:31:40,104 - INFO - Saved: webcam_snapshot_20250914_203139.png | Size: 0.4MB
+2025-09-14 20:31:40,105 - INFO - Captures: 152 | Remaining: 332871s | Restarts: 7
+2025-09-14 21:01:40,903 - INFO - Saved: webcam_snapshot_20250914_210140.png | Size: 0.4MB
+2025-09-14 21:01:40,903 - INFO - Captures: 153 | Remaining: 331071s | Restarts: 7
+2025-09-14 21:31:41,722 - INFO - Saved: webcam_snapshot_20250914_213140.png | Size: 0.4MB
+2025-09-14 21:31:41,723 - INFO - Captures: 154 | Remaining: 329270s | Restarts: 7
+2025-09-14 22:01:42,528 - INFO - Saved: webcam_snapshot_20250914_220141.png | Size: 0.4MB
+2025-09-14 22:01:42,528 - INFO - Captures: 155 | Remaining: 327469s | Restarts: 7
+2025-09-14 22:31:43,290 - INFO - Saved: webcam_snapshot_20250914_223142.png | Size: 0.4MB
+2025-09-14 22:31:43,290 - INFO - Captures: 156 | Remaining: 325668s | Restarts: 7
+2025-09-14 23:01:44,143 - INFO - Saved: webcam_snapshot_20250914_230143.png | Size: 0.4MB
+2025-09-14 23:01:44,144 - INFO - Captures: 157 | Remaining: 323867s | Restarts: 7
+2025-09-14 23:31:44,935 - INFO - Saved: webcam_snapshot_20250914_233144.png | Size: 0.4MB
+2025-09-14 23:31:44,936 - INFO - Captures: 158 | Remaining: 322067s | Restarts: 7
+2025-09-15 00:01:45,781 - INFO - Saved: webcam_snapshot_20250915_000144.png | Size: 0.4MB
+2025-09-15 00:01:45,781 - INFO - Captures: 159 | Remaining: 320266s | Restarts: 7
+2025-09-15 00:31:46,589 - INFO - Saved: webcam_snapshot_20250915_003145.png | Size: 0.4MB
+2025-09-15 00:31:46,589 - INFO - Captures: 160 | Remaining: 318465s | Restarts: 7
+2025-09-15 01:01:47,400 - INFO - Saved: webcam_snapshot_20250915_010146.png | Size: 0.4MB
+2025-09-15 01:01:47,401 - INFO - Captures: 161 | Remaining: 316664s | Restarts: 7
+2025-09-15 01:31:48,176 - INFO - Saved: webcam_snapshot_20250915_013147.png | Size: 0.4MB
+2025-09-15 01:31:48,176 - INFO - Captures: 162 | Remaining: 314863s | Restarts: 7
+2025-09-15 02:01:48,932 - INFO - Saved: webcam_snapshot_20250915_020148.png | Size: 0.4MB
+2025-09-15 02:01:48,932 - INFO - Captures: 163 | Remaining: 313063s | Restarts: 7
+2025-09-15 02:31:49,723 - INFO - Saved: webcam_snapshot_20250915_023148.png | Size: 0.4MB
+2025-09-15 02:31:49,723 - INFO - Captures: 164 | Remaining: 311262s | Restarts: 7
+2025-09-15 03:01:50,561 - INFO - Saved: webcam_snapshot_20250915_030149.png | Size: 0.4MB
+2025-09-15 03:01:50,561 - INFO - Captures: 165 | Remaining: 309461s | Restarts: 7
+2025-09-15 03:31:51,368 - INFO - Saved: webcam_snapshot_20250915_033150.png | Size: 0.4MB
+2025-09-15 03:31:51,369 - INFO - Captures: 166 | Remaining: 307660s | Restarts: 7
+2025-09-15 04:01:52,140 - INFO - Saved: webcam_snapshot_20250915_040151.png | Size: 0.4MB
+2025-09-15 04:01:52,140 - INFO - Captures: 167 | Remaining: 305859s | Restarts: 7
+2025-09-15 04:31:52,928 - INFO - Saved: webcam_snapshot_20250915_043152.png | Size: 0.4MB
+2025-09-15 04:31:52,929 - INFO - Captures: 168 | Remaining: 304059s | Restarts: 7
+2025-09-15 05:01:52,929 - INFO - Performing scheduled browser restart
+2025-09-15 05:01:53,725 - INFO - Saved: webcam_snapshot_20250915_050152.png | Size: 0.4MB
+2025-09-15 05:01:53,725 - INFO - Captures: 169 | Remaining: 302258s | Restarts: 8
+2025-09-15 05:31:54,585 - INFO - Saved: webcam_snapshot_20250915_053153.png | Size: 0.4MB
+2025-09-15 05:31:54,586 - INFO - Captures: 170 | Remaining: 300457s | Restarts: 8
+2025-09-15 06:01:55,362 - INFO - Saved: webcam_snapshot_20250915_060154.png | Size: 0.4MB
+2025-09-15 06:01:55,362 - INFO - Captures: 171 | Remaining: 298656s | Restarts: 8
+2025-09-15 06:31:56,123 - INFO - Saved: webcam_snapshot_20250915_063155.png | Size: 0.4MB
+2025-09-15 06:31:56,124 - INFO - Captures: 172 | Remaining: 296855s | Restarts: 8
+2025-09-15 07:01:56,900 - INFO - Saved: webcam_snapshot_20250915_070156.png | Size: 0.4MB
+2025-09-15 07:01:56,901 - INFO - Captures: 173 | Remaining: 295055s | Restarts: 8
+2025-09-15 07:31:57,730 - INFO - Saved: webcam_snapshot_20250915_073156.png | Size: 0.4MB
+2025-09-15 07:31:57,731 - INFO - Captures: 174 | Remaining: 293254s | Restarts: 8
+2025-09-15 08:01:58,574 - INFO - Saved: webcam_snapshot_20250915_080157.png | Size: 0.4MB
+2025-09-15 08:01:58,575 - INFO - Captures: 175 | Remaining: 291453s | Restarts: 8
+2025-09-15 08:31:59,347 - INFO - Saved: webcam_snapshot_20250915_083158.png | Size: 0.4MB
+2025-09-15 08:31:59,347 - INFO - Captures: 176 | Remaining: 289652s | Restarts: 8
+2025-09-15 09:02:00,132 - INFO - Saved: webcam_snapshot_20250915_090159.png | Size: 0.4MB
+2025-09-15 09:02:00,133 - INFO - Captures: 177 | Remaining: 287851s | Restarts: 8
+2025-09-15 09:32:00,979 - INFO - Saved: webcam_snapshot_20250915_093200.png | Size: 0.4MB
+2025-09-15 09:32:00,979 - INFO - Captures: 178 | Remaining: 286051s | Restarts: 8
+2025-09-15 10:02:01,750 - INFO - Saved: webcam_snapshot_20250915_100200.png | Size: 0.4MB
+2025-09-15 10:02:01,750 - INFO - Captures: 179 | Remaining: 284250s | Restarts: 8
+2025-09-15 10:32:02,479 - INFO - Saved: webcam_snapshot_20250915_103201.png | Size: 0.4MB
+2025-09-15 10:32:02,479 - INFO - Captures: 180 | Remaining: 282449s | Restarts: 8
+2025-09-15 11:02:03,242 - INFO - Saved: webcam_snapshot_20250915_110202.png | Size: 0.4MB
+2025-09-15 11:02:03,243 - INFO - Captures: 181 | Remaining: 280648s | Restarts: 8
+2025-09-15 11:32:04,077 - INFO - Saved: webcam_snapshot_20250915_113203.png | Size: 0.4MB
+2025-09-15 11:32:04,078 - INFO - Captures: 182 | Remaining: 278848s | Restarts: 8
+2025-09-15 12:02:04,837 - INFO - Saved: webcam_snapshot_20250915_120204.png | Size: 0.4MB
+2025-09-15 12:02:04,837 - INFO - Captures: 183 | Remaining: 277047s | Restarts: 8
+2025-09-15 12:32:05,696 - INFO - Saved: webcam_snapshot_20250915_123204.png | Size: 0.4MB
+2025-09-15 12:32:05,696 - INFO - Captures: 184 | Remaining: 275246s | Restarts: 8
+2025-09-15 13:02:06,497 - INFO - Saved: webcam_snapshot_20250915_130205.png | Size: 0.4MB
+2025-09-15 13:02:06,497 - INFO - Captures: 185 | Remaining: 273445s | Restarts: 8
+2025-09-15 13:32:07,261 - INFO - Saved: webcam_snapshot_20250915_133206.png | Size: 0.4MB
+2025-09-15 13:32:07,261 - INFO - Captures: 186 | Remaining: 271644s | Restarts: 8
+2025-09-15 14:02:08,059 - INFO - Saved: webcam_snapshot_20250915_140207.png | Size: 0.4MB
+2025-09-15 14:02:08,059 - INFO - Captures: 187 | Remaining: 269844s | Restarts: 8
+2025-09-15 14:32:08,851 - INFO - Saved: webcam_snapshot_20250915_143208.png | Size: 0.4MB
+2025-09-15 14:32:08,851 - INFO - Captures: 188 | Remaining: 268043s | Restarts: 8
+2025-09-15 15:02:09,653 - INFO - Saved: webcam_snapshot_20250915_150208.png | Size: 0.4MB
+2025-09-15 15:02:09,654 - INFO - Captures: 189 | Remaining: 266242s | Restarts: 8
+2025-09-15 15:32:10,387 - INFO - Saved: webcam_snapshot_20250915_153209.png | Size: 0.4MB
+2025-09-15 15:32:10,387 - INFO - Captures: 190 | Remaining: 264441s | Restarts: 8
+2025-09-15 16:02:11,186 - INFO - Saved: webcam_snapshot_20250915_160210.png | Size: 0.4MB
+2025-09-15 16:02:11,187 - INFO - Captures: 191 | Remaining: 262640s | Restarts: 8
+2025-09-15 16:32:11,964 - INFO - Saved: webcam_snapshot_20250915_163211.png | Size: 0.4MB
+2025-09-15 16:32:11,964 - INFO - Captures: 192 | Remaining: 260840s | Restarts: 8
+2025-09-15 17:02:11,965 - INFO - Performing scheduled browser restart
+2025-09-15 17:02:12,786 - INFO - Saved: webcam_snapshot_20250915_170211.png | Size: 0.4MB
+2025-09-15 17:02:12,786 - INFO - Captures: 193 | Remaining: 259039s | Restarts: 9
+2025-09-15 17:32:13,659 - INFO - Saved: webcam_snapshot_20250915_173212.png | Size: 0.4MB
+2025-09-15 17:32:13,660 - INFO - Captures: 194 | Remaining: 257238s | Restarts: 9
+2025-09-15 18:02:14,472 - INFO - Saved: webcam_snapshot_20250915_180213.png | Size: 0.4MB
+2025-09-15 18:02:14,473 - INFO - Captures: 195 | Remaining: 255437s | Restarts: 9
+2025-09-15 18:32:15,250 - INFO - Saved: webcam_snapshot_20250915_183214.png | Size: 0.4MB
+2025-09-15 18:32:15,250 - INFO - Captures: 196 | Remaining: 253636s | Restarts: 9
+2025-09-15 19:02:16,006 - INFO - Saved: webcam_snapshot_20250915_190215.png | Size: 0.4MB
+2025-09-15 19:02:16,006 - INFO - Captures: 197 | Remaining: 251836s | Restarts: 9
+2025-09-15 19:32:16,810 - INFO - Saved: webcam_snapshot_20250915_193216.png | Size: 0.4MB
+2025-09-15 19:32:16,811 - INFO - Captures: 198 | Remaining: 250035s | Restarts: 9
+2025-09-15 20:02:17,592 - INFO - Saved: webcam_snapshot_20250915_200216.png | Size: 0.4MB
+2025-09-15 20:02:17,593 - INFO - Captures: 199 | Remaining: 248234s | Restarts: 9
+2025-09-15 20:32:18,357 - INFO - Saved: webcam_snapshot_20250915_203217.png | Size: 0.4MB
+2025-09-15 20:32:18,358 - INFO - Captures: 200 | Remaining: 246433s | Restarts: 9
+2025-09-15 21:02:19,191 - INFO - Saved: webcam_snapshot_20250915_210218.png | Size: 0.4MB
+2025-09-15 21:02:19,191 - INFO - Captures: 201 | Remaining: 244632s | Restarts: 9
+2025-09-15 21:32:19,969 - INFO - Saved: webcam_snapshot_20250915_213219.png | Size: 0.4MB
+2025-09-15 21:32:19,969 - INFO - Captures: 202 | Remaining: 242832s | Restarts: 9
+2025-09-15 22:02:20,820 - INFO - Saved: webcam_snapshot_20250915_220219.png | Size: 0.4MB
+2025-09-15 22:02:20,821 - INFO - Captures: 203 | Remaining: 241031s | Restarts: 9
+2025-09-15 22:32:21,669 - INFO - Saved: webcam_snapshot_20250915_223220.png | Size: 0.4MB
+2025-09-15 22:32:21,670 - INFO - Captures: 204 | Remaining: 239230s | Restarts: 9
+2025-09-15 23:02:22,494 - INFO - Saved: webcam_snapshot_20250915_230221.png | Size: 0.4MB
+2025-09-15 23:02:22,495 - INFO - Captures: 205 | Remaining: 237429s | Restarts: 9
+2025-09-15 23:32:23,257 - INFO - Saved: webcam_snapshot_20250915_233222.png | Size: 0.4MB
+2025-09-15 23:32:23,257 - INFO - Captures: 206 | Remaining: 235628s | Restarts: 9
+2025-09-16 00:02:24,078 - INFO - Saved: webcam_snapshot_20250916_000223.png | Size: 0.4MB
+2025-09-16 00:02:24,078 - INFO - Captures: 207 | Remaining: 233828s | Restarts: 9
+2025-09-16 00:32:24,946 - INFO - Saved: webcam_snapshot_20250916_003224.png | Size: 0.4MB
+2025-09-16 00:32:24,946 - INFO - Captures: 208 | Remaining: 232027s | Restarts: 9
+2025-09-16 01:02:25,728 - INFO - Saved: webcam_snapshot_20250916_010224.png | Size: 0.4MB
+2025-09-16 01:02:25,729 - INFO - Captures: 209 | Remaining: 230226s | Restarts: 9
+2025-09-16 01:32:26,526 - INFO - Saved: webcam_snapshot_20250916_013225.png | Size: 0.4MB
+2025-09-16 01:32:26,527 - INFO - Captures: 210 | Remaining: 228425s | Restarts: 9
+2025-09-16 02:02:27,352 - INFO - Saved: webcam_snapshot_20250916_020226.png | Size: 0.4MB
+2025-09-16 02:02:27,352 - INFO - Captures: 211 | Remaining: 226624s | Restarts: 9
+2025-09-16 02:32:28,196 - INFO - Saved: webcam_snapshot_20250916_023227.png | Size: 0.4MB
+2025-09-16 02:32:28,197 - INFO - Captures: 212 | Remaining: 224823s | Restarts: 9
+2025-09-16 03:02:29,039 - INFO - Saved: webcam_snapshot_20250916_030228.png | Size: 0.4MB
+2025-09-16 03:02:29,039 - INFO - Captures: 213 | Remaining: 223023s | Restarts: 9
+2025-09-16 03:32:29,830 - INFO - Saved: webcam_snapshot_20250916_033229.png | Size: 0.4MB
+2025-09-16 03:32:29,830 - INFO - Captures: 214 | Remaining: 221222s | Restarts: 9
+2025-09-16 04:02:30,584 - INFO - Saved: webcam_snapshot_20250916_040229.png | Size: 0.4MB
+2025-09-16 04:02:30,584 - INFO - Captures: 215 | Remaining: 219421s | Restarts: 9
+2025-09-16 04:32:31,406 - INFO - Saved: webcam_snapshot_20250916_043230.png | Size: 0.4MB
+2025-09-16 04:32:31,407 - INFO - Captures: 216 | Remaining: 217620s | Restarts: 9
+2025-09-16 05:02:31,408 - INFO - Performing scheduled browser restart
+2025-09-16 05:02:32,218 - INFO - Saved: webcam_snapshot_20250916_050231.png | Size: 0.4MB
+2025-09-16 05:02:32,218 - INFO - Captures: 217 | Remaining: 215819s | Restarts: 10
+2025-09-16 05:32:33,110 - INFO - Saved: webcam_snapshot_20250916_053232.png | Size: 0.4MB
+2025-09-16 05:32:33,111 - INFO - Captures: 218 | Remaining: 214018s | Restarts: 10
+2025-09-16 06:02:33,923 - INFO - Saved: webcam_snapshot_20250916_060233.png | Size: 0.4MB
+2025-09-16 06:02:33,924 - INFO - Captures: 219 | Remaining: 212218s | Restarts: 10
+2025-09-16 06:32:34,753 - INFO - Saved: webcam_snapshot_20250916_063233.png | Size: 0.4MB
+2025-09-16 06:32:34,753 - INFO - Captures: 220 | Remaining: 210417s | Restarts: 10
+2025-09-16 07:02:35,548 - INFO - Saved: webcam_snapshot_20250916_070234.png | Size: 0.4MB
+2025-09-16 07:02:35,549 - INFO - Captures: 221 | Remaining: 208616s | Restarts: 10
+2025-09-16 07:32:36,429 - INFO - Saved: webcam_snapshot_20250916_073235.png | Size: 0.4MB
+2025-09-16 07:32:36,430 - INFO - Captures: 222 | Remaining: 206815s | Restarts: 10
+2025-09-16 08:02:37,318 - INFO - Saved: webcam_snapshot_20250916_080236.png | Size: 0.4MB
+2025-09-16 08:02:37,319 - INFO - Captures: 223 | Remaining: 205014s | Restarts: 10
+2025-09-16 08:32:38,173 - INFO - Saved: webcam_snapshot_20250916_083237.png | Size: 0.4MB
+2025-09-16 08:32:38,174 - INFO - Captures: 224 | Remaining: 203213s | Restarts: 10
+2025-09-16 09:02:38,978 - INFO - Saved: webcam_snapshot_20250916_090238.png | Size: 0.4MB
+2025-09-16 09:02:38,979 - INFO - Captures: 225 | Remaining: 201413s | Restarts: 10
+2025-09-16 09:32:39,771 - INFO - Saved: webcam_snapshot_20250916_093238.png | Size: 0.4MB
+2025-09-16 09:32:39,772 - INFO - Captures: 226 | Remaining: 199612s | Restarts: 10
+2025-09-16 10:02:40,630 - INFO - Saved: webcam_snapshot_20250916_100239.png | Size: 0.4MB
+2025-09-16 10:02:40,631 - INFO - Captures: 227 | Remaining: 197811s | Restarts: 10
+2025-09-16 10:32:41,527 - INFO - Saved: webcam_snapshot_20250916_103240.png | Size: 0.4MB
+2025-09-16 10:32:41,528 - INFO - Captures: 228 | Remaining: 196010s | Restarts: 10
+2025-09-16 11:02:42,286 - INFO - Saved: webcam_snapshot_20250916_110241.png | Size: 0.4MB
+2025-09-16 11:02:42,286 - INFO - Captures: 229 | Remaining: 194209s | Restarts: 10
+2025-09-16 11:32:43,089 - INFO - Saved: webcam_snapshot_20250916_113242.png | Size: 0.4MB
+2025-09-16 11:32:43,090 - INFO - Captures: 230 | Remaining: 192409s | Restarts: 10
+2025-09-16 12:02:43,973 - INFO - Saved: webcam_snapshot_20250916_120243.png | Size: 0.4MB
+2025-09-16 12:02:43,973 - INFO - Captures: 231 | Remaining: 190608s | Restarts: 10
+2025-09-16 12:32:44,828 - INFO - Saved: webcam_snapshot_20250916_123243.png | Size: 0.4MB
+2025-09-16 12:32:44,829 - INFO - Captures: 232 | Remaining: 188807s | Restarts: 10
+2025-09-16 13:02:45,705 - INFO - Saved: webcam_snapshot_20250916_130244.png | Size: 0.4MB
+2025-09-16 13:02:45,705 - INFO - Captures: 233 | Remaining: 187006s | Restarts: 10
+2025-09-16 13:32:46,487 - INFO - Saved: webcam_snapshot_20250916_133245.png | Size: 0.4MB
+2025-09-16 13:32:46,488 - INFO - Captures: 234 | Remaining: 185205s | Restarts: 10
+2025-09-16 14:02:47,284 - INFO - Saved: webcam_snapshot_20250916_140246.png | Size: 0.4MB
+2025-09-16 14:02:47,284 - INFO - Captures: 235 | Remaining: 183404s | Restarts: 10
+2025-09-16 14:32:48,069 - INFO - Saved: webcam_snapshot_20250916_143247.png | Size: 0.4MB
+2025-09-16 14:32:48,070 - INFO - Captures: 236 | Remaining: 181604s | Restarts: 10
+2025-09-16 15:02:48,912 - INFO - Saved: webcam_snapshot_20250916_150248.png | Size: 0.4MB
+2025-09-16 15:02:48,913 - INFO - Captures: 237 | Remaining: 179803s | Restarts: 10
+2025-09-16 15:32:49,741 - INFO - Saved: webcam_snapshot_20250916_153248.png | Size: 0.4MB
+2025-09-16 15:32:49,741 - INFO - Captures: 238 | Remaining: 178002s | Restarts: 10
+2025-09-16 16:02:50,551 - INFO - Saved: webcam_snapshot_20250916_160249.png | Size: 0.4MB
+2025-09-16 16:02:50,551 - INFO - Captures: 239 | Remaining: 176201s | Restarts: 10
+2025-09-16 16:32:51,410 - INFO - Saved: webcam_snapshot_20250916_163250.png | Size: 0.4MB
+2025-09-16 16:32:51,411 - INFO - Captures: 240 | Remaining: 174400s | Restarts: 10
+2025-09-16 17:02:51,412 - INFO - Performing scheduled browser restart
+2025-09-16 17:02:52,266 - INFO - Saved: webcam_snapshot_20250916_170251.png | Size: 0.4MB
+2025-09-16 17:02:52,266 - INFO - Captures: 241 | Remaining: 172599s | Restarts: 11
+2025-09-16 17:32:53,107 - INFO - Saved: webcam_snapshot_20250916_173252.png | Size: 0.4MB
+2025-09-16 17:32:53,108 - INFO - Captures: 242 | Remaining: 170798s | Restarts: 11
+2025-09-16 18:02:53,899 - INFO - Saved: webcam_snapshot_20250916_180253.png | Size: 0.4MB
+2025-09-16 18:02:53,900 - INFO - Captures: 243 | Remaining: 168998s | Restarts: 11
+2025-09-16 18:32:54,690 - INFO - Saved: webcam_snapshot_20250916_183253.png | Size: 0.4MB
+2025-09-16 18:32:54,690 - INFO - Captures: 244 | Remaining: 167197s | Restarts: 11
+2025-09-16 19:02:55,485 - INFO - Saved: webcam_snapshot_20250916_190254.png | Size: 0.4MB
+2025-09-16 19:02:55,485 - INFO - Captures: 245 | Remaining: 165396s | Restarts: 11
+2025-09-16 19:32:56,311 - INFO - Saved: webcam_snapshot_20250916_193255.png | Size: 0.4MB
+2025-09-16 19:32:56,312 - INFO - Captures: 246 | Remaining: 163595s | Restarts: 11
+2025-09-16 20:02:57,241 - INFO - Saved: webcam_snapshot_20250916_200256.png | Size: 0.4MB
+2025-09-16 20:02:57,242 - INFO - Captures: 247 | Remaining: 161794s | Restarts: 11
+2025-09-16 20:32:58,033 - INFO - Saved: webcam_snapshot_20250916_203257.png | Size: 0.4MB
+2025-09-16 20:32:58,034 - INFO - Captures: 248 | Remaining: 159994s | Restarts: 11
+2025-09-16 21:02:58,891 - INFO - Saved: webcam_snapshot_20250916_210258.png | Size: 0.4MB
+2025-09-16 21:02:58,892 - INFO - Captures: 249 | Remaining: 158193s | Restarts: 11
+2025-09-16 21:32:59,674 - INFO - Saved: webcam_snapshot_20250916_213258.png | Size: 0.4MB
+2025-09-16 21:32:59,674 - INFO - Captures: 250 | Remaining: 156392s | Restarts: 11
+2025-09-16 22:03:00,481 - INFO - Saved: webcam_snapshot_20250916_220259.png | Size: 0.4MB
+2025-09-16 22:03:00,482 - INFO - Captures: 251 | Remaining: 154591s | Restarts: 11
+2025-09-16 22:33:01,252 - INFO - Saved: webcam_snapshot_20250916_223300.png | Size: 0.4MB
+2025-09-16 22:33:01,252 - INFO - Captures: 252 | Remaining: 152790s | Restarts: 11
+2025-09-16 23:03:02,090 - INFO - Saved: webcam_snapshot_20250916_230301.png | Size: 0.4MB
+2025-09-16 23:03:02,090 - INFO - Captures: 253 | Remaining: 150990s | Restarts: 11
+2025-09-16 23:33:02,988 - INFO - Saved: webcam_snapshot_20250916_233302.png | Size: 0.4MB
+2025-09-16 23:33:02,992 - INFO - Captures: 254 | Remaining: 149189s | Restarts: 11
+2025-09-17 00:03:03,767 - INFO - Saved: webcam_snapshot_20250917_000302.png | Size: 0.4MB
+2025-09-17 00:03:03,768 - INFO - Captures: 255 | Remaining: 147388s | Restarts: 11
+2025-09-17 00:33:04,650 - INFO - Saved: webcam_snapshot_20250917_003303.png | Size: 0.4MB
+2025-09-17 00:33:04,651 - INFO - Captures: 256 | Remaining: 145587s | Restarts: 11
+2025-09-17 01:03:05,456 - INFO - Saved: webcam_snapshot_20250917_010304.png | Size: 0.4MB
+2025-09-17 01:03:05,456 - INFO - Captures: 257 | Remaining: 143786s | Restarts: 11
+2025-09-17 01:33:06,487 - INFO - Saved: webcam_snapshot_20250917_013305.png | Size: 0.4MB
+2025-09-17 01:33:06,489 - INFO - Captures: 258 | Remaining: 141985s | Restarts: 11
+2025-09-17 02:03:07,394 - INFO - Saved: webcam_snapshot_20250917_020306.png | Size: 0.4MB
+2025-09-17 02:03:07,395 - INFO - Captures: 259 | Remaining: 140184s | Restarts: 11
+2025-09-17 02:33:08,170 - INFO - Saved: webcam_snapshot_20250917_023307.png | Size: 0.4MB
+2025-09-17 02:33:08,170 - INFO - Captures: 260 | Remaining: 138383s | Restarts: 11
+2025-09-17 03:03:09,003 - INFO - Saved: webcam_snapshot_20250917_030308.png | Size: 0.4MB
+2025-09-17 03:03:09,003 - INFO - Captures: 261 | Remaining: 136583s | Restarts: 11
+2025-09-17 03:33:09,806 - INFO - Saved: webcam_snapshot_20250917_033309.png | Size: 0.4MB
+2025-09-17 03:33:09,807 - INFO - Captures: 262 | Remaining: 134782s | Restarts: 11
+2025-09-17 04:03:10,751 - INFO - Saved: webcam_snapshot_20250917_040309.png | Size: 0.4MB
+2025-09-17 04:03:10,752 - INFO - Captures: 263 | Remaining: 132981s | Restarts: 11
+2025-09-17 04:33:11,534 - INFO - Saved: webcam_snapshot_20250917_043310.png | Size: 0.4MB
+2025-09-17 04:33:11,534 - INFO - Captures: 264 | Remaining: 131180s | Restarts: 11
+2025-09-17 05:03:11,535 - INFO - Performing scheduled browser restart
+2025-09-17 05:03:12,362 - INFO - Saved: webcam_snapshot_20250917_050311.png | Size: 0.4MB
+2025-09-17 05:03:12,363 - INFO - Captures: 265 | Remaining: 129379s | Restarts: 12
+2025-09-17 05:33:13,202 - INFO - Saved: webcam_snapshot_20250917_053312.png | Size: 0.4MB
+2025-09-17 05:33:13,203 - INFO - Captures: 266 | Remaining: 127578s | Restarts: 12
+2025-09-17 06:03:14,079 - INFO - Saved: webcam_snapshot_20250917_060313.png | Size: 0.4MB
+2025-09-17 06:03:14,080 - INFO - Captures: 267 | Remaining: 125778s | Restarts: 12
+2025-09-17 06:33:14,861 - INFO - Saved: webcam_snapshot_20250917_063314.png | Size: 0.4MB
+2025-09-17 06:33:14,861 - INFO - Captures: 268 | Remaining: 123977s | Restarts: 12
+2025-09-17 07:03:15,677 - INFO - Saved: webcam_snapshot_20250917_070314.png | Size: 0.4MB
+2025-09-17 07:03:15,677 - INFO - Captures: 269 | Remaining: 122176s | Restarts: 12
+2025-09-17 07:33:16,505 - INFO - Saved: webcam_snapshot_20250917_073315.png | Size: 0.4MB
+2025-09-17 07:33:16,507 - INFO - Captures: 270 | Remaining: 120375s | Restarts: 12
+2025-09-17 08:03:17,399 - INFO - Saved: webcam_snapshot_20250917_080316.png | Size: 0.4MB
+2025-09-17 08:03:17,400 - INFO - Captures: 271 | Remaining: 118574s | Restarts: 12
+2025-09-17 08:33:18,153 - INFO - Saved: webcam_snapshot_20250917_083317.png | Size: 0.4MB
+2025-09-17 08:33:18,153 - INFO - Captures: 272 | Remaining: 116773s | Restarts: 12
+2025-09-17 09:03:18,961 - INFO - Saved: webcam_snapshot_20250917_090318.png | Size: 0.4MB
+2025-09-17 09:03:18,962 - INFO - Captures: 273 | Remaining: 114973s | Restarts: 12
+2025-09-17 09:33:19,765 - INFO - Saved: webcam_snapshot_20250917_093318.png | Size: 0.4MB
+2025-09-17 09:33:19,766 - INFO - Captures: 274 | Remaining: 113172s | Restarts: 12
+2025-09-17 10:03:20,634 - INFO - Saved: webcam_snapshot_20250917_100319.png | Size: 0.4MB
+2025-09-17 10:03:20,635 - INFO - Captures: 275 | Remaining: 111371s | Restarts: 12
+2025-09-17 10:33:21,418 - INFO - Saved: webcam_snapshot_20250917_103320.png | Size: 0.4MB
+2025-09-17 10:33:21,418 - INFO - Captures: 276 | Remaining: 109570s | Restarts: 12
+2025-09-17 11:03:22,210 - INFO - Saved: webcam_snapshot_20250917_110321.png | Size: 0.4MB
+2025-09-17 11:03:22,210 - INFO - Captures: 277 | Remaining: 107769s | Restarts: 12
+2025-09-17 11:33:23,002 - INFO - Saved: webcam_snapshot_20250917_113322.png | Size: 0.4MB
+2025-09-17 11:33:23,003 - INFO - Captures: 278 | Remaining: 105969s | Restarts: 12
+2025-09-17 12:03:23,815 - INFO - Saved: webcam_snapshot_20250917_120323.png | Size: 0.4MB
+2025-09-17 12:03:23,815 - INFO - Captures: 279 | Remaining: 104168s | Restarts: 12
+2025-09-17 12:33:24,680 - INFO - Saved: webcam_snapshot_20250917_123323.png | Size: 0.4MB
+2025-09-17 12:33:24,681 - INFO - Captures: 280 | Remaining: 102367s | Restarts: 12
+2025-09-17 13:03:25,504 - INFO - Saved: webcam_snapshot_20250917_130324.png | Size: 0.4MB
+2025-09-17 13:03:25,505 - INFO - Captures: 281 | Remaining: 100566s | Restarts: 12
+2025-09-17 13:33:26,297 - INFO - Saved: webcam_snapshot_20250917_133325.png | Size: 0.4MB
+2025-09-17 13:33:26,298 - INFO - Captures: 282 | Remaining: 98765s | Restarts: 12
+2025-09-17 14:03:27,061 - INFO - Saved: webcam_snapshot_20250917_140326.png | Size: 0.4MB
+2025-09-17 14:03:27,061 - INFO - Captures: 283 | Remaining: 96965s | Restarts: 12
+2025-09-17 14:33:27,909 - INFO - Saved: webcam_snapshot_20250917_143327.png | Size: 0.4MB
+2025-09-17 14:33:27,910 - INFO - Captures: 284 | Remaining: 95164s | Restarts: 12
+2025-09-17 15:03:28,672 - INFO - Saved: webcam_snapshot_20250917_150327.png | Size: 0.4MB
+2025-09-17 15:03:28,672 - INFO - Captures: 285 | Remaining: 93363s | Restarts: 12
+2025-09-17 15:33:29,462 - INFO - Saved: webcam_snapshot_20250917_153328.png | Size: 0.4MB
+2025-09-17 15:33:29,462 - INFO - Captures: 286 | Remaining: 91562s | Restarts: 12
+2025-09-17 16:03:30,236 - INFO - Saved: webcam_snapshot_20250917_160329.png | Size: 0.4MB
+2025-09-17 16:03:30,236 - INFO - Captures: 287 | Remaining: 89761s | Restarts: 12
+2025-09-17 16:33:30,996 - INFO - Saved: webcam_snapshot_20250917_163330.png | Size: 0.4MB
+2025-09-17 16:33:30,997 - INFO - Captures: 288 | Remaining: 87961s | Restarts: 12
+2025-09-17 17:03:30,997 - INFO - Performing scheduled browser restart
+2025-09-17 17:03:31,803 - INFO - Saved: webcam_snapshot_20250917_170331.png | Size: 0.4MB
+2025-09-17 17:03:31,803 - INFO - Captures: 289 | Remaining: 86160s | Restarts: 13
+2025-09-17 17:33:32,568 - INFO - Saved: webcam_snapshot_20250917_173331.png | Size: 0.4MB
+2025-09-17 17:33:32,569 - INFO - Captures: 290 | Remaining: 84359s | Restarts: 13
+2025-09-17 18:03:33,354 - INFO - Saved: webcam_snapshot_20250917_180332.png | Size: 0.4MB
+2025-09-17 18:03:33,355 - INFO - Captures: 291 | Remaining: 82558s | Restarts: 13
+2025-09-17 18:33:34,127 - INFO - Saved: webcam_snapshot_20250917_183333.png | Size: 0.4MB
+2025-09-17 18:33:34,127 - INFO - Captures: 292 | Remaining: 80757s | Restarts: 13
+2025-09-17 19:03:34,942 - INFO - Saved: webcam_snapshot_20250917_190334.png | Size: 0.4MB
+2025-09-17 19:03:34,943 - INFO - Captures: 293 | Remaining: 78957s | Restarts: 13
+2025-09-17 19:33:35,763 - INFO - Saved: webcam_snapshot_20250917_193334.png | Size: 0.4MB
+2025-09-17 19:33:35,763 - INFO - Captures: 294 | Remaining: 77156s | Restarts: 13
+2025-09-17 20:03:36,533 - INFO - Saved: webcam_snapshot_20250917_200335.png | Size: 0.4MB
+2025-09-17 20:03:36,533 - INFO - Captures: 295 | Remaining: 75355s | Restarts: 13
+2025-09-17 20:33:37,340 - INFO - Saved: webcam_snapshot_20250917_203336.png | Size: 0.4MB
+2025-09-17 20:33:37,341 - INFO - Captures: 296 | Remaining: 73554s | Restarts: 13
+2025-09-17 21:03:38,131 - INFO - Saved: webcam_snapshot_20250917_210337.png | Size: 0.4MB
+2025-09-17 21:03:38,132 - INFO - Captures: 297 | Remaining: 71753s | Restarts: 13
+2025-09-17 21:33:38,937 - INFO - Saved: webcam_snapshot_20250917_213338.png | Size: 0.4MB
+2025-09-17 21:33:38,937 - INFO - Captures: 298 | Remaining: 69953s | Restarts: 13
+2025-09-17 22:03:39,723 - INFO - Saved: webcam_snapshot_20250917_220338.png | Size: 0.4MB
+2025-09-17 22:03:39,724 - INFO - Captures: 299 | Remaining: 68152s | Restarts: 13
+2025-09-17 22:33:40,485 - INFO - Saved: webcam_snapshot_20250917_223339.png | Size: 0.4MB
+2025-09-17 22:33:40,486 - INFO - Captures: 300 | Remaining: 66351s | Restarts: 13
+2025-09-17 23:03:41,261 - INFO - Saved: webcam_snapshot_20250917_230340.png | Size: 0.4MB
+2025-09-17 23:03:41,261 - INFO - Captures: 301 | Remaining: 64550s | Restarts: 13
+2025-09-17 23:33:42,088 - INFO - Saved: webcam_snapshot_20250917_233341.png | Size: 0.4MB
+2025-09-17 23:33:42,089 - INFO - Captures: 302 | Remaining: 62750s | Restarts: 13
+2025-09-18 00:03:42,871 - INFO - Saved: webcam_snapshot_20250918_000342.png | Size: 0.4MB
+2025-09-18 00:03:42,871 - INFO - Captures: 303 | Remaining: 60949s | Restarts: 13
+2025-09-18 00:33:43,629 - INFO - Saved: webcam_snapshot_20250918_003342.png | Size: 0.4MB
+2025-09-18 00:33:43,630 - INFO - Captures: 304 | Remaining: 59148s | Restarts: 13
+2025-09-18 01:03:44,445 - INFO - Saved: webcam_snapshot_20250918_010343.png | Size: 0.4MB
+2025-09-18 01:03:44,445 - INFO - Captures: 305 | Remaining: 57347s | Restarts: 13
+2025-09-18 01:33:45,222 - INFO - Saved: webcam_snapshot_20250918_013344.png | Size: 0.4MB
+2025-09-18 01:33:45,222 - INFO - Captures: 306 | Remaining: 55546s | Restarts: 13
+2025-09-18 02:03:46,018 - INFO - Saved: webcam_snapshot_20250918_020345.png | Size: 0.4MB
+2025-09-18 02:03:46,019 - INFO - Captures: 307 | Remaining: 53746s | Restarts: 13
+2025-09-18 02:33:46,852 - INFO - Saved: webcam_snapshot_20250918_023346.png | Size: 0.4MB
+2025-09-18 02:33:46,853 - INFO - Captures: 308 | Remaining: 51945s | Restarts: 13
+2025-09-18 03:03:47,681 - INFO - Saved: webcam_snapshot_20250918_030346.png | Size: 0.4MB
+2025-09-18 03:03:47,681 - INFO - Captures: 309 | Remaining: 50144s | Restarts: 13
+2025-09-18 03:33:48,502 - INFO - Saved: webcam_snapshot_20250918_033347.png | Size: 0.4MB
+2025-09-18 03:33:48,502 - INFO - Captures: 310 | Remaining: 48343s | Restarts: 13
+2025-09-18 04:03:49,314 - INFO - Saved: webcam_snapshot_20250918_040348.png | Size: 0.4MB
+2025-09-18 04:03:49,314 - INFO - Captures: 311 | Remaining: 46542s | Restarts: 13
+2025-09-18 04:33:50,058 - INFO - Saved: webcam_snapshot_20250918_043349.png | Size: 0.4MB
+2025-09-18 04:33:50,059 - INFO - Captures: 312 | Remaining: 44742s | Restarts: 13
+2025-09-18 05:03:50,060 - INFO - Performing scheduled browser restart
+2025-09-18 05:03:50,879 - INFO - Saved: webcam_snapshot_20250918_050350.png | Size: 0.4MB
+2025-09-18 05:03:50,880 - INFO - Captures: 313 | Remaining: 42941s | Restarts: 14
+2025-09-18 05:33:51,659 - INFO - Saved: webcam_snapshot_20250918_053350.png | Size: 0.4MB
+2025-09-18 05:33:51,659 - INFO - Captures: 314 | Remaining: 41140s | Restarts: 14
+2025-09-18 06:03:52,491 - INFO - Saved: webcam_snapshot_20250918_060351.png | Size: 0.4MB
+2025-09-18 06:03:52,491 - INFO - Captures: 315 | Remaining: 39339s | Restarts: 14
+2025-09-18 06:33:53,269 - INFO - Saved: webcam_snapshot_20250918_063352.png | Size: 0.4MB
+2025-09-18 06:33:53,270 - INFO - Captures: 316 | Remaining: 37538s | Restarts: 14
+2025-09-18 07:03:54,081 - INFO - Saved: webcam_snapshot_20250918_070353.png | Size: 0.4MB
+2025-09-18 07:03:54,081 - INFO - Captures: 317 | Remaining: 35738s | Restarts: 14
+2025-09-18 07:33:54,837 - INFO - Saved: webcam_snapshot_20250918_073354.png | Size: 0.4MB
+2025-09-18 07:33:54,839 - INFO - Captures: 318 | Remaining: 33937s | Restarts: 14
+2025-09-18 08:03:55,699 - INFO - Saved: webcam_snapshot_20250918_080354.png | Size: 0.4MB
+2025-09-18 08:03:55,699 - INFO - Captures: 319 | Remaining: 32136s | Restarts: 14
+2025-09-18 08:33:56,480 - INFO - Saved: webcam_snapshot_20250918_083355.png | Size: 0.4MB
+2025-09-18 08:33:56,481 - INFO - Captures: 320 | Remaining: 30335s | Restarts: 14
+2025-09-18 09:03:57,298 - INFO - Saved: webcam_snapshot_20250918_090356.png | Size: 0.4MB
+2025-09-18 09:03:57,299 - INFO - Captures: 321 | Remaining: 28534s | Restarts: 14
+2025-09-18 09:33:58,074 - INFO - Saved: webcam_snapshot_20250918_093357.png | Size: 0.4MB
+2025-09-18 09:33:58,075 - INFO - Captures: 322 | Remaining: 26734s | Restarts: 14
+2025-09-18 10:03:58,932 - INFO - Saved: webcam_snapshot_20250918_100358.png | Size: 0.4MB
+2025-09-18 10:03:58,933 - INFO - Captures: 323 | Remaining: 24933s | Restarts: 14
+2025-09-18 10:33:59,762 - INFO - Saved: webcam_snapshot_20250918_103358.png | Size: 0.4MB
+2025-09-18 10:33:59,763 - INFO - Captures: 324 | Remaining: 23132s | Restarts: 14
+2025-09-18 11:04:00,553 - INFO - Saved: webcam_snapshot_20250918_110359.png | Size: 0.4MB
+2025-09-18 11:04:00,554 - INFO - Captures: 325 | Remaining: 21331s | Restarts: 14
+2025-09-18 11:34:01,412 - INFO - Saved: webcam_snapshot_20250918_113400.png | Size: 0.4MB
+2025-09-18 11:34:01,413 - INFO - Captures: 326 | Remaining: 19530s | Restarts: 14
+2025-09-18 12:04:02,250 - INFO - Saved: webcam_snapshot_20250918_120401.png | Size: 0.4MB
+2025-09-18 12:04:02,251 - INFO - Captures: 327 | Remaining: 17729s | Restarts: 14
+2025-09-18 12:34:02,996 - INFO - Saved: webcam_snapshot_20250918_123402.png | Size: 0.4MB
+2025-09-18 12:34:02,996 - INFO - Captures: 328 | Remaining: 15929s | Restarts: 14
+2025-09-18 13:04:03,824 - INFO - Saved: webcam_snapshot_20250918_130402.png | Size: 0.4MB
+2025-09-18 13:04:03,824 - INFO - Captures: 329 | Remaining: 14128s | Restarts: 14
+2025-09-18 13:34:04,631 - INFO - Saved: webcam_snapshot_20250918_133403.png | Size: 0.4MB
+2025-09-18 13:34:04,631 - INFO - Captures: 330 | Remaining: 12327s | Restarts: 14
+2025-09-18 14:04:05,501 - INFO - Saved: webcam_snapshot_20250918_140404.png | Size: 0.4MB
+2025-09-18 14:04:05,502 - INFO - Captures: 331 | Remaining: 10526s | Restarts: 14
+2025-09-18 14:34:06,312 - INFO - Saved: webcam_snapshot_20250918_143405.png | Size: 0.4MB
+2025-09-18 14:34:06,313 - INFO - Captures: 332 | Remaining: 8725s | Restarts: 14
+2025-09-18 15:04:07,055 - INFO - Saved: webcam_snapshot_20250918_150406.png | Size: 0.4MB
+2025-09-18 15:04:07,055 - INFO - Captures: 333 | Remaining: 6925s | Restarts: 14
+2025-09-18 15:34:07,874 - INFO - Saved: webcam_snapshot_20250918_153407.png | Size: 0.4MB
+2025-09-18 15:34:07,875 - INFO - Captures: 334 | Remaining: 5124s | Restarts: 14
+2025-09-18 16:04:08,718 - INFO - Saved: webcam_snapshot_20250918_160407.png | Size: 0.4MB
+2025-09-18 16:04:08,718 - INFO - Captures: 335 | Remaining: 3323s | Restarts: 14
+2025-09-18 16:34:09,490 - INFO - Saved: webcam_snapshot_20250918_163408.png | Size: 0.4MB
+2025-09-18 16:34:09,491 - INFO - Captures: 336 | Remaining: 1522s | Restarts: 14
+2025-09-18 17:04:09,492 - INFO - Maximum runtime reached. Captured 336 images.
+2025-09-18 17:04:09,777 - INFO - Browser closed
