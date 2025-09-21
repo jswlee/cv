@@ -2,3 +2,7 @@ selenium==4.15.2
 yt-dlp==2023.11.16
 numpy<2.0
 opencv-python==4.8.1.78
+boto3==1.34.0
+google-api-python-client==2.151.0
+python-dotenv==1.0.1
+PyYAML==6.0.2

@@ -1,0 +1,23 @@
+2025-09-21 10:05:20,094 - ERROR - Failed to resolve YouTube URL from search query
+2025-09-21 10:06:35,661 - ERROR - Failed to resolve YouTube URL from search query
+2025-09-21 10:07:00,219 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-21 10:07:01,057 - INFO - Starting YouTube capture for https://www.youtube.com/watch?v=c3HxYfhhFu8
+2025-09-21 10:07:01,068 - INFO - Found credentials in environment variables.
+2025-09-21 10:07:01,830 - INFO - S3 bucket 'haleakala-scraped-screenshots' is accessible
+2025-09-21 10:07:01,830 - INFO - Using S3 prefix: test
+2025-09-21 10:07:02,208 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=c3HxYfhhFu8
+2025-09-21 10:07:08,133 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
+2025-09-21 10:07:08,136 - INFO - Capturing every 10.0 seconds
+2025-09-21 10:07:08,136 - INFO - Will run for 30 seconds
+2025-09-21 10:07:08,136 - INFO - Uploading to S3: s3://haleakala-scraped-screenshots/test
+2025-09-21 10:07:08,136 - INFO - Using fresh connection for each capture to prevent freezing
+2025-09-21 10:07:08,136 - INFO - Added error recovery with automatic retries
+2025-09-21 10:07:08,136 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=c3HxYfhhFu8
+2025-09-21 10:07:10,720 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
+2025-09-21 10:07:14,585 - INFO - Uploaded: youtube_snapshot_20250921_100712.jpg | Size: 1.6MB | Location: s3://haleakala-scraped-screenshots/test/youtube_snapshot_20250921_100712.jpg
+2025-09-21 10:07:14,585 - INFO - Captures: 1 | Remaining: 17s
+2025-09-21 10:07:24,588 - INFO - Getting stream URL for: https://www.youtube.com/watch?v=c3HxYfhhFu8
+2025-09-21 10:07:27,692 - INFO - Chosen format: 1912x1080 @ 30.0fps | vcodec=avc1.640028 acodec=mp4a.40.2 prot=m3u8_native ext=mp4
+2025-09-21 10:07:30,099 - INFO - Uploaded: youtube_snapshot_20250921_100729.jpg | Size: 1.6MB | Location: s3://haleakala-scraped-screenshots/test/youtube_snapshot_20250921_100729.jpg
+2025-09-21 10:07:30,099 - INFO - Captures: 2 | Remaining: 2s
+2025-09-21 10:07:40,100 - INFO - Maximum runtime reached. Captured 2 images.

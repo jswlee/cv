@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
 """
 YouTube Livestream Capture for macOS
-Captures snapshots from a YouTube livestream at specified intervals
+Captures snapshots from a YouTube livestream and uploads to S3
 """
 
-import os
 import argparse
 import time
 import logging
-import json
 from datetime import datetime
 import cv2
-from urllib.parse import urlparse
 import random
+from utils import (
+    get_youtube_livestream_url,
+    read_config,
+    create_s3_client,
+    ensure_bucket_access,
+    upload_bytes_to_s3,
+)
 
 # Configure logging
 logging.basicConfig(
@@ -26,38 +30,31 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class YouTubeCapture:
-    def __init__(self, url, output_dir=None, interval=5, max_runtime=None):
-        """Initialize YouTube capture with a single URL"""
-        self.url = url
+    def __init__(self, url, s3_bucket, s3_prefix=None, interval=5, max_runtime=None, aws_region='us-east-2'):
+        """Initialize YouTube capture with S3 upload
         
-        # Set default output directory based on URL domain
-        if output_dir is None:
-            domain = urlparse(url).netloc
-            if domain == "youtu.be" or domain == "www.youtube.com" or domain == "youtube.com":
-                video_id = self._get_video_id(url)
-                output_dir = f"images/youtube_{video_id}"
-            else:
-                output_dir = f"images/{domain}"
-                
-        self.output_dir = output_dir
+        Args:
+            url: YouTube URL to capture
+            s3_bucket: S3 bucket name for uploads
+            s3_prefix: S3 key prefix for uploaded files (if None, uses domain-based naming)
+            interval: Seconds between captures
+            max_runtime: Maximum runtime in seconds
+            aws_region: AWS region for S3 client
+        """
+        self.url = url
+        self.s3_bucket = s3_bucket
         self.interval = interval
         self.max_runtime = max_runtime
-        self.cap = None
         
-        # Create output directory
-        os.makedirs(output_dir, exist_ok=True)
+        # Determine S3 prefix
+        self.s3_prefix = s3_prefix if s3_prefix else "youtube"
         
-    def _get_video_id(self, url):
-        """Extract video ID from YouTube URL"""
-        if "youtu.be" in url:
-            return url.split("/")[-1]
-        elif "youtube.com" in url:
-            if "v=" in url:
-                return url.split("v=")[1].split("&")[0]
-            else:
-                return url.split("/")[-1]
-        return "unknown"
-        
+        # Initialize S3 client via utils
+        self.s3_client = create_s3_client(aws_region)
+        ensure_bucket_access(self.s3_client, self.s3_bucket)
+        logger.info(f"S3 bucket '{self.s3_bucket}' is accessible")
+        logger.info(f"Using S3 prefix: {self.s3_prefix}")
+
     def get_stream_url(self):
         """Get the direct stream URL using yt-dlp Python API, picking highest-res playable stream.
 
@@ -143,30 +140,6 @@ class YouTubeCapture:
             logger.error(f"Error getting stream URL: {e}")
             return None
     
-    def setup_capture(self):
-        """Setup video capture from YouTube stream"""
-        try:
-            stream_url = self.get_stream_url()
-            if not stream_url:
-                raise ValueError("Failed to get stream URL")
-            
-            # Open video capture
-            self.cap = cv2.VideoCapture(stream_url)
-            
-            if not self.cap.isOpened():
-                raise ValueError("Failed to open video stream")
-                
-            # Get video properties
-            width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-            height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-            fps = self.cap.get(cv2.CAP_PROP_FPS)
-            logger.info(f"Stream opened: {width}x{height} at {fps:.1f} fps")
-            
-            return True
-            
-        except Exception as e:
-            logger.error(f"Failed to setup capture: {e}")
-            return False
             
     def capture_snapshot(self, max_retries=3):
         """Capture a snapshot from the stream by opening a fresh connection each time
@@ -221,19 +194,39 @@ class YouTubeCapture:
                         time.sleep(backoff)
                     continue
                 
-                # Save image
+                # Generate filename and upload to S3
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 filename = f"youtube_snapshot_{timestamp}.jpg"
-                filepath = os.path.join(self.output_dir, filename)
                 
-                # Save with higher JPEG quality
-                cv2.imwrite(filepath, frame, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
+                # Encode image to JPEG in memory
+                encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 100]
+                success, encoded_img = cv2.imencode('.jpg', frame, encode_param)
                 
-                # Get file size for logging
-                file_size = os.path.getsize(filepath) / (1024 * 1024)  # Size in MB
-                logger.info(f"Saved: {filename} | Size: {file_size:.1f}MB")
+                if not success:
+                    logger.error("Failed to encode image")
+                    attempt += 1
+                    if attempt < max_retries:
+                        backoff = (2 ** attempt) + random.uniform(0, 1)
+                        logger.info(f"Retrying in {backoff:.1f} seconds...")
+                        time.sleep(backoff)
+                    continue
                 
-                return filepath
+                # Upload to S3
+                image_data = encoded_img.tobytes()
+                file_size = len(image_data) / (1024 * 1024)  # Size in MB
+                s3_key = f"{self.s3_prefix}/{filename}" if self.s3_prefix else filename
+                s3_url = upload_bytes_to_s3(self.s3_client, self.s3_bucket, s3_key, image_data, content_type='image/jpeg')
+                if s3_url:
+                    logger.info(f"Uploaded: {filename} | Size: {file_size:.1f}MB | Location: {s3_url}")
+                    return s3_url
+                else:
+                    logger.error("Failed to upload to S3")
+                    attempt += 1
+                    if attempt < max_retries:
+                        backoff = (2 ** attempt) + random.uniform(0, 1)
+                        logger.info(f"Retrying in {backoff:.1f} seconds...")
+                        time.sleep(backoff)
+                    continue
                 
             except Exception as e:
                 logger.error(f"Error capturing snapshot (attempt {attempt+1}/{max_retries}): {e}")
@@ -266,7 +259,10 @@ class YouTubeCapture:
                 logger.info(f"Will run for {self.max_runtime} seconds")
             else:
                 logger.info("Press Ctrl+C to stop")
-            logger.info(f"Saving to: {os.path.abspath(self.output_dir)}")
+            
+            s3_location = f"s3://{self.s3_bucket}/{self.s3_prefix}"
+            logger.info(f"Uploading to S3: {s3_location}")
+                
             logger.info("Using fresh connection for each capture to prevent freezing")
             logger.info("Added error recovery with automatic retries")
             
@@ -315,18 +311,20 @@ class YouTubeCapture:
         except Exception as e:
             logger.error(f"Critical error in main loop: {e}")
         finally:
-            if self.cap:
-                self.cap.release()
-                logger.info("Video capture released")
+            pass  # No cleanup needed for S3-only mode
 
 
 def main():
     """Parse arguments and start capture"""
     parser = argparse.ArgumentParser(description="YouTube livestream snapshot capture")
     parser.add_argument(
-        "--url", type=str,
-        default="https://www.youtube.com/watch?v=DNnj_9bVWGI",
-        help="URL of the YouTube livestream to capture"
+        "--url", type=str, default=None,
+        help="Direct URL of the YouTube livestream to capture (overrides --search-query)"
+    )
+    parser.add_argument(
+        "--search-query", type=str,
+        default="4K MAUI LIVE CAM WhalerCondo.net",
+        help="YouTube search query used to find the livestream when --url is not provided"
     )
     parser.add_argument(
         "--interval", type=float, default=5,
@@ -337,23 +335,47 @@ def main():
         help="Total runtime in seconds; 0 = run until Ctrl+C (default: 30)"
     )
     parser.add_argument(
-        "--output-dir", type=str, default=None,
-        help="Directory to save images (default: images/youtube_{video_id})"
+        "--s3-bucket", type=str, required=True,
+        help="S3 bucket name for uploading images"
+    )
+    parser.add_argument(
+        "--s3-prefix", type=str, default=None,
+        help="S3 key prefix for uploaded files (if not specified, uses domain-based naming like 'www.nps.gov')"
+    )
+    parser.add_argument(
+        "--aws-region", type=str, default="us-east-2",
+        help="AWS region for S3 client (default: us-east-2)"
     )
     args = parser.parse_args()
 
     # Handle max_runtime=0 meaning run indefinitely
     max_runtime = args.max_runtime if args.max_runtime > 0 else None
+    
+    # Resolve livestream URL: prefer explicit --url, otherwise use search query
+    cfg = read_config() or {}
+    resolved_url = args.url
+    if not resolved_url:
+        # Prefer CLI search-query over config default
+        search_query = args.search_query or cfg.get("search_query")
+        if not search_query:
+            logger.error("No --url provided and no --search-query specified (or in config.yaml)")
+            return 1
+        resolved_url = get_youtube_livestream_url(search_query)
+        if not resolved_url:
+            logger.error("Failed to resolve YouTube URL from search query")
+            return 1
 
-    logger.info(f"Starting YouTube capture for {args.url}")
+    logger.info(f"Starting YouTube capture for {resolved_url}")
     
     try:
         # Create and run the capture
         capture = YouTubeCapture(
-            url=args.url,
-            output_dir=args.output_dir,
+            url=resolved_url,
+            s3_bucket=args.s3_bucket,
+            s3_prefix=args.s3_prefix,
             interval=args.interval,
-            max_runtime=max_runtime
+            max_runtime=max_runtime,
+            aws_region=args.aws_region
         )
         capture.run()
     except Exception as e:
