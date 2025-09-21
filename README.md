@@ -174,6 +174,65 @@ Both scripts include robust error handling:
 - Browser session management (webcam capture)
 - Detailed logging of all operations
 
+## Running as a Background Process
+
+For long-running captures, you can run the script in the background using `nohup` to keep it running after you log out:
+
+### Basic Background Execution
+
+```bash
+nohup python3 webcam_capture.py \
+  --s3-bucket "your-bucket-name" \
+  --s3-prefix "webcam-prefix" \
+  --interval 1800 \
+  --max-runtime 0 \
+  > webcam_capture.log 2>&1 &
+```
+
+### Example: NPS Webcam (30-minute intervals)
+
+```bash
+nohup python3 webcam_capture.py \
+  --s3-bucket "haleakala-scraped-screenshots" \
+  --s3-prefix "www.nps.gov" \
+  --interval 1800 \
+  --max-runtime 0 \
+  > webcam_nps.log 2>&1 &
+```
+
+### Managing Background Processes
+
+#### Check if it's running:
+```bash
+ps aux | grep "python3 webcam_capture.py"
+```
+
+#### View the latest logs:
+```bash
+tail -f webcam_nps.log
+```
+
+#### Stop the process:
+1. Find the process ID (PID):
+   ```bash
+   ps aux | grep "python3 webcam_capture.py"
+   ```
+2. Kill the process:
+   ```bash
+   kill <PID>
+   ```
+   Or force kill if needed:
+   ```bash
+   kill -9 <PID>
+   ```
+
+### Notes:
+- `--interval 1800` = 30 minutes between captures
+- `--max-runtime 0` = run indefinitely (use `Ctrl+C` or `kill` to stop)
+- `> webcam_nps.log 2>&1` = save all output to a log file
+- `&` = run in background
+- The script will continue running even if you log out of the server
+
 ## Cost Considerations
 
 - S3 PUT requests: ~$0.0005 per 1,000 requests
@@ -211,6 +270,72 @@ For a capture every 30 seconds running 24/7:
 - The script automatically restarts the browser on failures
 - For persistent issues, try adjusting the `--zoom` factor
 - Check that the webcam URL is accessible and contains video elements
+
+## Command Reference
+
+### `ps aux | grep "python3 webcam_capture.py"`
+
+This command helps you find running instances of your webcam capture script:
+
+- `ps` - Process Status command
+  - `a` - Show processes for all users
+  - `u` - Display the process's user/owner
+  - `x` - Also show processes not attached to a terminal
+
+- `|` - Pipe symbol, takes the output of the left command and uses it as input to the right command
+
+- `grep` - Global Regular Expression Print
+  - Filters the `ps aux` output to only show lines containing "python3 webcam_capture.py"
+  - Useful for finding the Process ID (PID) of your running script
+
+Example output:
+```
+user     12345  0.0  0.5 123456 78901 ?        S    12:00   0:05 python3 webcam_capture.py --s3-bucket my-bucket
+```
+
+### `tail -f webcam_nps.log`
+
+- `tail` - Outputs the last part of files
+  - `-f` - Follow mode: append data as the file grows
+  - `webcam_nps.log` - The log file to monitor
+
+This is useful for monitoring the script's output in real-time. Press `Ctrl+C` to stop following the log.
+
+### `kill <PID>` vs `kill -9 <PID>`
+
+- `kill <PID>` - Sends the TERM (terminate) signal to the process
+  - Graceful shutdown, allows the process to clean up
+  - Example: `kill 12345`
+
+- `kill -9 <PID>` - Sends the KILL signal (SIGKILL)
+  - Forceful immediate termination
+  - Use only if `kill` without `-9` doesn't work
+  - Example: `kill -9 12345`
+
+### `nohup` Command Breakdown
+
+```bash
+nohup python3 webcam_capture.py \
+  --s3-bucket "my-bucket" \
+  --interval 1800 \
+  > webcam.log 2>&1 &
+```
+
+- `nohup` - Run a command immune to hangups
+  - Keeps the process running after you log out
+  - Saves output to `nohup.out` by default
+
+- `>` - Redirects standard output to a file
+  - `webcam.log` - The file to save output to
+
+- `2>&1` - Redirects standard error to the same place as standard output
+  - `2` is file descriptor for stderr
+  - `1` is file descriptor for stdout
+  - `&` indicates that what follows is a file descriptor
+
+- `&` at the end - Runs the command in the background
+  - Returns control to the terminal immediately
+  - The process continues running after you log out
 
 ## Examples
 
