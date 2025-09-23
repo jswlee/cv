@@ -13,6 +13,11 @@ Both scripts support S3-only uploads (no local file saving) and can be configure
 ```bash
 pip install -r requirements.txt
 ```
+If installing on a fresh VM, you may need to install chromedriver:
+
+```bash
+sudo apt install -y chromium-driver
+```
 
 ### 2. AWS Credentials Setup
 
